@@ -169,13 +169,13 @@
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_class">ComponentFoundation.class</a>
     </div>
     <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_ActiveConditionalClasses">ComponentFoundation.ActiveConditionalClasses</a>
+    </div>
+    <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_style">ComponentFoundation.style</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Tooltip">ComponentFoundation.Tooltip</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_ActiveConditionalClasses">ComponentFoundation.ActiveConditionalClasses</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync">ComponentBase.OnInitializedAsync()</a>
@@ -260,10 +260,10 @@
 </h2>
 
 
-  <a id="Material_Blazor_MBIcon_IconName_" data-uid="Material.Blazor.MBIcon.IconName*"></a>
+  <a id="Material_Blazor_MBIcon_Descriptor_" data-uid="Material.Blazor.MBIcon.Descriptor*"></a>
 
-  <h3 id="Material_Blazor_MBIcon_IconName" data-uid="Material.Blazor.MBIcon.IconName">
-  IconName
+  <h3 id="Material_Blazor_MBIcon_Descriptor" data-uid="Material.Blazor.MBIcon.Descriptor">
+  Descriptor
   <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Icon/MBIcon.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -272,7 +272,7 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Parameter]
-public string IconName { get; set; }</code></pre>
+public MBIconDescriptor Descriptor { get; set; }</code></pre>
   </div>
 
 
@@ -281,7 +281,7 @@ public string IconName { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
     <dd></dd>
   </dl>
 
@@ -318,6 +318,93 @@ public string IconName { get; set; }</code></pre>
 </dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBIcon_BuildRenderTreeWorker_" data-uid="Material.Blazor.MBIcon.BuildRenderTreeWorker*"></a>
+
+  <h3 id="Material_Blazor_MBIcon_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_Material_Blazor_MBIconDescriptor_System_String_" data-uid="Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,Material.Blazor.MBIconDescriptor,System.String)">
+  BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBIconDescriptor, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Icon/MBIcon.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void BuildRenderTreeWorker(RenderTreeBuilder builder, ref int rendSeq, MBCascadingDefaults cascadingDefaults, MBIconDescriptor descriptor, string slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a></dt>
+    <dd></dd>
+    <dt><code>rendSeq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cascadingDefaults</code> <a class="xref" href="Material.Blazor.MBCascadingDefaults.html">MBCascadingDefaults</a></dt>
+    <dd></dd>
+    <dt><code>descriptor</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBIcon_IconDescriptorConstructor_" data-uid="Material.Blazor.MBIcon.IconDescriptorConstructor*"></a>
+
+  <h3 id="Material_Blazor_MBIcon_IconDescriptorConstructor_System_String_System_Nullable_System_Decimal__System_Nullable_Material_Blazor_MBIconGradient__System_String_System_Nullable_Material_Blazor_MBIconSize__System_Nullable_Material_Blazor_MBIconStyle__System_Nullable_Material_Blazor_MBIconWeight__" data-uid="Material.Blazor.MBIcon.IconDescriptorConstructor(System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.String,System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})">
+  IconDescriptorConstructor(string, decimal?, MBIconGradient?, string, MBIconSize?, MBIconStyle?, MBIconWeight?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Icon/MBIcon.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MBIconDescriptor IconDescriptorConstructor(string color = null, decimal? fill = null, MBIconGradient? gradient = null, string name = null, MBIconSize? size = null, MBIconStyle? style = null, MBIconWeight? weight = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>fill</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</dt>
+    <dd></dd>
+    <dt><code>gradient</code> <a class="xref" href="Material.Blazor.MBIconGradient.html">MBIconGradient</a>?</dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>size</code> <a class="xref" href="Material.Blazor.MBIconSize.html">MBIconSize</a>?</dt>
+    <dd></dd>
+    <dt><code>style</code> <a class="xref" href="Material.Blazor.MBIconStyle.html">MBIconStyle</a>?</dt>
+    <dd></dd>
+    <dt><code>weight</code> <a class="xref" href="Material.Blazor.MBIconWeight.html">MBIconWeight</a>?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
