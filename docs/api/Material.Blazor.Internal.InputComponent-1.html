@@ -29,13 +29,10 @@
       <meta name="loc:themeAuto" content="Auto">
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -141,8 +138,8 @@
       <div><a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html">SingleSelectComponent&lt;T, TListElement&gt;</a></div>
       <div><a class="xref" href="Material.Blazor.MBCheckbox.html">MBCheckbox</a></div>
       <div><a class="xref" href="Material.Blazor.MBRadioButton-1.html">MBRadioButton&lt;TItem&gt;</a></div>
+      <div><a class="xref" href="Material.Blazor.MBSlider-1.html">MBSlider&lt;TItem&gt;</a></div>
       <div><a class="xref" href="Material.Blazor.MBSwitch.html">MBSwitch</a></div>
-      <div><a class="xref" href="Material.Blazor.MD2.MBSlider.html">MBSlider</a></div>
     </dd>
   </dl>
 
@@ -166,9 +163,6 @@
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSet">ComponentFoundation.OnParametersSet()</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSetAsync">ComponentFoundation.OnParametersSetAsync()</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_CascadingDefaults">ComponentFoundation.CascadingDefaults</a>
@@ -199,9 +193,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged">ComponentBase.StateHasChanged()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender">ComponentBase.ShouldRender()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)">ComponentBase.InvokeAsync(Action)</a>
@@ -539,6 +530,40 @@ want the component to refresh when that operation is completed.</p>
 
 
 
+  <a id="Material_Blazor_Internal_InputComponent_1_OnParametersSetAsync_" data-uid="Material.Blazor.Internal.InputComponent`1.OnParametersSetAsync*"></a>
+
+  <h3 id="Material_Blazor_Internal_InputComponent_1_OnParametersSetAsync" data-uid="Material.Blazor.Internal.InputComponent`1.OnParametersSetAsync">
+  OnParametersSetAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation/InputComponent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Method invoked when the component has received parameters from its parent in
+the render tree, and the incoming values have been assigned to properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task OnParametersSetAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> representing any asynchronous operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Material_Blazor_Internal_InputComponent_1_SetParametersAsync_" data-uid="Material.Blazor.Internal.InputComponent`1.SetParametersAsync*"></a>
 
   <h3 id="Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_" data-uid="Material.Blazor.Internal.InputComponent`1.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)">
@@ -590,6 +615,38 @@ want the component to refresh when that operation is completed.</p>
 
 
 
+  <a id="Material_Blazor_Internal_InputComponent_1_ShouldRender_" data-uid="Material.Blazor.Internal.InputComponent`1.ShouldRender*"></a>
+
+  <h3 id="Material_Blazor_Internal_InputComponent_1_ShouldRender" data-uid="Material.Blazor.Internal.InputComponent`1.ShouldRender">
+  ShouldRender()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation/InputComponent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a flag to indicate whether the component should render.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed bool ShouldRender()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_" data-uid="Material.Blazor.Internal.InputComponent`1.TryParseValueFromString*"></a>
 
   <h3 id="Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_System_String__0__System_String__" data-uid="Material.Blazor.Internal.InputComponent`1.TryParseValueFromString(System.String,`0@,System.String@)">
@@ -637,7 +694,7 @@ want the component to refresh when that operation is completed.</p>
           <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation/InputComponent.cs" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
@@ -646,7 +703,7 @@ want the component to refresh when that operation is completed.</p>
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

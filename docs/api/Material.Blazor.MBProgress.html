@@ -29,13 +29,10 @@
       <meta name="loc:themeAuto" content="Auto">
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -90,7 +87,7 @@
 
   <h1 id="Material_Blazor_MBProgress" data-uid="Material.Blazor.MBProgress" class="text-break">
     Class MBProgress
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -189,7 +186,7 @@
 
   <h3 id="Material_Blazor_MBProgress__ctor" data-uid="Material.Blazor.MBProgress.#ctor">
   MBProgress()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -215,11 +212,43 @@
 </h2>
 
 
+  <a id="Material_Blazor_MBProgress_ProgressBufferLevel_" data-uid="Material.Blazor.MBProgress.ProgressBufferLevel*"></a>
+
+  <h3 id="Material_Blazor_MBProgress_ProgressBufferLevel" data-uid="Material.Blazor.MBProgress.ProgressBufferLevel">
+  ProgressBufferLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public double? ProgressBufferLevel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Material_Blazor_MBProgress_ProgressIsFourColor_" data-uid="Material.Blazor.MBProgress.ProgressIsFourColor*"></a>
 
   <h3 id="Material_Blazor_MBProgress_ProgressIsFourColor" data-uid="Material.Blazor.MBProgress.ProgressIsFourColor">
   ProgressIsFourColor
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -251,7 +280,7 @@ public bool ProgressIsFourColor { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBProgress_ProgressLevel" data-uid="Material.Blazor.MBProgress.ProgressLevel">
   ProgressLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -283,7 +312,7 @@ public double ProgressLevel { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBProgress_ProgressStyle" data-uid="Material.Blazor.MBProgress.ProgressStyle">
   ProgressStyle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -315,7 +344,7 @@ public MBProgressStyle ProgressStyle { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBProgress_ProgressType" data-uid="Material.Blazor.MBProgress.ProgressType">
   ProgressType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -351,7 +380,7 @@ public MBProgressType ProgressType { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBProgress_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_" data-uid="Material.Blazor.MBProgress.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)">
   BuildRenderTree(RenderTreeBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the component to the supplied <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a>.</p>
@@ -384,10 +413,10 @@ public MBProgressType ProgressType { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Progress/MBProgress.cs" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
@@ -396,7 +425,7 @@ public MBProgressType ProgressType { get; set; }</code></pre>
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

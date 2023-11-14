@@ -29,13 +29,10 @@
       <meta name="loc:themeAuto" content="Auto">
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -102,7 +99,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MBRadioButtonGroup&lt;TItem&gt; : SingleSelectComponent&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class MBRadioButtonGroup&lt;TItem&gt; : SingleSelectComponent&lt;TItem, MBSingleSelectElement&lt;TItem&gt;&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
   </div>
 
 
@@ -120,7 +117,7 @@
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html">ComponentFoundation</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.InputComponent-1.html">InputComponent</a>&lt;TItem&gt;</div>
-      <div><a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html">SingleSelectComponent</a>&lt;TItem, <a class="xref" href="Material.Blazor.MBSelectElement-1.html">MBSelectElement</a>&lt;TItem&gt;&gt;</div>
+      <div><a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html">SingleSelectComponent</a>&lt;TItem, <a class="xref" href="Material.Blazor.MBSingleSelectElement-1.html">MBSingleSelectElement</a>&lt;TItem&gt;&gt;</div>
       <div><span class="xref">MBRadioButtonGroup&lt;TItem&gt;</span></div>
     </dd>
   </dl>
@@ -140,25 +137,28 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_OnParametersSetAsync">SingleSelectComponent&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.OnParametersSetAsync()</a>
+      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_OnParametersSetAsync">SingleSelectComponent&lt;TItem, MBSingleSelectElement&lt;TItem&gt;&gt;.OnParametersSetAsync()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_ValidateItemList_System_Collections_Generic_IEnumerable_Material_Blazor_MBSelectElement__0___Material_Blazor_MBItemValidation_">SingleSelectComponent&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.ValidateItemList(IEnumerable&lt;MBSelectElement&lt;TItem&gt;&gt;, MBItemValidation)</a>
+      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_ValidateItemList_System_Collections_Generic_IEnumerable_Material_Blazor_MBSingleSelectElement__0___Material_Blazor_MBItemValidation_">SingleSelectComponent&lt;TItem, MBSingleSelectElement&lt;TItem&gt;&gt;.ValidateItemList(IEnumerable&lt;MBSingleSelectElement&lt;TItem&gt;&gt;, MBItemValidation)</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_GetKeysFunc">SingleSelectComponent&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.GetKeysFunc</a>
+      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_GetKeysFunc">SingleSelectComponent&lt;TItem, MBSingleSelectElement&lt;TItem&gt;&gt;.GetKeysFunc</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_Items">SingleSelectComponent&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.Items</a>
+      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_Items">SingleSelectComponent&lt;TItem, MBSingleSelectElement&lt;TItem&gt;&gt;.Items</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_ItemValidation">SingleSelectComponent&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.ItemValidation</a>
+      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html#Material_Blazor_Internal_SingleSelectComponent_2_ItemValidation">SingleSelectComponent&lt;TItem, MBSingleSelectElement&lt;TItem&gt;&gt;.ItemValidation</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_FormatValueToString__0_">InputComponent&lt;TItem&gt;.FormatValueToString(TItem)</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_">InputComponent&lt;TItem&gt;.SetParametersAsync(ParameterView)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ShouldRender">InputComponent&lt;TItem&gt;.ShouldRender()</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_System_String__0__System_String__">InputComponent&lt;TItem&gt;.TryParseValueFromString(string, out TItem, out string)</a>
@@ -225,9 +225,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged">ComponentBase.StateHasChanged()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender">ComponentBase.ShouldRender()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)">ComponentBase.InvokeAsync(Action)</a>
@@ -478,7 +475,7 @@ the render tree, and the incoming values have been assigned to properties.</p>
           <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/RadioButtonGroup/MBRadioButtonGroup.cs" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
@@ -487,7 +484,7 @@ the render tree, and the incoming values have been assigned to properties.</p>
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

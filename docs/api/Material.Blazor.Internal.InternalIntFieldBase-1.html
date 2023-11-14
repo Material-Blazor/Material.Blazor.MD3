@@ -29,13 +29,10 @@
       <meta name="loc:themeAuto" content="Auto">
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -146,13 +143,13 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_OnParametersSetAsync">InternalNumericFieldBase&lt;int, U&gt;.OnParametersSetAsync()</a>
-    </div>
-    <div>
       <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_">InternalNumericFieldBase&lt;int, U&gt;.BuildRenderTree(RenderTreeBuilder)</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_OnAfterRenderAsync_System_Boolean_">InternalNumericFieldBase&lt;int, U&gt;.OnAfterRenderAsync(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_OnParametersSetAsync">InternalNumericFieldBase&lt;int, U&gt;.OnParametersSetAsync()</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_SupportingText">InternalNumericFieldBase&lt;int, U&gt;.SupportingText</a>
@@ -200,7 +197,13 @@
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_OnInitializedAsync">InputComponent&lt;int&gt;.OnInitializedAsync()</a>
     </div>
     <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_OnParametersSetAsync">InputComponent&lt;int&gt;.OnParametersSetAsync()</a>
+    </div>
+    <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_">InputComponent&lt;int&gt;.SetParametersAsync(ParameterView)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ShouldRender">InputComponent&lt;int&gt;.ShouldRender()</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_System_String__0__System_String__">InputComponent&lt;int&gt;.TryParseValueFromString(string, out int, out string)</a>
@@ -242,9 +245,6 @@
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSet">ComponentFoundation.OnParametersSet()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSetAsync">ComponentFoundation.OnParametersSetAsync()</a>
-    </div>
-    <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_CascadingDefaults">ComponentFoundation.CascadingDefaults</a>
     </div>
     <div>
@@ -273,9 +273,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged">ComponentBase.StateHasChanged()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender">ComponentBase.ShouldRender()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)">ComponentBase.InvokeAsync(Action)</a>
@@ -351,7 +348,7 @@
           <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/InternalIntFieldBase.cs" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
@@ -360,7 +357,7 @@
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
