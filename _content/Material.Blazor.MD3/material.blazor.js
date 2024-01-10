@@ -39,15 +39,34 @@ var __webpack_exports__ = {};
 var MBDialog_namespaceObject = {};
 __webpack_require__.r(MBDialog_namespaceObject);
 __webpack_require__.d(MBDialog_namespaceObject, {
+  dialogClose: () => (dialogClose),
   dialogShow: () => (dialogShow)
+});
+
+// NAMESPACE OBJECT: ./Components/Grid/MBGrid.ts
+var MBGrid_namespaceObject = {};
+__webpack_require__.r(MBGrid_namespaceObject);
+__webpack_require__.d(MBGrid_namespaceObject, {
+  getScrollBarWidth: () => (getScrollBarWidth),
+  getTextWidths: () => (getTextWidths),
+  scrollToIndicatedRow: () => (scrollToIndicatedRow),
+  syncScrollByID: () => (syncScrollByID),
+  syncScrollByRef: () => (syncScrollByRef)
 });
 
 // NAMESPACE OBJECT: ./Components/Menu/MBMenu.ts
 var MBMenu_namespaceObject = {};
 __webpack_require__.r(MBMenu_namespaceObject);
 __webpack_require__.d(MBMenu_namespaceObject, {
-  setMenuCloseEvent: () => (setMenuCloseEvent),
-  toggleMenuOpen: () => (toggleMenuOpen)
+  logAfterRenderEvent: () => (logAfterRenderEvent),
+  setMenuEventListeners: () => (setMenuEventListeners)
+});
+
+// NAMESPACE OBJECT: ./Components/Tabs/MBTabs.ts
+var MBTabs_namespaceObject = {};
+__webpack_require__.r(MBTabs_namespaceObject);
+__webpack_require__.d(MBTabs_namespaceObject, {
+  setTabsChangeEvent: () => (setTabsChangeEvent)
 });
 
 // NAMESPACE OBJECT: ./Components/TextField/MBTextField.ts
@@ -68,8 +87,7 @@ __webpack_require__.d(MBCard_namespaceObject, {
 var MBDataTable_namespaceObject = {};
 __webpack_require__.r(MBDataTable_namespaceObject);
 __webpack_require__.d(MBDataTable_namespaceObject, {
-  init: () => (MBDataTable_init),
-  setProgress: () => (setProgress)
+  init: () => (MBDataTable_init)
 });
 
 // NAMESPACE OBJECT: ./Components.MD2/Drawer/MBDrawer.ts
@@ -492,7 +510,7 @@ const css_tag_t=globalThis,e=css_tag_t.ShadowRoot&&(void 0===css_tag_t.ShadyCSS|
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:reactive_element_i,defineProperty:reactive_element_e,getOwnPropertyDescriptor:reactive_element_r,getOwnPropertyNames:h,getOwnPropertySymbols:reactive_element_o,getPrototypeOf:reactive_element_n}=Object,a=globalThis,reactive_element_c=a.trustedTypes,l=reactive_element_c?reactive_element_c.emptyScript:"",p=a.reactiveElementPolyfillSupport,d=(t,s)=>t,u={toAttribute(t,s){switch(s){case Boolean:t=t?l:null;break;case Object:case Array:t=null==t?t:JSON.stringify(t)}return t},fromAttribute(t,s){let i=t;switch(s){case Boolean:i=null!==t;break;case Number:i=null===t?null:Number(t);break;case Object:case Array:try{i=JSON.parse(t)}catch(t){i=null}}return i}},f=(t,s)=>!reactive_element_i(t,s),y={attribute:!0,type:String,converter:u,reflect:!1,hasChanged:f};Symbol.metadata??=Symbol("metadata"),a.litPropertyMetadata??=new WeakMap;class b extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??=[]).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,s=y){if(s.state&&(s.attribute=!1),this._$Ei(),this.elementProperties.set(t,s),!s.noAccessor){const i=Symbol(),r=this.getPropertyDescriptor(t,i,s);void 0!==r&&reactive_element_e(this.prototype,t,r)}}static getPropertyDescriptor(t,s,i){const{get:e,set:h}=reactive_element_r(this.prototype,t)??{get(){return this[s]},set(t){this[s]=t}};return{get(){return e?.call(this)},set(s){const r=e?.call(this);h.call(this,s),this.requestUpdate(t,r,i)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??y}static _$Ei(){if(this.hasOwnProperty(d("elementProperties")))return;const t=reactive_element_n(this);t.finalize(),void 0!==t.l&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(d("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(d("properties"))){const t=this.properties,s=[...h(t),...reactive_element_o(t)];for(const i of s)this.createProperty(i,t[i])}const t=this[Symbol.metadata];if(null!==t){const s=litPropertyMetadata.get(t);if(void 0!==s)for(const[t,i]of s)this.elementProperties.set(t,i)}this._$Eh=new Map;for(const[t,s]of this.elementProperties){const i=this._$Eu(t,s);void 0!==i&&this._$Eh.set(i,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(s){const i=[];if(Array.isArray(s)){const e=new Set(s.flat(1/0).reverse());for(const s of e)i.unshift(c(s))}else void 0!==s&&i.push(c(s));return i}static _$Eu(t,s){const i=s.attribute;return!1===i?void 0:"string"==typeof i?i:"string"==typeof t?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){this._$Eg=new Promise((t=>this.enableUpdating=t)),this._$AL=new Map,this._$ES(),this.requestUpdate(),this.constructor.l?.forEach((t=>t(this)))}addController(t){(this._$E_??=new Set).add(t),void 0!==this.renderRoot&&this.isConnected&&t.hostConnected?.()}removeController(t){this._$E_?.delete(t)}_$ES(){const t=new Map,s=this.constructor.elementProperties;for(const i of s.keys())this.hasOwnProperty(i)&&(t.set(i,this[i]),delete this[i]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return S(t,this.constructor.elementStyles),t}connectedCallback(){this.renderRoot??=this.createRenderRoot(),this.enableUpdating(!0),this._$E_?.forEach((t=>t.hostConnected?.()))}enableUpdating(t){}disconnectedCallback(){this._$E_?.forEach((t=>t.hostDisconnected?.()))}attributeChangedCallback(t,s,i){this._$AK(t,i)}_$EO(t,s){const i=this.constructor.elementProperties.get(t),e=this.constructor._$Eu(t,i);if(void 0!==e&&!0===i.reflect){const r=(void 0!==i.converter?.toAttribute?i.converter:u).toAttribute(s,i.type);this._$Em=t,null==r?this.removeAttribute(e):this.setAttribute(e,r),this._$Em=null}}_$AK(t,s){const i=this.constructor,e=i._$Eh.get(t);if(void 0!==e&&this._$Em!==e){const t=i.getPropertyOptions(e),r="function"==typeof t.converter?{fromAttribute:t.converter}:void 0!==t.converter?.fromAttribute?t.converter:u;this._$Em=e,this[e]=r.fromAttribute(s,t.type),this._$Em=null}}requestUpdate(t,s,i,e=!1,r){if(void 0!==t){if(i??=this.constructor.getPropertyOptions(t),!(i.hasChanged??f)(e?r:this[t],s))return;this.C(t,s,i)}!1===this.isUpdatePending&&(this._$Eg=this._$EP())}C(t,s,i){this._$AL.has(t)||this._$AL.set(t,s),!0===i.reflect&&this._$Em!==t&&(this._$Ej??=new Set).add(t)}async _$EP(){this.isUpdatePending=!0;try{await this._$Eg}catch(t){Promise.reject(t)}const t=this.scheduleUpdate();return null!=t&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??=this.createRenderRoot(),this._$Ep){for(const[t,s]of this._$Ep)this[t]=s;this._$Ep=void 0}const t=this.constructor.elementProperties;if(t.size>0)for(const[s,i]of t)!0!==i.wrapped||this._$AL.has(s)||void 0===this[s]||this.C(s,this[s],i)}let t=!1;const s=this._$AL;try{t=this.shouldUpdate(s),t?(this.willUpdate(s),this._$E_?.forEach((t=>t.hostUpdate?.())),this.update(s)):this._$ET()}catch(s){throw t=!1,this._$ET(),s}t&&this._$AE(s)}willUpdate(t){}_$AE(t){this._$E_?.forEach((t=>t.hostUpdated?.())),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$ET(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$Eg}shouldUpdate(t){return!0}update(t){this._$Ej&&=this._$Ej.forEach((t=>this._$EO(t,this[t]))),this._$ET()}updated(t){}firstUpdated(t){}}b.elementStyles=[],b.shadowRootOptions={mode:"open"},b[d("elementProperties")]=new Map,b[d("finalized")]=new Map,p?.({ReactiveElement:b}),(a.reactiveElementVersions??=[]).push("2.0.2");
+ */const{is:reactive_element_i,defineProperty:reactive_element_e,getOwnPropertyDescriptor:reactive_element_r,getOwnPropertyNames:h,getOwnPropertySymbols:reactive_element_o,getPrototypeOf:reactive_element_n}=Object,a=globalThis,reactive_element_c=a.trustedTypes,l=reactive_element_c?reactive_element_c.emptyScript:"",p=a.reactiveElementPolyfillSupport,d=(t,s)=>t,u={toAttribute(t,s){switch(s){case Boolean:t=t?l:null;break;case Object:case Array:t=null==t?t:JSON.stringify(t)}return t},fromAttribute(t,s){let i=t;switch(s){case Boolean:i=null!==t;break;case Number:i=null===t?null:Number(t);break;case Object:case Array:try{i=JSON.parse(t)}catch(t){i=null}}return i}},f=(t,s)=>!reactive_element_i(t,s),y={attribute:!0,type:String,converter:u,reflect:!1,hasChanged:f};Symbol.metadata??=Symbol("metadata"),a.litPropertyMetadata??=new WeakMap;class b extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??=[]).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,s=y){if(s.state&&(s.attribute=!1),this._$Ei(),this.elementProperties.set(t,s),!s.noAccessor){const i=Symbol(),r=this.getPropertyDescriptor(t,i,s);void 0!==r&&reactive_element_e(this.prototype,t,r)}}static getPropertyDescriptor(t,s,i){const{get:e,set:h}=reactive_element_r(this.prototype,t)??{get(){return this[s]},set(t){this[s]=t}};return{get(){return e?.call(this)},set(s){const r=e?.call(this);h.call(this,s),this.requestUpdate(t,r,i)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??y}static _$Ei(){if(this.hasOwnProperty(d("elementProperties")))return;const t=reactive_element_n(this);t.finalize(),void 0!==t.l&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(d("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(d("properties"))){const t=this.properties,s=[...h(t),...reactive_element_o(t)];for(const i of s)this.createProperty(i,t[i])}const t=this[Symbol.metadata];if(null!==t){const s=litPropertyMetadata.get(t);if(void 0!==s)for(const[t,i]of s)this.elementProperties.set(t,i)}this._$Eh=new Map;for(const[t,s]of this.elementProperties){const i=this._$Eu(t,s);void 0!==i&&this._$Eh.set(i,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(s){const i=[];if(Array.isArray(s)){const e=new Set(s.flat(1/0).reverse());for(const s of e)i.unshift(c(s))}else void 0!==s&&i.push(c(s));return i}static _$Eu(t,s){const i=s.attribute;return!1===i?void 0:"string"==typeof i?i:"string"==typeof t?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){this._$Eg=new Promise((t=>this.enableUpdating=t)),this._$AL=new Map,this._$ES(),this.requestUpdate(),this.constructor.l?.forEach((t=>t(this)))}addController(t){(this._$E_??=new Set).add(t),void 0!==this.renderRoot&&this.isConnected&&t.hostConnected?.()}removeController(t){this._$E_?.delete(t)}_$ES(){const t=new Map,s=this.constructor.elementProperties;for(const i of s.keys())this.hasOwnProperty(i)&&(t.set(i,this[i]),delete this[i]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return S(t,this.constructor.elementStyles),t}connectedCallback(){this.renderRoot??=this.createRenderRoot(),this.enableUpdating(!0),this._$E_?.forEach((t=>t.hostConnected?.()))}enableUpdating(t){}disconnectedCallback(){this._$E_?.forEach((t=>t.hostDisconnected?.()))}attributeChangedCallback(t,s,i){this._$AK(t,i)}_$EO(t,s){const i=this.constructor.elementProperties.get(t),e=this.constructor._$Eu(t,i);if(void 0!==e&&!0===i.reflect){const r=(void 0!==i.converter?.toAttribute?i.converter:u).toAttribute(s,i.type);this._$Em=t,null==r?this.removeAttribute(e):this.setAttribute(e,r),this._$Em=null}}_$AK(t,s){const i=this.constructor,e=i._$Eh.get(t);if(void 0!==e&&this._$Em!==e){const t=i.getPropertyOptions(e),r="function"==typeof t.converter?{fromAttribute:t.converter}:void 0!==t.converter?.fromAttribute?t.converter:u;this._$Em=e,this[e]=r.fromAttribute(s,t.type),this._$Em=null}}requestUpdate(t,s,i){if(void 0!==t){if(i??=this.constructor.getPropertyOptions(t),!(i.hasChanged??f)(this[t],s))return;this.C(t,s,i)}!1===this.isUpdatePending&&(this._$Eg=this._$EP())}C(t,s,i){this._$AL.has(t)||this._$AL.set(t,s),!0===i.reflect&&this._$Em!==t&&(this._$ET??=new Set).add(t)}async _$EP(){this.isUpdatePending=!0;try{await this._$Eg}catch(t){Promise.reject(t)}const t=this.scheduleUpdate();return null!=t&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??=this.createRenderRoot(),this._$Ep){for(const[t,s]of this._$Ep)this[t]=s;this._$Ep=void 0}const t=this.constructor.elementProperties;if(t.size>0)for(const[s,i]of t)!0!==i.wrapped||this._$AL.has(s)||void 0===this[s]||this.C(s,this[s],i)}let t=!1;const s=this._$AL;try{t=this.shouldUpdate(s),t?(this.willUpdate(s),this._$E_?.forEach((t=>t.hostUpdate?.())),this.update(s)):this._$Ej()}catch(s){throw t=!1,this._$Ej(),s}t&&this._$AE(s)}willUpdate(t){}_$AE(t){this._$E_?.forEach((t=>t.hostUpdated?.())),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$Ej(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$Eg}shouldUpdate(t){return!0}update(t){this._$ET&&=this._$ET.forEach((t=>this._$EO(t,this[t]))),this._$Ej()}updated(t){}firstUpdated(t){}}b.elementStyles=[],b.shadowRootOptions={mode:"open"},b[d("elementProperties")]=new Map,b[d("finalized")]=new Map,p?.({ReactiveElement:b}),(a.reactiveElementVersions??=[]).push("2.0.3");
 //# sourceMappingURL=reactive-element.js.map
 
 ;// CONCATENATED MODULE: ./node_modules/@lit/reactive-element/decorators/property.js
@@ -579,7 +597,7 @@ function query_async_r(r){return(n,e)=>base_e(n,e,{async get(){return await this
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const lit_html_t=globalThis,lit_html_i=lit_html_t.trustedTypes,lit_html_s=lit_html_i?lit_html_i.createPolicy("lit-html",{createHTML:t=>t}):void 0,lit_html_e="$lit$",lit_html_h=`lit$${(Math.random()+"").slice(9)}$`,lit_html_o="?"+lit_html_h,lit_html_n=`<${lit_html_o}>`,lit_html_r=document,lit_html_l=()=>lit_html_r.createComment(""),lit_html_c=t=>null===t||"object"!=typeof t&&"function"!=typeof t,lit_html_a=Array.isArray,lit_html_u=t=>lit_html_a(t)||"function"==typeof t?.[Symbol.iterator],lit_html_d="[ \t\n\f\r]",lit_html_f=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,v=/-->/g,_=/>/g,m=RegExp(`>|${lit_html_d}(?:([^\\s"'>=/]+)(${lit_html_d}*=${lit_html_d}*(?:[^ \t\n\f\r"'\`<>=]|("|')|))|$)`,"g"),lit_html_p=/'/g,g=/"/g,$=/^(?:script|style|textarea|title)$/i,lit_html_y=t=>(i,...s)=>({_$litType$:t,strings:i,values:s}),x=lit_html_y(1),lit_html_b=lit_html_y(2),w=Symbol.for("lit-noChange"),T=Symbol.for("lit-nothing"),A=new WeakMap,E=lit_html_r.createTreeWalker(lit_html_r,129);function C(t,i){if(!Array.isArray(t)||!t.hasOwnProperty("raw"))throw Error("invalid template strings array");return void 0!==lit_html_s?lit_html_s.createHTML(i):i}const P=(t,i)=>{const s=t.length-1,o=[];let r,l=2===i?"<svg>":"",c=lit_html_f;for(let i=0;i<s;i++){const s=t[i];let a,u,d=-1,y=0;for(;y<s.length&&(c.lastIndex=y,u=c.exec(s),null!==u);)y=c.lastIndex,c===lit_html_f?"!--"===u[1]?c=v:void 0!==u[1]?c=_:void 0!==u[2]?($.test(u[2])&&(r=RegExp("</"+u[2],"g")),c=m):void 0!==u[3]&&(c=m):c===m?">"===u[0]?(c=r??lit_html_f,d=-1):void 0===u[1]?d=-2:(d=c.lastIndex-u[2].length,a=u[1],c=void 0===u[3]?m:'"'===u[3]?g:lit_html_p):c===g||c===lit_html_p?c=m:c===v||c===_?c=lit_html_f:(c=m,r=void 0);const x=c===m&&t[i+1].startsWith("/>")?" ":"";l+=c===lit_html_f?s+lit_html_n:d>=0?(o.push(a),s.slice(0,d)+lit_html_e+s.slice(d)+lit_html_h+x):s+lit_html_h+(-2===d?i:x)}return[C(t,l+(t[s]||"<?>")+(2===i?"</svg>":"")),o]};class V{constructor({strings:t,_$litType$:s},n){let r;this.parts=[];let c=0,a=0;const u=t.length-1,d=this.parts,[f,v]=P(t,s);if(this.el=V.createElement(f,n),E.currentNode=this.el.content,2===s){const t=this.el.content.firstChild;t.replaceWith(...t.childNodes)}for(;null!==(r=E.nextNode())&&d.length<u;){if(1===r.nodeType){if(r.hasAttributes())for(const t of r.getAttributeNames())if(t.endsWith(lit_html_e)){const i=v[a++],s=r.getAttribute(t).split(lit_html_h),e=/([.?@])?(.*)/.exec(i);d.push({type:1,index:c,name:e[2],strings:s,ctor:"."===e[1]?k:"?"===e[1]?H:"@"===e[1]?I:R}),r.removeAttribute(t)}else t.startsWith(lit_html_h)&&(d.push({type:6,index:c}),r.removeAttribute(t));if($.test(r.tagName)){const t=r.textContent.split(lit_html_h),s=t.length-1;if(s>0){r.textContent=lit_html_i?lit_html_i.emptyScript:"";for(let i=0;i<s;i++)r.append(t[i],lit_html_l()),E.nextNode(),d.push({type:2,index:++c});r.append(t[s],lit_html_l())}}}else if(8===r.nodeType)if(r.data===lit_html_o)d.push({type:2,index:c});else{let t=-1;for(;-1!==(t=r.data.indexOf(lit_html_h,t+1));)d.push({type:7,index:c}),t+=lit_html_h.length-1}c++}}static createElement(t,i){const s=lit_html_r.createElement("template");return s.innerHTML=t,s}}function N(t,i,s=t,e){if(i===w)return i;let h=void 0!==e?s._$Co?.[e]:s._$Cl;const o=lit_html_c(i)?void 0:i._$litDirective$;return h?.constructor!==o&&(h?._$AO?.(!1),void 0===o?h=void 0:(h=new o(t),h._$AT(t,s,e)),void 0!==e?(s._$Co??=[])[e]=h:s._$Cl=h),void 0!==h&&(i=N(t,h._$AS(t,i.values),h,e)),i}class lit_html_S{constructor(t,i){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=i}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){const{el:{content:i},parts:s}=this._$AD,e=(t?.creationScope??lit_html_r).importNode(i,!0);E.currentNode=e;let h=E.nextNode(),o=0,n=0,l=s[0];for(;void 0!==l;){if(o===l.index){let i;2===l.type?i=new M(h,h.nextSibling,this,t):1===l.type?i=new l.ctor(h,l.name,l.strings,this,t):6===l.type&&(i=new L(h,this,t)),this._$AV.push(i),l=s[++n]}o!==l?.index&&(h=E.nextNode(),o++)}return E.currentNode=lit_html_r,e}p(t){let i=0;for(const s of this._$AV)void 0!==s&&(void 0!==s.strings?(s._$AI(t,s,i),i+=s.strings.length-2):s._$AI(t[i])),i++}}class M{get _$AU(){return this._$AM?._$AU??this._$Cv}constructor(t,i,s,e){this.type=2,this._$AH=T,this._$AN=void 0,this._$AA=t,this._$AB=i,this._$AM=s,this.options=e,this._$Cv=e?.isConnected??!0}get parentNode(){let t=this._$AA.parentNode;const i=this._$AM;return void 0!==i&&11===t?.nodeType&&(t=i.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,i=this){t=N(this,t,i),lit_html_c(t)?t===T||null==t||""===t?(this._$AH!==T&&this._$AR(),this._$AH=T):t!==this._$AH&&t!==w&&this._(t):void 0!==t._$litType$?this.g(t):void 0!==t.nodeType?this.$(t):lit_html_u(t)?this.T(t):this._(t)}k(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}$(t){this._$AH!==t&&(this._$AR(),this._$AH=this.k(t))}_(t){this._$AH!==T&&lit_html_c(this._$AH)?this._$AA.nextSibling.data=t:this.$(lit_html_r.createTextNode(t)),this._$AH=t}g(t){const{values:i,_$litType$:s}=t,e="number"==typeof s?this._$AC(t):(void 0===s.el&&(s.el=V.createElement(C(s.h,s.h[0]),this.options)),s);if(this._$AH?._$AD===e)this._$AH.p(i);else{const t=new lit_html_S(e,this),s=t.u(this.options);t.p(i),this.$(s),this._$AH=t}}_$AC(t){let i=A.get(t.strings);return void 0===i&&A.set(t.strings,i=new V(t)),i}T(t){lit_html_a(this._$AH)||(this._$AH=[],this._$AR());const i=this._$AH;let s,e=0;for(const h of t)e===i.length?i.push(s=new M(this.k(lit_html_l()),this.k(lit_html_l()),this,this.options)):s=i[e],s._$AI(h),e++;e<i.length&&(this._$AR(s&&s._$AB.nextSibling,e),i.length=e)}_$AR(t=this._$AA.nextSibling,i){for(this._$AP?.(!1,!0,i);t&&t!==this._$AB;){const i=t.nextSibling;t.remove(),t=i}}setConnected(t){void 0===this._$AM&&(this._$Cv=t,this._$AP?.(t))}}class R{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(t,i,s,e,h){this.type=1,this._$AH=T,this._$AN=void 0,this.element=t,this.name=i,this._$AM=e,this.options=h,s.length>2||""!==s[0]||""!==s[1]?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=T}_$AI(t,i=this,s,e){const h=this.strings;let o=!1;if(void 0===h)t=N(this,t,i,0),o=!lit_html_c(t)||t!==this._$AH&&t!==w,o&&(this._$AH=t);else{const e=t;let n,r;for(t=h[0],n=0;n<h.length-1;n++)r=N(this,e[s+n],i,n),r===w&&(r=this._$AH[n]),o||=!lit_html_c(r)||r!==this._$AH[n],r===T?t=T:t!==T&&(t+=(r??"")+h[n+1]),this._$AH[n]=r}o&&!e&&this.O(t)}O(t){t===T?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,t??"")}}class k extends R{constructor(){super(...arguments),this.type=3}O(t){this.element[this.name]=t===T?void 0:t}}class H extends R{constructor(){super(...arguments),this.type=4}O(t){this.element.toggleAttribute(this.name,!!t&&t!==T)}}class I extends R{constructor(t,i,s,e,h){super(t,i,s,e,h),this.type=5}_$AI(t,i=this){if((t=N(this,t,i,0)??T)===w)return;const s=this._$AH,e=t===T&&s!==T||t.capture!==s.capture||t.once!==s.once||t.passive!==s.passive,h=t!==T&&(s===T||e);e&&this.element.removeEventListener(this.name,this,s),h&&this.element.addEventListener(this.name,this,t),this._$AH=t}handleEvent(t){"function"==typeof this._$AH?this._$AH.call(this.options?.host??this.element,t):this._$AH.handleEvent(t)}}class L{constructor(t,i,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=i,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(t){N(this,t)}}const z={j:lit_html_e,P:lit_html_h,A:lit_html_o,C:1,M:P,L:lit_html_S,R:lit_html_u,V:N,D:M,I:R,H,N:I,U:k,B:L},Z=lit_html_t.litHtmlPolyfillSupport;Z?.(V,M),(lit_html_t.litHtmlVersions??=[]).push("3.1.0");const j=(t,i,s)=>{const e=s?.renderBefore??i;let h=e._$litPart$;if(void 0===h){const t=s?.renderBefore??null;e._$litPart$=h=new M(i.insertBefore(lit_html_l(),t),t,void 0,s??{})}return h._$AI(t),h};
+const lit_html_t=globalThis,lit_html_i=lit_html_t.trustedTypes,lit_html_s=lit_html_i?lit_html_i.createPolicy("lit-html",{createHTML:t=>t}):void 0,lit_html_e="$lit$",lit_html_h=`lit$${(Math.random()+"").slice(9)}$`,lit_html_o="?"+lit_html_h,lit_html_n=`<${lit_html_o}>`,lit_html_r=document,lit_html_l=()=>lit_html_r.createComment(""),lit_html_c=t=>null===t||"object"!=typeof t&&"function"!=typeof t,lit_html_a=Array.isArray,lit_html_u=t=>lit_html_a(t)||"function"==typeof t?.[Symbol.iterator],lit_html_d="[ \t\n\f\r]",lit_html_f=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,v=/-->/g,_=/>/g,m=RegExp(`>|${lit_html_d}(?:([^\\s"'>=/]+)(${lit_html_d}*=${lit_html_d}*(?:[^ \t\n\f\r"'\`<>=]|("|')|))|$)`,"g"),lit_html_p=/'/g,g=/"/g,$=/^(?:script|style|textarea|title)$/i,lit_html_y=t=>(i,...s)=>({_$litType$:t,strings:i,values:s}),x=lit_html_y(1),lit_html_b=lit_html_y(2),w=Symbol.for("lit-noChange"),T=Symbol.for("lit-nothing"),A=new WeakMap,E=lit_html_r.createTreeWalker(lit_html_r,129);function C(t,i){if(!Array.isArray(t)||!t.hasOwnProperty("raw"))throw Error("invalid template strings array");return void 0!==lit_html_s?lit_html_s.createHTML(i):i}const P=(t,i)=>{const s=t.length-1,o=[];let r,l=2===i?"<svg>":"",c=lit_html_f;for(let i=0;i<s;i++){const s=t[i];let a,u,d=-1,y=0;for(;y<s.length&&(c.lastIndex=y,u=c.exec(s),null!==u);)y=c.lastIndex,c===lit_html_f?"!--"===u[1]?c=v:void 0!==u[1]?c=_:void 0!==u[2]?($.test(u[2])&&(r=RegExp("</"+u[2],"g")),c=m):void 0!==u[3]&&(c=m):c===m?">"===u[0]?(c=r??lit_html_f,d=-1):void 0===u[1]?d=-2:(d=c.lastIndex-u[2].length,a=u[1],c=void 0===u[3]?m:'"'===u[3]?g:lit_html_p):c===g||c===lit_html_p?c=m:c===v||c===_?c=lit_html_f:(c=m,r=void 0);const x=c===m&&t[i+1].startsWith("/>")?" ":"";l+=c===lit_html_f?s+lit_html_n:d>=0?(o.push(a),s.slice(0,d)+lit_html_e+s.slice(d)+lit_html_h+x):s+lit_html_h+(-2===d?i:x)}return[C(t,l+(t[s]||"<?>")+(2===i?"</svg>":"")),o]};class V{constructor({strings:t,_$litType$:s},n){let r;this.parts=[];let c=0,a=0;const u=t.length-1,d=this.parts,[f,v]=P(t,s);if(this.el=V.createElement(f,n),E.currentNode=this.el.content,2===s){const t=this.el.content.firstChild;t.replaceWith(...t.childNodes)}for(;null!==(r=E.nextNode())&&d.length<u;){if(1===r.nodeType){if(r.hasAttributes())for(const t of r.getAttributeNames())if(t.endsWith(lit_html_e)){const i=v[a++],s=r.getAttribute(t).split(lit_html_h),e=/([.?@])?(.*)/.exec(i);d.push({type:1,index:c,name:e[2],strings:s,ctor:"."===e[1]?k:"?"===e[1]?H:"@"===e[1]?I:R}),r.removeAttribute(t)}else t.startsWith(lit_html_h)&&(d.push({type:6,index:c}),r.removeAttribute(t));if($.test(r.tagName)){const t=r.textContent.split(lit_html_h),s=t.length-1;if(s>0){r.textContent=lit_html_i?lit_html_i.emptyScript:"";for(let i=0;i<s;i++)r.append(t[i],lit_html_l()),E.nextNode(),d.push({type:2,index:++c});r.append(t[s],lit_html_l())}}}else if(8===r.nodeType)if(r.data===lit_html_o)d.push({type:2,index:c});else{let t=-1;for(;-1!==(t=r.data.indexOf(lit_html_h,t+1));)d.push({type:7,index:c}),t+=lit_html_h.length-1}c++}}static createElement(t,i){const s=lit_html_r.createElement("template");return s.innerHTML=t,s}}function N(t,i,s=t,e){if(i===w)return i;let h=void 0!==e?s._$Co?.[e]:s._$Cl;const o=lit_html_c(i)?void 0:i._$litDirective$;return h?.constructor!==o&&(h?._$AO?.(!1),void 0===o?h=void 0:(h=new o(t),h._$AT(t,s,e)),void 0!==e?(s._$Co??=[])[e]=h:s._$Cl=h),void 0!==h&&(i=N(t,h._$AS(t,i.values),h,e)),i}class lit_html_S{constructor(t,i){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=i}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){const{el:{content:i},parts:s}=this._$AD,e=(t?.creationScope??lit_html_r).importNode(i,!0);E.currentNode=e;let h=E.nextNode(),o=0,n=0,l=s[0];for(;void 0!==l;){if(o===l.index){let i;2===l.type?i=new M(h,h.nextSibling,this,t):1===l.type?i=new l.ctor(h,l.name,l.strings,this,t):6===l.type&&(i=new L(h,this,t)),this._$AV.push(i),l=s[++n]}o!==l?.index&&(h=E.nextNode(),o++)}return E.currentNode=lit_html_r,e}p(t){let i=0;for(const s of this._$AV)void 0!==s&&(void 0!==s.strings?(s._$AI(t,s,i),i+=s.strings.length-2):s._$AI(t[i])),i++}}class M{get _$AU(){return this._$AM?._$AU??this._$Cv}constructor(t,i,s,e){this.type=2,this._$AH=T,this._$AN=void 0,this._$AA=t,this._$AB=i,this._$AM=s,this.options=e,this._$Cv=e?.isConnected??!0}get parentNode(){let t=this._$AA.parentNode;const i=this._$AM;return void 0!==i&&11===t?.nodeType&&(t=i.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,i=this){t=N(this,t,i),lit_html_c(t)?t===T||null==t||""===t?(this._$AH!==T&&this._$AR(),this._$AH=T):t!==this._$AH&&t!==w&&this._(t):void 0!==t._$litType$?this.g(t):void 0!==t.nodeType?this.$(t):lit_html_u(t)?this.T(t):this._(t)}k(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}$(t){this._$AH!==t&&(this._$AR(),this._$AH=this.k(t))}_(t){this._$AH!==T&&lit_html_c(this._$AH)?this._$AA.nextSibling.data=t:this.$(lit_html_r.createTextNode(t)),this._$AH=t}g(t){const{values:i,_$litType$:s}=t,e="number"==typeof s?this._$AC(t):(void 0===s.el&&(s.el=V.createElement(C(s.h,s.h[0]),this.options)),s);if(this._$AH?._$AD===e)this._$AH.p(i);else{const t=new lit_html_S(e,this),s=t.u(this.options);t.p(i),this.$(s),this._$AH=t}}_$AC(t){let i=A.get(t.strings);return void 0===i&&A.set(t.strings,i=new V(t)),i}T(t){lit_html_a(this._$AH)||(this._$AH=[],this._$AR());const i=this._$AH;let s,e=0;for(const h of t)e===i.length?i.push(s=new M(this.k(lit_html_l()),this.k(lit_html_l()),this,this.options)):s=i[e],s._$AI(h),e++;e<i.length&&(this._$AR(s&&s._$AB.nextSibling,e),i.length=e)}_$AR(t=this._$AA.nextSibling,i){for(this._$AP?.(!1,!0,i);t&&t!==this._$AB;){const i=t.nextSibling;t.remove(),t=i}}setConnected(t){void 0===this._$AM&&(this._$Cv=t,this._$AP?.(t))}}class R{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(t,i,s,e,h){this.type=1,this._$AH=T,this._$AN=void 0,this.element=t,this.name=i,this._$AM=e,this.options=h,s.length>2||""!==s[0]||""!==s[1]?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=T}_$AI(t,i=this,s,e){const h=this.strings;let o=!1;if(void 0===h)t=N(this,t,i,0),o=!lit_html_c(t)||t!==this._$AH&&t!==w,o&&(this._$AH=t);else{const e=t;let n,r;for(t=h[0],n=0;n<h.length-1;n++)r=N(this,e[s+n],i,n),r===w&&(r=this._$AH[n]),o||=!lit_html_c(r)||r!==this._$AH[n],r===T?t=T:t!==T&&(t+=(r??"")+h[n+1]),this._$AH[n]=r}o&&!e&&this.O(t)}O(t){t===T?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,t??"")}}class k extends R{constructor(){super(...arguments),this.type=3}O(t){this.element[this.name]=t===T?void 0:t}}class H extends R{constructor(){super(...arguments),this.type=4}O(t){this.element.toggleAttribute(this.name,!!t&&t!==T)}}class I extends R{constructor(t,i,s,e,h){super(t,i,s,e,h),this.type=5}_$AI(t,i=this){if((t=N(this,t,i,0)??T)===w)return;const s=this._$AH,e=t===T&&s!==T||t.capture!==s.capture||t.once!==s.once||t.passive!==s.passive,h=t!==T&&(s===T||e);e&&this.element.removeEventListener(this.name,this,s),h&&this.element.addEventListener(this.name,this,t),this._$AH=t}handleEvent(t){"function"==typeof this._$AH?this._$AH.call(this.options?.host??this.element,t):this._$AH.handleEvent(t)}}class L{constructor(t,i,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=i,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(t){N(this,t)}}const z={j:lit_html_e,P:lit_html_h,A:lit_html_o,C:1,M:P,L:lit_html_S,R:lit_html_u,V:N,D:M,I:R,H,N:I,U:k,B:L},Z=lit_html_t.litHtmlPolyfillSupport;Z?.(V,M),(lit_html_t.litHtmlVersions??=[]).push("3.1.1");const j=(t,i,s)=>{const e=s?.renderBefore??i;let h=e._$litPart$;if(void 0===h){const t=s?.renderBefore??null;e._$litPart$=h=new M(i.insertBefore(lit_html_l(),t),t,void 0,s??{})}return h._$AI(t),h};
 //# sourceMappingURL=lit-html.js.map
 
 ;// CONCATENATED MODULE: ./node_modules/lit-element/lit-element.js
@@ -588,7 +606,7 @@ const lit_html_t=globalThis,lit_html_i=lit_html_t.trustedTypes,lit_html_s=lit_ht
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */class lit_element_s extends b{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){const t=super.createRenderRoot();return this.renderOptions.renderBefore??=t.firstChild,t}update(t){const i=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(t),this._$Do=j(i,this.renderRoot,this.renderOptions)}connectedCallback(){super.connectedCallback(),this._$Do?.setConnected(!0)}disconnectedCallback(){super.disconnectedCallback(),this._$Do?.setConnected(!1)}render(){return w}}lit_element_s._$litElement$=!0,lit_element_s[("finalized","finalized")]=!0,globalThis.litElementHydrateSupport?.({LitElement:lit_element_s});const lit_element_r=globalThis.litElementPolyfillSupport;lit_element_r?.({LitElement:lit_element_s});const lit_element_o={_$AK:(t,e,i)=>{t._$AK(e,i)},_$AL:t=>t._$AL};(globalThis.litElementVersions??=[]).push("4.0.2");
+ */class lit_element_s extends b{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){const t=super.createRenderRoot();return this.renderOptions.renderBefore??=t.firstChild,t}update(t){const i=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(t),this._$Do=j(i,this.renderRoot,this.renderOptions)}connectedCallback(){super.connectedCallback(),this._$Do?.setConnected(!0)}disconnectedCallback(){super.disconnectedCallback(),this._$Do?.setConnected(!1)}render(){return w}}lit_element_s._$litElement$=!0,lit_element_s[("finalized","finalized")]=!0,globalThis.litElementHydrateSupport?.({LitElement:lit_element_s});const lit_element_r=globalThis.litElementPolyfillSupport;lit_element_r?.({LitElement:lit_element_s});const lit_element_o={_$AK:(t,e,i)=>{t._$AK(e,i)},_$AL:t=>t._$AL};(globalThis.litElementVersions??=[]).push("4.0.3");
 //# sourceMappingURL=lit-element.js.map
 
 ;// CONCATENATED MODULE: ./node_modules/lit-html/is-server.js
@@ -1121,6 +1139,13 @@ const ripple_EVENTS = [
  */
 const TOUCH_DELAY_MS = 150;
 /**
+ * Used to detect if HCM is active. Events do not process during HCM when the
+ * ripple is not displayed.
+ */
+const FORCED_COLORS = is_server_o
+    ? null
+    : window.matchMedia('(forced-colors: active)');
+/**
  * A ripple component.
  */
 class Ripple extends lit_element_s {
@@ -1342,6 +1367,7 @@ class Ripple extends lit_element_s {
         });
     }
     async endPressAnimation() {
+        this.rippleStartEvent = undefined;
         this.state = State.INACTIVE;
         const animation = this.growAnimation;
         let pressAnimationPlayState = Infinity;
@@ -1402,6 +1428,10 @@ class Ripple extends lit_element_s {
     }
     /** @private */
     async handleEvent(event) {
+        if (FORCED_COLORS?.matches) {
+            // Skip event logic since the ripple is `display: none`.
+            return;
+        }
         switch (event.type) {
             case 'click':
                 this.handleClick();
@@ -1625,46 +1655,129 @@ function requestUpdateOnAriaChange(ctor) {
     });
 }
 //# sourceMappingURL=delegate.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/internal/controller/events.js
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/element-internals.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/**
+ * A unique symbol used for protected access to an instance's
+ * `ElementInternals`.
+ *
+ * @example
+ * ```ts
+ * class MyElement extends mixinElementInternals(LitElement) {
+ *   constructor() {
+ *     super();
+ *     this[internals].role = 'button';
+ *   }
+ * }
+ * ```
+ */
+const internals = Symbol('internals');
+// Private symbols
+const privateInternals = Symbol('privateInternals');
+/**
+ * Mixes in an attached `ElementInternals` instance.
+ *
+ * This mixin is only needed when other shared code needs access to a
+ * component's `ElementInternals`, such as form-associated mixins.
+ *
+ * @param base The class to mix functionality into.
+ * @return The provided class with `WithElementInternals` mixed in.
+ */
+function mixinElementInternals(base) {
+    class WithElementInternalsElement extends base {
+        get [internals]() {
+            // Create internals in getter so that it can be used in methods called on
+            // construction in `ReactiveElement`, such as `requestUpdate()`.
+            if (!this[privateInternals]) {
+                // Cast needed for closure
+                this[privateInternals] = this.attachInternals();
+            }
+            return this[privateInternals];
+        }
+    }
+    return WithElementInternalsElement;
+}
+//# sourceMappingURL=element-internals.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/internal/controller/form-submitter.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+/**
+ * Sets up an element's constructor to enable form submission. The element
+ * instance should be form associated and have a `type` property.
+ *
+ * A click listener is added to each element instance. If the click is not
+ * default prevented, it will submit the element's form, if any.
+ *
+ * @example
+ * ```ts
+ * class MyElement extends mixinElementInternals(LitElement) {
+ *   static {
+ *     setupFormSubmitter(MyElement);
+ *   }
+ *
+ *   static formAssociated = true;
+ *
+ *   type: FormSubmitterType = 'submit';
+ * }
+ * ```
+ *
+ * @param ctor The form submitter element's constructor.
+ */
+function setupFormSubmitter(ctor) {
+    if (is_server_o) {
+        return;
+    }
+    ctor.addInitializer((instance) => {
+        const submitter = instance;
+        submitter.addEventListener('click', async (event) => {
+            const { type, [internals]: elementInternals } = submitter;
+            const { form } = elementInternals;
+            if (!form || type === 'button') {
+                return;
+            }
+            // Wait a full task for event bubbling to complete.
+            await new Promise((resolve) => {
+                setTimeout(resolve);
+            });
+            if (event.defaultPrevented) {
+                return;
+            }
+            if (type === 'reset') {
+                form.reset();
+                return;
+            }
+            // form.requestSubmit(submitter) does not work with form associated custom
+            // elements. This patches the dispatched submit event to add the correct
+            // `submitter`.
+            // See https://github.com/WICG/webcomponents/issues/814
+            form.addEventListener('submit', (submitEvent) => {
+                Object.defineProperty(submitEvent, 'submitter', {
+                    configurable: true,
+                    enumerable: true,
+                    get: () => submitter,
+                });
+            }, { capture: true, once: true });
+            elementInternals.setFormValue(submitter.value);
+            form.requestSubmit();
+        });
+    });
+}
+//# sourceMappingURL=form-submitter.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/internal/events/form-label-activation.js
 /**
  * @license
  * Copyright 2021 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-/**
- * Re-dispatches an event from the provided element.
- *
- * This function is useful for forwarding non-composed events, such as `change`
- * events.
- *
- * @example
- * class MyInput extends LitElement {
- *   render() {
- *     return html`<input @change=${this.redispatchEvent}>`;
- *   }
- *
- *   protected redispatchEvent(event: Event) {
- *     redispatchEvent(this, event);
- *   }
- * }
- *
- * @param element The element to dispatch the event from.
- * @param event The event to re-dispatch.
- * @return Whether or not the event was dispatched (if cancelable).
- */
-function redispatchEvent(element, event) {
-    // For bubbling events in SSR light DOM (or composed), stop their propagation
-    // and dispatch the copy.
-    if (event.bubbles && (!element.shadowRoot || event.composed)) {
-        event.stopPropagation();
-    }
-    const copy = Reflect.construct(event.constructor, [event.type, event]);
-    const dispatched = element.dispatchEvent(copy);
-    if (!dispatched) {
-        event.preventDefault();
-    }
-    return dispatched;
-}
 /**
  * Dispatches a click event to the given element that triggers a native action,
  * but is not composed and therefore is not seen outside the element.
@@ -1755,124 +1868,7 @@ async function squelchEventsForMicrotask() {
     await null;
     isSquelchingEvents = false;
 }
-//# sourceMappingURL=events.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/element-internals.js
-/**
- * @license
- * Copyright 2023 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-/**
- * A unique symbol used for protected access to an instance's
- * `ElementInternals`.
- *
- * @example
- * ```ts
- * class MyElement extends mixinElementInternals(LitElement) {
- *   constructor() {
- *     super();
- *     this[internals].role = 'button';
- *   }
- * }
- * ```
- */
-const internals = Symbol('internals');
-// Private symbols
-const privateInternals = Symbol('privateInternals');
-/**
- * Mixes in an attached `ElementInternals` instance.
- *
- * This mixin is only needed when other shared code needs access to a
- * component's `ElementInternals`, such as form-associated mixins.
- *
- * @param base The class to mix functionality into.
- * @return The provided class with `WithElementInternals` mixed in.
- */
-function mixinElementInternals(base) {
-    class WithElementInternalsElement extends base {
-        get [internals]() {
-            // Create internals in getter so that it can be used in methods called on
-            // construction in `ReactiveElement`, such as `requestUpdate()`.
-            if (!this[privateInternals]) {
-                // Cast needed for closure
-                this[privateInternals] = this.attachInternals();
-            }
-            return this[privateInternals];
-        }
-    }
-    return WithElementInternalsElement;
-}
-//# sourceMappingURL=element-internals.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/internal/controller/form-submitter.js
-/**
- * @license
- * Copyright 2023 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-/**
- * Sets up an element's constructor to enable form submission. The element
- * instance should be form associated and have a `type` property.
- *
- * A click listener is added to each element instance. If the click is not
- * default prevented, it will submit the element's form, if any.
- *
- * @example
- * ```ts
- * class MyElement extends mixinElementInternals(LitElement) {
- *   static {
- *     setupFormSubmitter(MyElement);
- *   }
- *
- *   static formAssociated = true;
- *
- *   type: FormSubmitterType = 'submit';
- * }
- * ```
- *
- * @param ctor The form submitter element's constructor.
- */
-function setupFormSubmitter(ctor) {
-    if (is_server_o) {
-        return;
-    }
-    ctor.addInitializer((instance) => {
-        const submitter = instance;
-        submitter.addEventListener('click', async (event) => {
-            const { type, [internals]: elementInternals } = submitter;
-            const { form } = elementInternals;
-            if (!form || type === 'button') {
-                return;
-            }
-            // Wait a microtask for event bubbling to complete.
-            await new Promise((resolve) => {
-                resolve();
-            });
-            if (event.defaultPrevented) {
-                return;
-            }
-            if (type === 'reset') {
-                form.reset();
-                return;
-            }
-            // form.requestSubmit(submitter) does not work with form associated custom
-            // elements. This patches the dispatched submit event to add the correct
-            // `submitter`.
-            // See https://github.com/WICG/webcomponents/issues/814
-            form.addEventListener('submit', (submitEvent) => {
-                Object.defineProperty(submitEvent, 'submitter', {
-                    configurable: true,
-                    enumerable: true,
-                    get: () => submitter,
-                });
-            }, { capture: true, once: true });
-            elementInternals.setFormValue(submitter.value);
-            form.requestSubmit();
-        });
-    });
-}
-//# sourceMappingURL=form-submitter.js.map
+//# sourceMappingURL=form-label-activation.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/button/internal/button.js
 /**
  * @license
@@ -2403,6 +2399,47 @@ MdTextButton = __decorate([
     t('md-text-button')
 ], MdTextButton);
 //# sourceMappingURL=text-button.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/internal/events/redispatch-event.js
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/**
+ * Re-dispatches an event from the provided element.
+ *
+ * This function is useful for forwarding non-composed events, such as `change`
+ * events.
+ *
+ * @example
+ * class MyInput extends LitElement {
+ *   render() {
+ *     return html`<input @change=${this.redispatchEvent}>`;
+ *   }
+ *
+ *   protected redispatchEvent(event: Event) {
+ *     redispatchEvent(this, event);
+ *   }
+ * }
+ *
+ * @param element The element to dispatch the event from.
+ * @param event The event to re-dispatch.
+ * @return Whether or not the event was dispatched (if cancelable).
+ */
+function redispatchEvent(element, event) {
+    // For bubbling events in SSR light DOM (or composed), stop their propagation
+    // and dispatch the copy.
+    if (event.bubbles && (!element.shadowRoot || event.composed)) {
+        event.stopPropagation();
+    }
+    const copy = Reflect.construct(event.constructor, [event.type, event]);
+    const dispatched = element.dispatchEvent(copy);
+    if (!dispatched) {
+        event.preventDefault();
+    }
+    return dispatched;
+}
+//# sourceMappingURL=redispatch-event.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/constraint-validation.js
 /**
  * @license
@@ -2638,26 +2675,46 @@ function mixinFormAssociated(base) {
         get labels() {
             return this[internals].labels;
         }
-        // name attribute must be set synchronously
+        // Use @property for the `name` and `disabled` properties to add them to the
+        // `observedAttributes` array and trigger `attributeChangedCallback()`.
+        //
+        // We don't use Lit's default getter/setter (`noAccessor: true`) because
+        // the attributes need to be updated synchronously to work with synchronous
+        // form APIs, and Lit updates attributes async by default.
         get name() {
             return this.getAttribute('name') ?? '';
         }
         set name(name) {
-            const prev = this.name;
-            // Setting name to null or empty string does not remove the attribute.
+            // Note: setting name to null or empty does not remove the attribute.
             this.setAttribute('name', name);
-            // Explicit requestUpdate needed for Lit 2.0
-            this.requestUpdate('name', prev);
+            // We don't need to call `requestUpdate()` since it's called synchronously
+            // in `attributeChangedCallback()`.
         }
-        // disabled attribute must be set synchronously
         get disabled() {
             return this.hasAttribute('disabled');
         }
         set disabled(disabled) {
-            const prev = this.disabled;
             this.toggleAttribute('disabled', disabled);
-            // Explicit requestUpdate needed for Lit 2.0
-            this.requestUpdate('disabled', prev);
+            // We don't need to call `requestUpdate()` since it's called synchronously
+            // in `attributeChangedCallback()`.
+        }
+        attributeChangedCallback(name, old, value) {
+            // Manually `requestUpdate()` for `name` and `disabled` when their
+            // attribute or property changes.
+            // The properties update their attributes, so this callback is invoked
+            // immediately when the properties are set. We call `requestUpdate()` here
+            // instead of letting Lit set the properties from the attribute change.
+            // That would cause the properties to re-set the attribute and invoke this
+            // callback again in a loop. This leads to stale state when Lit tries to
+            // determine if a property changed or not.
+            if (name === 'name' || name === 'disabled') {
+                // Disabled's value is only false if the attribute is missing and null.
+                const oldValue = name === 'disabled' ? old !== null : old;
+                // Trigger a lit update when the attribute changes.
+                this.requestUpdate(name, oldValue);
+                return;
+            }
+            super.attributeChangedCallback(name, old, value);
         }
         requestUpdate(name, oldValue, options) {
             super.requestUpdate(name, oldValue, options);
@@ -2683,10 +2740,10 @@ function mixinFormAssociated(base) {
     /** @nocollapse */
     FormAssociatedElement.formAssociated = true;
     __decorate([
-        property_n({ reflect: true })
+        property_n({ noAccessor: true })
     ], FormAssociatedElement.prototype, "name", null);
     __decorate([
-        property_n({ type: Boolean, reflect: true })
+        property_n({ type: Boolean, noAccessor: true })
     ], FormAssociatedElement.prototype, "disabled", null);
     return FormAssociatedElement;
 }
@@ -2816,6 +2873,7 @@ class CheckboxValidator extends Validator {
 
 
 
+
 // Separate variable needed for closure.
 const checkboxBaseClass = mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(lit_element_s)));
 /**
@@ -2912,6 +2970,7 @@ class Checkbox extends checkboxBaseClass {
           ?required=${this.required}
           .indeterminate=${this.indeterminate}
           .checked=${this.checked}
+          @input=${this.handleInput}
           @change=${this.handleChange} />
 
         <div class="outline"></div>
@@ -2925,10 +2984,14 @@ class Checkbox extends checkboxBaseClass {
       </div>
     `;
     }
-    handleChange(event) {
+    handleInput(event) {
         const target = event.target;
         this.checked = target.checked;
         this.indeterminate = target.indeterminate;
+        // <input> 'input' event bubbles and is composed, don't re-dispatch it.
+    }
+    handleChange(event) {
+        // <input> 'change' event is not composed, re-dispatch it.
         redispatchEvent(this, event);
     }
     [getFormValue]() {
@@ -3067,6 +3130,13 @@ class Chip extends lit_element_s {
          * The label of the chip.
          */
         this.label = '';
+        /**
+         * Only needed for SSR.
+         *
+         * Add this attribute when a chip has a `slot="icon"` to avoid a Flash Of
+         * Unstyled Content.
+         */
+        this.hasIcon = false;
     }
     /**
      * Whether or not the primary ripple is disabled (defaults to `disabled`).
@@ -3096,6 +3166,7 @@ class Chip extends lit_element_s {
     getContainerClasses() {
         return {
             'disabled': this.disabled,
+            'has-icon': this.hasIcon,
         };
     }
     renderContainerContent() {
@@ -3112,7 +3183,7 @@ class Chip extends lit_element_s {
         return x `<span class="outline"></span>`;
     }
     renderLeadingIcon() {
-        return x `<slot name="icon"></slot>`;
+        return x `<slot name="icon" @slotchange=${this.handleIconChange}></slot>`;
     }
     renderPrimaryContent() {
         return x `
@@ -3122,6 +3193,10 @@ class Chip extends lit_element_s {
       <span class="label">${this.label}</span>
       <span class="touch"></span>
     `;
+    }
+    handleIconChange(event) {
+        const slot = event.target;
+        this.hasIcon = slot.assignedElements({ flatten: true }).length > 0;
     }
 }
 (() => {
@@ -3141,6 +3216,9 @@ __decorate([
 __decorate([
     property_n()
 ], Chip.prototype, "label", void 0);
+__decorate([
+    property_n({ type: Boolean, reflect: true, attribute: 'has-icon' })
+], Chip.prototype, "hasIcon", void 0);
 //# sourceMappingURL=chip.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/internal/assist-chip.js
 /**
@@ -3228,7 +3306,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const assist_styles_css_styles = i `:host{--_container-height: var(--md-assist-chip-container-height, 32px);--_container-shape: var(--md-assist-chip-container-shape, 8px);--_disabled-label-text-color: var(--md-assist-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-assist-chip-disabled-label-text-opacity, 0.38);--_elevated-container-color: var(--md-assist-chip-elevated-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_elevated-container-elevation: var(--md-assist-chip-elevated-container-elevation, 1);--_elevated-container-shadow-color: var(--md-assist-chip-elevated-container-shadow-color, var(--md-sys-color-shadow, #000));--_elevated-disabled-container-color: var(--md-assist-chip-elevated-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_elevated-disabled-container-elevation: var(--md-assist-chip-elevated-disabled-container-elevation, 0);--_elevated-disabled-container-opacity: var(--md-assist-chip-elevated-disabled-container-opacity, 0.12);--_elevated-focus-container-elevation: var(--md-assist-chip-elevated-focus-container-elevation, 1);--_elevated-hover-container-elevation: var(--md-assist-chip-elevated-hover-container-elevation, 2);--_elevated-pressed-container-elevation: var(--md-assist-chip-elevated-pressed-container-elevation, 1);--_focus-label-text-color: var(--md-assist-chip-focus-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-label-text-color: var(--md-assist-chip-hover-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-color: var(--md-assist-chip-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-assist-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-assist-chip-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_label-text-font: var(--md-assist-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-assist-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-assist-chip-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-assist-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_pressed-label-text-color: var(--md-assist-chip-pressed-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-color: var(--md-assist-chip-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-opacity: var(--md-assist-chip-pressed-state-layer-opacity, 0.12);--_disabled-outline-color: var(--md-assist-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-assist-chip-disabled-outline-opacity, 0.12);--_focus-outline-color: var(--md-assist-chip-focus-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_outline-color: var(--md-assist-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-assist-chip-outline-width, 1px);--_disabled-leading-icon-color: var(--md-assist-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-assist-chip-disabled-leading-icon-opacity, 0.38);--_focus-leading-icon-color: var(--md-assist-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-assist-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-assist-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-assist-chip-icon-size, 18px);--_pressed-leading-icon-color: var(--md-assist-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_container-shape-start-start: var( --md-assist-chip-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-assist-chip-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-assist-chip-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-assist-chip-container-shape-end-start, var(--_container-shape) )}@media(forced-colors: active){.link .outline{border-color:ActiveText}}/*# sourceMappingURL=assist-styles.css.map */
+const assist_styles_css_styles = i `:host{--_container-height: var(--md-assist-chip-container-height, 32px);--_container-shape: var(--md-assist-chip-container-shape, 8px);--_disabled-label-text-color: var(--md-assist-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-assist-chip-disabled-label-text-opacity, 0.38);--_elevated-container-color: var(--md-assist-chip-elevated-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_elevated-container-elevation: var(--md-assist-chip-elevated-container-elevation, 1);--_elevated-container-shadow-color: var(--md-assist-chip-elevated-container-shadow-color, var(--md-sys-color-shadow, #000));--_elevated-disabled-container-color: var(--md-assist-chip-elevated-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_elevated-disabled-container-elevation: var(--md-assist-chip-elevated-disabled-container-elevation, 0);--_elevated-disabled-container-opacity: var(--md-assist-chip-elevated-disabled-container-opacity, 0.12);--_elevated-focus-container-elevation: var(--md-assist-chip-elevated-focus-container-elevation, 1);--_elevated-hover-container-elevation: var(--md-assist-chip-elevated-hover-container-elevation, 2);--_elevated-pressed-container-elevation: var(--md-assist-chip-elevated-pressed-container-elevation, 1);--_focus-label-text-color: var(--md-assist-chip-focus-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-label-text-color: var(--md-assist-chip-hover-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-color: var(--md-assist-chip-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-assist-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-assist-chip-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_label-text-font: var(--md-assist-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-assist-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-assist-chip-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-assist-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_pressed-label-text-color: var(--md-assist-chip-pressed-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-color: var(--md-assist-chip-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-opacity: var(--md-assist-chip-pressed-state-layer-opacity, 0.12);--_disabled-outline-color: var(--md-assist-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-assist-chip-disabled-outline-opacity, 0.12);--_focus-outline-color: var(--md-assist-chip-focus-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_outline-color: var(--md-assist-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-assist-chip-outline-width, 1px);--_disabled-leading-icon-color: var(--md-assist-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-assist-chip-disabled-leading-icon-opacity, 0.38);--_focus-leading-icon-color: var(--md-assist-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-assist-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-assist-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-assist-chip-icon-size, 18px);--_pressed-leading-icon-color: var(--md-assist-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-space: var(--md-assist-chip-leading-space, 16px);--_trailing-space: var(--md-assist-chip-trailing-space, 16px);--_icon-label-space: var(--md-assist-chip-icon-label-space, 8px);--_with-leading-icon-leading-space: var(--md-assist-chip-with-leading-icon-leading-space, 8px);--_container-shape-start-start: var( --md-assist-chip-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-assist-chip-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-assist-chip-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-assist-chip-container-shape-end-start, var(--_container-shape) )}@media(forced-colors: active){.link .outline{border-color:ActiveText}}/*# sourceMappingURL=assist-styles.css.map */
 `;
 //# sourceMappingURL=assist-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/internal/elevated-styles.css.js
@@ -3248,7 +3326,7 @@ const internal_elevated_styles_css_styles = i `.elevated{--md-elevation-level: v
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const internal_shared_styles_css_styles = i `:host{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end);display:inline-flex;height:var(--_container-height);cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}:host([disabled]){pointer-events:none}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-height))/2) 0}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}.container{border-radius:inherit;box-sizing:border-box;display:flex;height:100%;position:relative;width:100%}.container::before{border-radius:inherit;content:"";inset:0;pointer-events:none;position:absolute}.container:not(.disabled){cursor:pointer}.container.disabled{pointer-events:none}.cell{display:flex}.action{align-items:baseline;appearance:none;background:none;border:none;border-radius:inherit;display:flex;gap:8px;outline:none;padding:0;position:relative;text-decoration:none}.primary.action{padding-inline-start:8px;padding-inline-end:16px}.touch{height:48px;inset:50% 0 0;position:absolute;transform:translateY(-50%);width:100%}:host([touch-target=none]) .touch{display:none}.outline{border:var(--_outline-width) solid var(--_outline-color);border-radius:inherit;inset:0;pointer-events:none;position:absolute}:where(:focus) .outline{border-color:var(--_focus-outline-color)}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}md-ripple{border-radius:inherit}.label,.icon,.touch{z-index:1}.label{align-items:center;color:var(--_label-text-color);display:flex;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);height:100%;text-overflow:ellipsis;user-select:none;white-space:nowrap}:where(:hover) .label{color:var(--_hover-label-text-color)}:where(:focus) .label{color:var(--_focus-label-text-color)}:where(:active) .label{color:var(--_pressed-label-text-color)}:where(.disabled) .label{color:var(--_disabled-label-text-color);opacity:var(--_disabled-label-text-opacity)}.icon{align-self:center;display:flex;fill:currentColor;position:relative}.icon ::slotted(:first-child){font-size:var(--_icon-size);height:var(--_icon-size);width:var(--_icon-size)}.leading.icon{color:var(--_leading-icon-color)}:where(:hover) .leading.icon{color:var(--_hover-leading-icon-color)}:where(:focus) .leading.icon{color:var(--_focus-leading-icon-color)}:where(:active) .leading.icon{color:var(--_pressed-leading-icon-color)}:where(.disabled) .leading.icon{color:var(--_disabled-leading-icon-color);opacity:var(--_disabled-leading-icon-opacity)}@media(forced-colors: active){:where(.disabled) :is(.label,.outline,.leading.icon){color:GrayText;opacity:1}}a,button:not(:disabled){cursor:inherit}/*# sourceMappingURL=shared-styles.css.map */
+const internal_shared_styles_css_styles = i `:host{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end);display:inline-flex;height:var(--_container-height);cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}:host([disabled]){pointer-events:none}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-height))/2) 0}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}.container{border-radius:inherit;box-sizing:border-box;display:flex;height:100%;position:relative;width:100%}.container::before{border-radius:inherit;content:"";inset:0;pointer-events:none;position:absolute}.container:not(.disabled){cursor:pointer}.container.disabled{pointer-events:none}.cell{display:flex}.action{align-items:baseline;appearance:none;background:none;border:none;border-radius:inherit;display:flex;outline:none;padding:0;position:relative;text-decoration:none}.primary.action{padding-inline-start:var(--_leading-space);padding-inline-end:var(--_trailing-space)}.has-icon .primary.action{padding-inline-start:var(--_with-leading-icon-leading-space)}.touch{height:48px;inset:50% 0 0;position:absolute;transform:translateY(-50%);width:100%}:host([touch-target=none]) .touch{display:none}.outline{border:var(--_outline-width) solid var(--_outline-color);border-radius:inherit;inset:0;pointer-events:none;position:absolute}:where(:focus) .outline{border-color:var(--_focus-outline-color)}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}md-ripple{border-radius:inherit}.label,.icon,.touch{z-index:1}.label{align-items:center;color:var(--_label-text-color);display:flex;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);height:100%;text-overflow:ellipsis;user-select:none;white-space:nowrap}:where(:hover) .label{color:var(--_hover-label-text-color)}:where(:focus) .label{color:var(--_focus-label-text-color)}:where(:active) .label{color:var(--_pressed-label-text-color)}:where(.disabled) .label{color:var(--_disabled-label-text-color);opacity:var(--_disabled-label-text-opacity)}.icon{align-self:center;display:flex;fill:currentColor;position:relative}.icon ::slotted(:first-child){font-size:var(--_icon-size);height:var(--_icon-size);width:var(--_icon-size)}.leading.icon{color:var(--_leading-icon-color)}.leading.icon ::slotted(*),.leading.icon svg{margin-inline-end:var(--_icon-label-space)}:where(:hover) .leading.icon{color:var(--_hover-leading-icon-color)}:where(:focus) .leading.icon{color:var(--_focus-leading-icon-color)}:where(:active) .leading.icon{color:var(--_pressed-leading-icon-color)}:where(.disabled) .leading.icon{color:var(--_disabled-leading-icon-color);opacity:var(--_disabled-leading-icon-opacity)}@media(forced-colors: active){:where(.disabled) :is(.label,.outline,.leading.icon){color:GrayText;opacity:1}}a,button:not(:disabled){cursor:inherit}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/assist-chip.js
@@ -3554,10 +3632,14 @@ function renderRemoveButton({ ariaLabel, disabled, focusListener, tabbable = fal
       @focus=${focusListener}>
       <md-focus-ring part="trailing-focus-ring"></md-focus-ring>
       <md-ripple ?disabled=${disabled}></md-ripple>
-      <svg class="trailing icon" viewBox="0 96 960 960" aria-hidden="true">
-        <path
-          d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
-      </svg>
+      <span class="trailing icon" aria-hidden="true">
+        <slot name="remove-trailing-icon">
+          <svg viewBox="0 96 960 960">
+            <path
+              d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+          </svg>
+        </slot>
+      </span>
       <span class="touch"></span>
     </button>
   `;
@@ -3598,6 +3680,13 @@ class FilterChip extends MultiActionChip {
         this.elevated = false;
         this.removable = false;
         this.selected = false;
+        /**
+         * Only needed for SSR.
+         *
+         * Add this attribute when a filter chip has a `slot="selected-icon"` to avoid
+         * a Flash Of Unstyled Content.
+         */
+        this.hasSelectedIcon = false;
     }
     get primaryId() {
         return 'button';
@@ -3608,6 +3697,7 @@ class FilterChip extends MultiActionChip {
             elevated: this.elevated,
             selected: this.selected,
             'has-trailing': this.removable,
+            'has-icon': this.hasIcon || this.selected,
         };
     }
     renderPrimaryAction(content) {
@@ -3629,10 +3719,12 @@ class FilterChip extends MultiActionChip {
             return super.renderLeadingIcon();
         }
         return x `
-      <svg class="checkmark" viewBox="0 0 18 18" aria-hidden="true">
-        <path
-          d="M6.75012 12.1274L3.62262 8.99988L2.55762 10.0574L6.75012 14.2499L15.7501 5.24988L14.6926 4.19238L6.75012 12.1274Z" />
-      </svg>
+      <slot name="selected-icon">
+        <svg class="checkmark" viewBox="0 0 18 18" aria-hidden="true">
+          <path
+            d="M6.75012 12.1274L3.62262 8.99988L2.55762 10.0574L6.75012 14.2499L15.7501 5.24988L14.6926 4.19238L6.75012 12.1274Z" />
+        </svg>
+      </slot>
     `;
     }
     renderTrailingAction(focusListener) {
@@ -3655,10 +3747,16 @@ class FilterChip extends MultiActionChip {
         if (this.disabled) {
             return;
         }
+        // Store prevValue to revert in case `chip.selected` is changed during an
+        // event listener.
+        const prevValue = this.selected;
         this.selected = !this.selected;
         const preventDefault = !redispatchEvent(this, event);
         if (preventDefault) {
-            this.selected = !this.selected;
+            // We should not do `this.selected = !this.selected`, since a client
+            // click listener could change its value. Instead, always revert to the
+            // original value.
+            this.selected = prevValue;
             return;
         }
     }
@@ -3673,6 +3771,9 @@ __decorate([
     property_n({ type: Boolean, reflect: true })
 ], FilterChip.prototype, "selected", void 0);
 __decorate([
+    property_n({ type: Boolean, reflect: true, attribute: 'has-selected-icon' })
+], FilterChip.prototype, "hasSelectedIcon", void 0);
+__decorate([
     query_e('.primary.action')
 ], FilterChip.prototype, "primaryAction", void 0);
 __decorate([
@@ -3686,7 +3787,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const filter_styles_css_styles = i `:host{--_container-height: var(--md-filter-chip-container-height, 32px);--_container-shape: var(--md-filter-chip-container-shape, 8px);--_disabled-label-text-color: var(--md-filter-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-filter-chip-disabled-label-text-opacity, 0.38);--_elevated-container-elevation: var(--md-filter-chip-elevated-container-elevation, 1);--_elevated-container-shadow-color: var(--md-filter-chip-elevated-container-shadow-color, var(--md-sys-color-shadow, #000));--_elevated-disabled-container-color: var(--md-filter-chip-elevated-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_elevated-disabled-container-elevation: var(--md-filter-chip-elevated-disabled-container-elevation, 0);--_elevated-disabled-container-opacity: var(--md-filter-chip-elevated-disabled-container-opacity, 0.12);--_elevated-focus-container-elevation: var(--md-filter-chip-elevated-focus-container-elevation, 1);--_elevated-hover-container-elevation: var(--md-filter-chip-elevated-hover-container-elevation, 2);--_elevated-pressed-container-elevation: var(--md-filter-chip-elevated-pressed-container-elevation, 1);--_elevated-selected-container-color: var(--md-filter-chip-elevated-selected-container-color, var(--md-sys-color-secondary-container, #e8def8));--_label-text-font: var(--md-filter-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-filter-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-filter-chip-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-filter-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_selected-focus-label-text-color: var(--md-filter-chip-selected-focus-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-label-text-color: var(--md-filter-chip-selected-hover-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-state-layer-color: var(--md-filter-chip-selected-hover-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-state-layer-opacity: var(--md-filter-chip-selected-hover-state-layer-opacity, 0.08);--_selected-label-text-color: var(--md-filter-chip-selected-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-label-text-color: var(--md-filter-chip-selected-pressed-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-state-layer-color: var(--md-filter-chip-selected-pressed-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_selected-pressed-state-layer-opacity: var(--md-filter-chip-selected-pressed-state-layer-opacity, 0.12);--_elevated-container-color: var(--md-filter-chip-elevated-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_disabled-outline-color: var(--md-filter-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-filter-chip-disabled-outline-opacity, 0.12);--_disabled-selected-container-color: var(--md-filter-chip-disabled-selected-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-container-opacity: var(--md-filter-chip-disabled-selected-container-opacity, 0.12);--_focus-outline-color: var(--md-filter-chip-focus-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-filter-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-filter-chip-outline-width, 1px);--_selected-container-color: var(--md-filter-chip-selected-container-color, var(--md-sys-color-secondary-container, #e8def8));--_selected-outline-width: var(--md-filter-chip-selected-outline-width, 0px);--_focus-label-text-color: var(--md-filter-chip-focus-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-label-text-color: var(--md-filter-chip-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-filter-chip-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-opacity: var(--md-filter-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-filter-chip-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-label-text-color: var(--md-filter-chip-pressed-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-color: var(--md-filter-chip-pressed-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_pressed-state-layer-opacity: var(--md-filter-chip-pressed-state-layer-opacity, 0.12);--_icon-size: var(--md-filter-chip-icon-size, 18px);--_disabled-leading-icon-color: var(--md-filter-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-filter-chip-disabled-leading-icon-opacity, 0.38);--_selected-focus-leading-icon-color: var(--md-filter-chip-selected-focus-leading-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-leading-icon-color: var(--md-filter-chip-selected-hover-leading-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-leading-icon-color: var(--md-filter-chip-selected-leading-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-leading-icon-color: var(--md-filter-chip-selected-pressed-leading-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_focus-leading-icon-color: var(--md-filter-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-filter-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-filter-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-leading-icon-color: var(--md-filter-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_disabled-trailing-icon-color: var(--md-filter-chip-disabled-trailing-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-trailing-icon-opacity: var(--md-filter-chip-disabled-trailing-icon-opacity, 0.38);--_selected-focus-trailing-icon-color: var(--md-filter-chip-selected-focus-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-trailing-icon-color: var(--md-filter-chip-selected-hover-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-trailing-icon-color: var(--md-filter-chip-selected-pressed-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-trailing-icon-color: var(--md-filter-chip-selected-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_focus-trailing-icon-color: var(--md-filter-chip-focus-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-trailing-icon-color: var(--md-filter-chip-hover-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-trailing-icon-color: var(--md-filter-chip-pressed-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_trailing-icon-color: var(--md-filter-chip-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_container-shape-start-start: var( --md-filter-chip-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-filter-chip-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-filter-chip-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-filter-chip-container-shape-end-start, var(--_container-shape) )}.selected.elevated::before{background:var(--_elevated-selected-container-color)}.checkmark{height:var(--_icon-size);width:var(--_icon-size)}.disabled .checkmark{opacity:var(--_disabled-leading-icon-opacity)}@media(forced-colors: active){.disabled .checkmark{opacity:1}}/*# sourceMappingURL=filter-styles.css.map */
+const filter_styles_css_styles = i `:host{--_container-height: var(--md-filter-chip-container-height, 32px);--_container-shape: var(--md-filter-chip-container-shape, 8px);--_disabled-label-text-color: var(--md-filter-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-filter-chip-disabled-label-text-opacity, 0.38);--_elevated-container-elevation: var(--md-filter-chip-elevated-container-elevation, 1);--_elevated-container-shadow-color: var(--md-filter-chip-elevated-container-shadow-color, var(--md-sys-color-shadow, #000));--_elevated-disabled-container-color: var(--md-filter-chip-elevated-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_elevated-disabled-container-elevation: var(--md-filter-chip-elevated-disabled-container-elevation, 0);--_elevated-disabled-container-opacity: var(--md-filter-chip-elevated-disabled-container-opacity, 0.12);--_elevated-focus-container-elevation: var(--md-filter-chip-elevated-focus-container-elevation, 1);--_elevated-hover-container-elevation: var(--md-filter-chip-elevated-hover-container-elevation, 2);--_elevated-pressed-container-elevation: var(--md-filter-chip-elevated-pressed-container-elevation, 1);--_elevated-selected-container-color: var(--md-filter-chip-elevated-selected-container-color, var(--md-sys-color-secondary-container, #e8def8));--_label-text-font: var(--md-filter-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-filter-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-filter-chip-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-filter-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_selected-focus-label-text-color: var(--md-filter-chip-selected-focus-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-label-text-color: var(--md-filter-chip-selected-hover-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-state-layer-color: var(--md-filter-chip-selected-hover-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-state-layer-opacity: var(--md-filter-chip-selected-hover-state-layer-opacity, 0.08);--_selected-label-text-color: var(--md-filter-chip-selected-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-label-text-color: var(--md-filter-chip-selected-pressed-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-state-layer-color: var(--md-filter-chip-selected-pressed-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_selected-pressed-state-layer-opacity: var(--md-filter-chip-selected-pressed-state-layer-opacity, 0.12);--_elevated-container-color: var(--md-filter-chip-elevated-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_disabled-outline-color: var(--md-filter-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-filter-chip-disabled-outline-opacity, 0.12);--_disabled-selected-container-color: var(--md-filter-chip-disabled-selected-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-container-opacity: var(--md-filter-chip-disabled-selected-container-opacity, 0.12);--_focus-outline-color: var(--md-filter-chip-focus-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-filter-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-filter-chip-outline-width, 1px);--_selected-container-color: var(--md-filter-chip-selected-container-color, var(--md-sys-color-secondary-container, #e8def8));--_selected-outline-width: var(--md-filter-chip-selected-outline-width, 0px);--_focus-label-text-color: var(--md-filter-chip-focus-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-label-text-color: var(--md-filter-chip-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-filter-chip-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-opacity: var(--md-filter-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-filter-chip-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-label-text-color: var(--md-filter-chip-pressed-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-color: var(--md-filter-chip-pressed-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_pressed-state-layer-opacity: var(--md-filter-chip-pressed-state-layer-opacity, 0.12);--_icon-size: var(--md-filter-chip-icon-size, 18px);--_disabled-leading-icon-color: var(--md-filter-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-filter-chip-disabled-leading-icon-opacity, 0.38);--_selected-focus-leading-icon-color: var(--md-filter-chip-selected-focus-leading-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-leading-icon-color: var(--md-filter-chip-selected-hover-leading-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-leading-icon-color: var(--md-filter-chip-selected-leading-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-leading-icon-color: var(--md-filter-chip-selected-pressed-leading-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_focus-leading-icon-color: var(--md-filter-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-filter-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-filter-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-leading-icon-color: var(--md-filter-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_disabled-trailing-icon-color: var(--md-filter-chip-disabled-trailing-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-trailing-icon-opacity: var(--md-filter-chip-disabled-trailing-icon-opacity, 0.38);--_selected-focus-trailing-icon-color: var(--md-filter-chip-selected-focus-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-trailing-icon-color: var(--md-filter-chip-selected-hover-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-trailing-icon-color: var(--md-filter-chip-selected-pressed-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-trailing-icon-color: var(--md-filter-chip-selected-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_focus-trailing-icon-color: var(--md-filter-chip-focus-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-trailing-icon-color: var(--md-filter-chip-hover-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-trailing-icon-color: var(--md-filter-chip-pressed-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_trailing-icon-color: var(--md-filter-chip-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_leading-space: var(--md-filter-chip-leading-space, 16px);--_trailing-space: var(--md-filter-chip-trailing-space, 16px);--_icon-label-space: var(--md-filter-chip-icon-label-space, 8px);--_with-leading-icon-leading-space: var(--md-filter-chip-with-leading-icon-leading-space, 8px);--_with-trailing-icon-trailing-space: var(--md-filter-chip-with-trailing-icon-trailing-space, 8px);--_container-shape-start-start: var( --md-filter-chip-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-filter-chip-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-filter-chip-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-filter-chip-container-shape-end-start, var(--_container-shape) )}.selected.elevated::before{background:var(--_elevated-selected-container-color)}.checkmark{height:var(--_icon-size);width:var(--_icon-size)}.disabled .checkmark{opacity:var(--_disabled-leading-icon-opacity)}@media(forced-colors: active){.disabled .checkmark{opacity:1}}/*# sourceMappingURL=filter-styles.css.map */
 `;
 //# sourceMappingURL=filter-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/internal/selectable-styles.css.js
@@ -3706,7 +3807,7 @@ const selectable_styles_css_styles = i `.selected{--md-ripple-hover-color: var(-
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const trailing_icon_styles_css_styles = i `.trailing.action{align-items:center;justify-content:center;padding:0 8px}.trailing.action :is(md-ripple,md-focus-ring){border-radius:50%;height:calc(1.3333333333*var(--_icon-size));width:calc(1.3333333333*var(--_icon-size))}.trailing.action md-focus-ring{inset:unset}.has-trailing .primary.action{padding-inline-end:0}.trailing.icon{color:var(--_trailing-icon-color);height:var(--_icon-size);width:var(--_icon-size)}:where(:hover) .trailing.icon{color:var(--_hover-trailing-icon-color)}:where(:focus) .trailing.icon{color:var(--_focus-trailing-icon-color)}:where(:active) .trailing.icon{color:var(--_pressed-trailing-icon-color)}:where(.disabled) .trailing.icon{color:var(--_disabled-trailing-icon-color);opacity:var(--_disabled-trailing-icon-opacity)}:where(.selected) .trailing.icon{color:var(--_selected-trailing-icon-color)}:where(.selected:hover) .trailing.icon{color:var(--_selected-hover-trailing-icon-color)}:where(.selected:focus) .trailing.icon{color:var(--_selected-focus-trailing-icon-color)}:where(.selected:active) .trailing.icon{color:var(--_selected-pressed-trailing-icon-color)}@media(forced-colors: active){.trailing.icon{color:ButtonText}:where(.disabled) .trailing.icon{color:GrayText;opacity:1}}/*# sourceMappingURL=trailing-icon-styles.css.map */
+const trailing_icon_styles_css_styles = i `.trailing.action{align-items:center;justify-content:center;padding-inline-start:var(--_icon-label-space);padding-inline-end:var(--_with-trailing-icon-trailing-space)}.trailing.action :is(md-ripple,md-focus-ring){border-radius:50%;height:calc(1.3333333333*var(--_icon-size));width:calc(1.3333333333*var(--_icon-size))}.trailing.action md-focus-ring{inset:unset}.has-trailing .primary.action{padding-inline-end:0}.trailing.icon{color:var(--_trailing-icon-color);height:var(--_icon-size);width:var(--_icon-size)}:where(:hover) .trailing.icon{color:var(--_hover-trailing-icon-color)}:where(:focus) .trailing.icon{color:var(--_focus-trailing-icon-color)}:where(:active) .trailing.icon{color:var(--_pressed-trailing-icon-color)}:where(.disabled) .trailing.icon{color:var(--_disabled-trailing-icon-color);opacity:var(--_disabled-trailing-icon-opacity)}:where(.selected) .trailing.icon{color:var(--_selected-trailing-icon-color)}:where(.selected:hover) .trailing.icon{color:var(--_selected-hover-trailing-icon-color)}:where(.selected:focus) .trailing.icon{color:var(--_selected-focus-trailing-icon-color)}:where(.selected:active) .trailing.icon{color:var(--_selected-pressed-trailing-icon-color)}@media(forced-colors: active){.trailing.icon{color:ButtonText}:where(.disabled) .trailing.icon{color:GrayText;opacity:1}}/*# sourceMappingURL=trailing-icon-styles.css.map */
 `;
 //# sourceMappingURL=trailing-icon-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/filter-chip.js
@@ -3866,7 +3967,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const input_styles_css_styles = i `:host{--_container-height: var(--md-input-chip-container-height, 32px);--_container-shape: var(--md-input-chip-container-shape, 8px);--_disabled-label-text-color: var(--md-input-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-input-chip-disabled-label-text-opacity, 0.38);--_disabled-selected-container-color: var(--md-input-chip-disabled-selected-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-container-opacity: var(--md-input-chip-disabled-selected-container-opacity, 0.12);--_label-text-font: var(--md-input-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-input-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-input-chip-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-input-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_selected-container-color: var(--md-input-chip-selected-container-color, var(--md-sys-color-secondary-container, #e8def8));--_selected-focus-label-text-color: var(--md-input-chip-selected-focus-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-label-text-color: var(--md-input-chip-selected-hover-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-state-layer-color: var(--md-input-chip-selected-hover-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-state-layer-opacity: var(--md-input-chip-selected-hover-state-layer-opacity, 0.08);--_selected-label-text-color: var(--md-input-chip-selected-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-outline-width: var(--md-input-chip-selected-outline-width, 0px);--_selected-pressed-label-text-color: var(--md-input-chip-selected-pressed-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-state-layer-color: var(--md-input-chip-selected-pressed-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-state-layer-opacity: var(--md-input-chip-selected-pressed-state-layer-opacity, 0.12);--_disabled-outline-color: var(--md-input-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-input-chip-disabled-outline-opacity, 0.12);--_focus-label-text-color: var(--md-input-chip-focus-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-outline-color: var(--md-input-chip-focus-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-label-text-color: var(--md-input-chip-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-input-chip-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-opacity: var(--md-input-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-input-chip-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-input-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-input-chip-outline-width, 1px);--_pressed-label-text-color: var(--md-input-chip-pressed-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-color: var(--md-input-chip-pressed-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-opacity: var(--md-input-chip-pressed-state-layer-opacity, 0.12);--_avatar-shape: var(--md-input-chip-avatar-shape, 9999px);--_avatar-size: var(--md-input-chip-avatar-size, 24px);--_disabled-avatar-opacity: var(--md-input-chip-disabled-avatar-opacity, 0.38);--_disabled-leading-icon-color: var(--md-input-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-input-chip-disabled-leading-icon-opacity, 0.38);--_icon-size: var(--md-input-chip-icon-size, 18px);--_selected-focus-leading-icon-color: var(--md-input-chip-selected-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-leading-icon-color: var(--md-input-chip-selected-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-leading-icon-color: var(--md-input-chip-selected-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-leading-icon-color: var(--md-input-chip-selected-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_focus-leading-icon-color: var(--md-input-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-input-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-input-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-leading-icon-color: var(--md-input-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_disabled-trailing-icon-color: var(--md-input-chip-disabled-trailing-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-trailing-icon-opacity: var(--md-input-chip-disabled-trailing-icon-opacity, 0.38);--_selected-focus-trailing-icon-color: var(--md-input-chip-selected-focus-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-trailing-icon-color: var(--md-input-chip-selected-hover-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-trailing-icon-color: var(--md-input-chip-selected-pressed-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-trailing-icon-color: var(--md-input-chip-selected-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_focus-trailing-icon-color: var(--md-input-chip-focus-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-trailing-icon-color: var(--md-input-chip-hover-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-trailing-icon-color: var(--md-input-chip-pressed-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_trailing-icon-color: var(--md-input-chip-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_container-shape-start-start: var( --md-input-chip-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-input-chip-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-input-chip-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-input-chip-container-shape-end-start, var(--_container-shape) )}:host([avatar]){--_container-shape-start-start: var( --md-input-chip-container-shape-start-start, var(--md-input-chip-container-shape, calc(var(--_container-height) / 2)) );--_container-shape-start-end: var( --md-input-chip-container-shape-start-end, var(--md-input-chip-container-shape, calc(var(--_container-height) / 2)) );--_container-shape-end-end: var( --md-input-chip-container-shape-end-end, var(--md-input-chip-container-shape, calc(var(--_container-height) / 2)) );--_container-shape-end-start: var( --md-input-chip-container-shape-end-start, var(--md-input-chip-container-shape, calc(var(--_container-height) / 2)) )}.avatar .primary.action{padding-inline-start:4px}.avatar .leading.icon ::slotted(:first-child){border-radius:var(--_avatar-shape);height:var(--_avatar-size);width:var(--_avatar-size)}.disabled.avatar .leading.icon{opacity:var(--_disabled-avatar-opacity)}@media(forced-colors: active){.link .outline{border-color:ActiveText}.disabled.avatar .leading.icon{opacity:1}}/*# sourceMappingURL=input-styles.css.map */
+const input_styles_css_styles = i `:host{--_container-height: var(--md-input-chip-container-height, 32px);--_container-shape: var(--md-input-chip-container-shape, 8px);--_disabled-label-text-color: var(--md-input-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-input-chip-disabled-label-text-opacity, 0.38);--_disabled-selected-container-color: var(--md-input-chip-disabled-selected-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-container-opacity: var(--md-input-chip-disabled-selected-container-opacity, 0.12);--_label-text-font: var(--md-input-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-input-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-input-chip-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-input-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_selected-container-color: var(--md-input-chip-selected-container-color, var(--md-sys-color-secondary-container, #e8def8));--_selected-focus-label-text-color: var(--md-input-chip-selected-focus-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-label-text-color: var(--md-input-chip-selected-hover-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-state-layer-color: var(--md-input-chip-selected-hover-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-state-layer-opacity: var(--md-input-chip-selected-hover-state-layer-opacity, 0.08);--_selected-label-text-color: var(--md-input-chip-selected-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-outline-width: var(--md-input-chip-selected-outline-width, 0px);--_selected-pressed-label-text-color: var(--md-input-chip-selected-pressed-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-state-layer-color: var(--md-input-chip-selected-pressed-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-state-layer-opacity: var(--md-input-chip-selected-pressed-state-layer-opacity, 0.12);--_disabled-outline-color: var(--md-input-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-input-chip-disabled-outline-opacity, 0.12);--_focus-label-text-color: var(--md-input-chip-focus-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-outline-color: var(--md-input-chip-focus-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-label-text-color: var(--md-input-chip-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-input-chip-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-opacity: var(--md-input-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-input-chip-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-input-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-input-chip-outline-width, 1px);--_pressed-label-text-color: var(--md-input-chip-pressed-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-color: var(--md-input-chip-pressed-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-opacity: var(--md-input-chip-pressed-state-layer-opacity, 0.12);--_avatar-shape: var(--md-input-chip-avatar-shape, 9999px);--_avatar-size: var(--md-input-chip-avatar-size, 24px);--_disabled-avatar-opacity: var(--md-input-chip-disabled-avatar-opacity, 0.38);--_disabled-leading-icon-color: var(--md-input-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-input-chip-disabled-leading-icon-opacity, 0.38);--_icon-size: var(--md-input-chip-icon-size, 18px);--_selected-focus-leading-icon-color: var(--md-input-chip-selected-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-leading-icon-color: var(--md-input-chip-selected-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-leading-icon-color: var(--md-input-chip-selected-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-leading-icon-color: var(--md-input-chip-selected-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_focus-leading-icon-color: var(--md-input-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-input-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-input-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-leading-icon-color: var(--md-input-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_disabled-trailing-icon-color: var(--md-input-chip-disabled-trailing-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-trailing-icon-opacity: var(--md-input-chip-disabled-trailing-icon-opacity, 0.38);--_selected-focus-trailing-icon-color: var(--md-input-chip-selected-focus-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-hover-trailing-icon-color: var(--md-input-chip-selected-hover-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-pressed-trailing-icon-color: var(--md-input-chip-selected-pressed-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_selected-trailing-icon-color: var(--md-input-chip-selected-trailing-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_focus-trailing-icon-color: var(--md-input-chip-focus-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-trailing-icon-color: var(--md-input-chip-hover-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-trailing-icon-color: var(--md-input-chip-pressed-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_trailing-icon-color: var(--md-input-chip-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_leading-space: var(--md-input-chip-leading-space, 16px);--_trailing-space: var(--md-input-chip-trailing-space, 16px);--_icon-label-space: var(--md-input-chip-icon-label-space, 8px);--_with-leading-icon-leading-space: var(--md-input-chip-with-leading-icon-leading-space, 8px);--_with-trailing-icon-trailing-space: var(--md-input-chip-with-trailing-icon-trailing-space, 8px);--_container-shape-start-start: var( --md-input-chip-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-input-chip-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-input-chip-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-input-chip-container-shape-end-start, var(--_container-shape) )}:host([avatar]){--_container-shape-start-start: var( --md-input-chip-container-shape-start-start, var(--md-input-chip-container-shape, calc(var(--_container-height) / 2)) );--_container-shape-start-end: var( --md-input-chip-container-shape-start-end, var(--md-input-chip-container-shape, calc(var(--_container-height) / 2)) );--_container-shape-end-end: var( --md-input-chip-container-shape-end-end, var(--md-input-chip-container-shape, calc(var(--_container-height) / 2)) );--_container-shape-end-start: var( --md-input-chip-container-shape-end-start, var(--md-input-chip-container-shape, calc(var(--_container-height) / 2)) )}.avatar .primary.action{padding-inline-start:4px}.avatar .leading.icon ::slotted(:first-child){border-radius:var(--_avatar-shape);height:var(--_avatar-size);width:var(--_avatar-size)}.disabled.avatar .leading.icon{opacity:var(--_disabled-avatar-opacity)}@media(forced-colors: active){.link .outline{border-color:ActiveText}.disabled.avatar .leading.icon{opacity:1}}/*# sourceMappingURL=input-styles.css.map */
 `;
 //# sourceMappingURL=input-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/input-chip.js
@@ -3922,7 +4023,7 @@ class SuggestionChip extends AssistChip {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const suggestion_styles_css_styles = i `:host{--_container-height: var(--md-suggestion-chip-container-height, 32px);--_container-shape: var(--md-suggestion-chip-container-shape, 8px);--_disabled-label-text-color: var(--md-suggestion-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-suggestion-chip-disabled-label-text-opacity, 0.38);--_elevated-container-color: var(--md-suggestion-chip-elevated-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_elevated-container-elevation: var(--md-suggestion-chip-elevated-container-elevation, 1);--_elevated-container-shadow-color: var(--md-suggestion-chip-elevated-container-shadow-color, var(--md-sys-color-shadow, #000));--_elevated-disabled-container-color: var(--md-suggestion-chip-elevated-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_elevated-disabled-container-elevation: var(--md-suggestion-chip-elevated-disabled-container-elevation, 0);--_elevated-disabled-container-opacity: var(--md-suggestion-chip-elevated-disabled-container-opacity, 0.12);--_elevated-focus-container-elevation: var(--md-suggestion-chip-elevated-focus-container-elevation, 1);--_elevated-hover-container-elevation: var(--md-suggestion-chip-elevated-hover-container-elevation, 2);--_elevated-pressed-container-elevation: var(--md-suggestion-chip-elevated-pressed-container-elevation, 1);--_focus-label-text-color: var(--md-suggestion-chip-focus-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-label-text-color: var(--md-suggestion-chip-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-suggestion-chip-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-opacity: var(--md-suggestion-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-suggestion-chip-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-font: var(--md-suggestion-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-suggestion-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-suggestion-chip-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-suggestion-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_pressed-label-text-color: var(--md-suggestion-chip-pressed-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-color: var(--md-suggestion-chip-pressed-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-opacity: var(--md-suggestion-chip-pressed-state-layer-opacity, 0.12);--_disabled-outline-color: var(--md-suggestion-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-suggestion-chip-disabled-outline-opacity, 0.12);--_focus-outline-color: var(--md-suggestion-chip-focus-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-suggestion-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-suggestion-chip-outline-width, 1px);--_disabled-leading-icon-color: var(--md-suggestion-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-suggestion-chip-disabled-leading-icon-opacity, 0.38);--_focus-leading-icon-color: var(--md-suggestion-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-suggestion-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-suggestion-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-leading-icon-color: var(--md-suggestion-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-suggestion-chip-icon-size, 18px);--_container-shape-start-start: var( --md-suggestion-chip-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-suggestion-chip-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-suggestion-chip-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-suggestion-chip-container-shape-end-start, var(--_container-shape) )}@media(forced-colors: active){.link .outline{border-color:ActiveText}}/*# sourceMappingURL=suggestion-styles.css.map */
+const suggestion_styles_css_styles = i `:host{--_container-height: var(--md-suggestion-chip-container-height, 32px);--_container-shape: var(--md-suggestion-chip-container-shape, 8px);--_disabled-label-text-color: var(--md-suggestion-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-suggestion-chip-disabled-label-text-opacity, 0.38);--_elevated-container-color: var(--md-suggestion-chip-elevated-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_elevated-container-elevation: var(--md-suggestion-chip-elevated-container-elevation, 1);--_elevated-container-shadow-color: var(--md-suggestion-chip-elevated-container-shadow-color, var(--md-sys-color-shadow, #000));--_elevated-disabled-container-color: var(--md-suggestion-chip-elevated-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_elevated-disabled-container-elevation: var(--md-suggestion-chip-elevated-disabled-container-elevation, 0);--_elevated-disabled-container-opacity: var(--md-suggestion-chip-elevated-disabled-container-opacity, 0.12);--_elevated-focus-container-elevation: var(--md-suggestion-chip-elevated-focus-container-elevation, 1);--_elevated-hover-container-elevation: var(--md-suggestion-chip-elevated-hover-container-elevation, 2);--_elevated-pressed-container-elevation: var(--md-suggestion-chip-elevated-pressed-container-elevation, 1);--_focus-label-text-color: var(--md-suggestion-chip-focus-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-label-text-color: var(--md-suggestion-chip-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-suggestion-chip-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-opacity: var(--md-suggestion-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-suggestion-chip-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-font: var(--md-suggestion-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-suggestion-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-suggestion-chip-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-suggestion-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_pressed-label-text-color: var(--md-suggestion-chip-pressed-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-color: var(--md-suggestion-chip-pressed-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-opacity: var(--md-suggestion-chip-pressed-state-layer-opacity, 0.12);--_disabled-outline-color: var(--md-suggestion-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-suggestion-chip-disabled-outline-opacity, 0.12);--_focus-outline-color: var(--md-suggestion-chip-focus-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-suggestion-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-suggestion-chip-outline-width, 1px);--_disabled-leading-icon-color: var(--md-suggestion-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-suggestion-chip-disabled-leading-icon-opacity, 0.38);--_focus-leading-icon-color: var(--md-suggestion-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-suggestion-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-suggestion-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-leading-icon-color: var(--md-suggestion-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-suggestion-chip-icon-size, 18px);--_leading-space: var(--md-suggestion-chip-leading-space, 16px);--_trailing-space: var(--md-suggestion-chip-trailing-space, 16px);--_icon-label-space: var(--md-suggestion-chip-icon-label-space, 8px);--_with-leading-icon-leading-space: var(--md-suggestion-chip-with-leading-icon-leading-space, 8px);--_container-shape-start-start: var( --md-suggestion-chip-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-suggestion-chip-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-suggestion-chip-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-suggestion-chip-container-shape-end-start, var(--_container-shape) )}@media(forced-colors: active){.link .outline{border-color:ActiveText}}/*# sourceMappingURL=suggestion-styles.css.map */
 `;
 //# sourceMappingURL=suggestion-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/suggestion-chip.js
@@ -4220,8 +4321,41 @@ class Dialog extends lit_element_s {
         this.hasHeadline = false;
         this.hasActions = false;
         this.hasIcon = false;
+        // See https://bugs.chromium.org/p/chromium/issues/detail?id=1512224
+        // Chrome v120 has a bug where escape keys do not trigger cancels. If we get
+        // a dialog "close" event that is triggered without a "cancel" after an escape
+        // keydown, then we need to manually trigger our closing logic.
+        //
+        // This bug occurs when pressing escape to close a dialog without first
+        // interacting with the dialog's content.
+        //
+        // Cleanup tracking:
+        // https://github.com/material-components/material-web/issues/5330
+        // This can be removed when full CloseWatcher support added and the above bug
+        // in Chromium is fixed to fire 'cancel' with one escape press and close with
+        // multiple.
+        this.escapePressedWithoutCancel = false;
         if (!is_server_o) {
             this.addEventListener('submit', this.handleSubmit);
+            // We do not use `delegatesFocus: true` due to a Chromium bug with
+            // selecting text.
+            // See https://bugs.chromium.org/p/chromium/issues/detail?id=950357
+            //
+            // Material requires using focus trapping within the dialog (see
+            // b/314840853 for the bug to add it). This would normally mean we don't
+            // care about delegating focus since the `<dialog>` never receives it.
+            // However, we still need to handle situations when a user has not
+            // provided an focusable child in the content. When that happens, the
+            // `<dialog>` itself is focused.
+            //
+            // Listen to focus/blur instead of focusin/focusout since those can bubble
+            // from content.
+            this.addEventListener('focus', () => {
+                this.dialog?.focus();
+            });
+            this.addEventListener('blur', () => {
+                this.dialog?.blur();
+            });
         }
     }
     /**
@@ -4330,6 +4464,8 @@ class Dialog extends lit_element_s {
         role=${this.type === 'alert' ? 'alertdialog' : T}
         @cancel=${this.handleCancel}
         @click=${this.handleDialogClick}
+        @close=${this.handleClose}
+        @keydown=${this.handleKeydown}
         .returnValue=${this.returnValue || T}>
         <div class="container" @click=${this.handleContentClick}>
           <div class="headline">
@@ -4400,6 +4536,7 @@ class Dialog extends lit_element_s {
             // Ignore any cancel events dispatched by content.
             return;
         }
+        this.escapePressedWithoutCancel = false;
         const preventDefault = !redispatchEvent(this, event);
         // We always prevent default on the original dialog event since we'll
         // animate closing it before it actually closes.
@@ -4408,6 +4545,26 @@ class Dialog extends lit_element_s {
             return;
         }
         this.close();
+    }
+    handleClose() {
+        if (!this.escapePressedWithoutCancel) {
+            return;
+        }
+        this.escapePressedWithoutCancel = false;
+        this.dialog?.dispatchEvent(new Event('cancel', { cancelable: true }));
+    }
+    handleKeydown(event) {
+        if (event.key !== 'Escape') {
+            return;
+        }
+        // An escape key was pressed. If a "close" event fires next without a
+        // "cancel" event first, then we know we're in the Chrome v120 bug.
+        this.escapePressedWithoutCancel = true;
+        // Wait a full task for the cancel/close event listeners to fire, then
+        // reset the flag.
+        setTimeout(() => {
+            this.escapePressedWithoutCancel = false;
+        });
     }
     async animateDialog(animation) {
         const { dialog, scrim, container, headline, content, actions } = this;
@@ -4461,11 +4618,6 @@ class Dialog extends lit_element_s {
 (() => {
     requestUpdateOnAriaChange(Dialog);
 })();
-/** @nocollapse */
-Dialog.shadowRootOptions = {
-    ...lit_element_s.shadowRootOptions,
-    delegatesFocus: true,
-};
 __decorate([
     property_n({ type: Boolean })
 ], Dialog.prototype, "open", null);
@@ -4882,10 +5034,15 @@ class Field extends lit_element_s {
         this.disableTransitions = false;
     }
     get counterText() {
-        if (this.count < 0 || this.max < 0) {
+        // Count and max are typed as number, but can be set to null when Lit removes
+        // their attributes. These getters coerce back to a number for calculations.
+        const countAsNumber = this.count ?? -1;
+        const maxAsNumber = this.max ?? -1;
+        // Counter does not show if count is negative, or max is negative or 0.
+        if (countAsNumber < 0 || maxAsNumber <= 0) {
             return '';
         }
-        return `${this.count} / ${this.max}`;
+        return `${countAsNumber} / ${maxAsNumber}`;
     }
     get supportingOrErrorText() {
         return this.error && this.errorText ? this.errorText : this.supportingText;
@@ -7900,9 +8057,12 @@ class Menu extends lit_element_s {
             }
             if (event.relatedTarget) {
                 // Don't close the menu if we are switching focus between menu,
-                // md-menu-item, and md-list or if the anchor was click focused.
+                // md-menu-item, and md-list or if the anchor was click focused, but check
+                // if length of pointerPath is 0 because that means something was at least
+                // clicked (shift+tab case).
                 if (isElementInSubtree(event.relatedTarget, this) ||
-                    isElementInSubtree(event.relatedTarget, anchorEl)) {
+                    (this.pointerPath.length !== 0 &&
+                        isElementInSubtree(event.relatedTarget, anchorEl))) {
                     return;
                 }
             }
@@ -8450,7 +8610,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const menu_styles_css_styles = i `:host{--md-elevation-level: var(--md-menu-container-elevation, 2);--md-elevation-shadow-color: var(--md-menu-container-shadow-color, var(--md-sys-color-shadow, #000));min-width:112px;color:unset;display:contents}md-focus-ring{--md-focus-ring-shape: var(--md-menu-container-shape, 4px)}.menu{border-radius:var(--md-menu-container-shape, 4px);display:none;inset:auto;border:none;padding:0px;overflow:visible;background-color:rgba(0,0,0,0);opacity:0;z-index:20;position:absolute;user-select:none;max-height:inherit;height:inherit;min-width:inherit;max-width:inherit}.menu::backdrop{display:none}.fixed{position:fixed}.items{display:block;list-style-type:none;margin:0;outline:none;box-sizing:border-box;background-color:var(--md-menu-container-color, var(--md-sys-color-surface-container, #f3edf7));height:inherit;max-height:inherit;overflow:auto;min-width:inherit;max-width:inherit;border-radius:inherit}.item-padding{padding-block:8px}.has-overflow:not([popover]) .items{overflow:visible}.has-overflow.animating .items,.animating .items{overflow:hidden}.has-overflow.animating .items{pointer-events:none}.animating ::slotted(.md-menu-hidden){opacity:0}slot{display:block;height:inherit;max-height:inherit}::slotted(:is(md-divider,[role=separator])){margin:8px 0}@media(forced-colors: active){.menu{border-style:solid;border-color:CanvasText;border-width:1px}}/*# sourceMappingURL=menu-styles.css.map */
+const menu_styles_css_styles = i `:host{--md-elevation-level: var(--md-menu-container-elevation, 2);--md-elevation-shadow-color: var(--md-menu-container-shadow-color, var(--md-sys-color-shadow, #000));min-width:112px;color:unset;display:contents}md-focus-ring{--md-focus-ring-shape: var(--md-menu-container-shape, 4px)}.menu{border-radius:var(--md-menu-container-shape, 4px);display:none;inset:auto;border:none;padding:0px;overflow:visible;background-color:rgba(0,0,0,0);color:inherit;opacity:0;z-index:20;position:absolute;user-select:none;max-height:inherit;height:inherit;min-width:inherit;max-width:inherit}.menu::backdrop{display:none}.fixed{position:fixed}.items{display:block;list-style-type:none;margin:0;outline:none;box-sizing:border-box;background-color:var(--md-menu-container-color, var(--md-sys-color-surface-container, #f3edf7));height:inherit;max-height:inherit;overflow:auto;min-width:inherit;max-width:inherit;border-radius:inherit}.item-padding{padding-block:8px}.has-overflow:not([popover]) .items{overflow:visible}.has-overflow.animating .items,.animating .items{overflow:hidden}.has-overflow.animating .items{pointer-events:none}.animating ::slotted(.md-menu-hidden){opacity:0}slot{display:block;height:inherit;max-height:inherit}::slotted(:is(md-divider,[role=separator])){margin:8px 0}@media(forced-colors: active){.menu{border-style:solid;border-color:CanvasText;border-width:1px}}/*# sourceMappingURL=menu-styles.css.map */
 `;
 //# sourceMappingURL=menu-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/menu/menu.js
@@ -8563,10 +8723,15 @@ class MenuItemController {
                     interactiveElement.click();
                 }
             }
-            if (this.host.keepOpen || event.defaultPrevented)
+            if (event.defaultPrevented)
                 return;
+            // If the host has keepOpen = true we should ignore clicks & Space/Enter,
+            // however we always maintain the ability to close a menu with a explicit
+            // `escape` keypress.
             const keyCode = event.code;
-            if (!event.defaultPrevented && isClosableKey(keyCode)) {
+            if (this.host.keepOpen && keyCode !== 'Escape')
+                return;
+            if (isClosableKey(keyCode)) {
                 event.preventDefault();
                 this.host.dispatchEvent(createDefaultCloseMenuEvent(this.host, {
                     kind: CloseReason.KEYDOWN,
@@ -8574,14 +8739,17 @@ class MenuItemController {
                 }));
             }
         };
-        const { getHeadlineElements, getInteractiveElement } = config;
-        this.getHeadlineElements = getHeadlineElements;
-        this.getInteractiveElement = getInteractiveElement;
+        this.getHeadlineElements = config.getHeadlineElements;
+        this.getSupportingTextElements = config.getSupportingTextElements;
+        this.getDefaultElements = config.getDefaultElements;
+        this.getInteractiveElement = config.getInteractiveElement;
         this.host.addController(this);
     }
     /**
      * The text that is selectable via typeahead. If not set, defaults to the
-     * innerText of the item slotted into the `"headline"` slot.
+     * innerText of the item slotted into the `"headline"` slot, and if there are
+     * no slotted elements into headline, then it checks the _default_ slot, and
+     * then the `"supporting-text"` slot if nothing is in _default_.
      */
     get typeaheadText() {
         if (this.internalTypeaheadText !== null) {
@@ -8594,6 +8762,24 @@ class MenuItemController {
                 textParts.push(headlineElement.textContent.trim());
             }
         });
+        // If there are no headline elements, check the default slot's text content
+        if (textParts.length === 0) {
+            this.getDefaultElements().forEach((defaultElement) => {
+                if (defaultElement.textContent && defaultElement.textContent.trim()) {
+                    textParts.push(defaultElement.textContent.trim());
+                }
+            });
+        }
+        // If there are no headline nor default slot elements, check the
+        //supporting-text slot's text content
+        if (textParts.length === 0) {
+            this.getSupportingTextElements().forEach((supportingTextElement) => {
+                if (supportingTextElement.textContent &&
+                    supportingTextElement.textContent.trim()) {
+                    textParts.push(supportingTextElement.textContent.trim());
+                }
+            });
+        }
         return textParts.join(' ');
     }
     /**
@@ -8685,6 +8871,12 @@ class MenuItemEl extends lit_element_s {
         this.menuItemController = new MenuItemController(this, {
             getHeadlineElements: () => {
                 return this.headlineElements;
+            },
+            getSupportingTextElements: () => {
+                return this.supportingTextElements;
+            },
+            getDefaultElements: () => {
+                return this.defaultElements;
             },
             getInteractiveElement: () => this.listItemRoot,
         });
@@ -8831,6 +9023,12 @@ __decorate([
 __decorate([
     query_assigned_elements_o({ slot: 'headline' })
 ], MenuItemEl.prototype, "headlineElements", void 0);
+__decorate([
+    query_assigned_elements_o({ slot: 'supporting-text' })
+], MenuItemEl.prototype, "supportingTextElements", void 0);
+__decorate([
+    query_assigned_nodes_n({ slot: '' })
+], MenuItemEl.prototype, "defaultElements", void 0);
 __decorate([
     property_n({ attribute: 'typeahead-text' })
 ], MenuItemEl.prototype, "typeaheadText", null);
@@ -9510,8 +9708,11 @@ class LinearProgress extends Progress {
         const dotStyles = {
             transform: `scaleX(${(this.indeterminate ? 1 : this.buffer / this.max) * 100}%)`,
         };
+        // Only display dots when visible - this prevents invisible infinite
+        // animation.
+        const hideDots = this.indeterminate || this.buffer >= this.max || this.value >= this.max;
         return x `
-      <div class="dots"></div>
+      <div class="dots" ?hidden=${hideDots}></div>
       <div class="inactive-track" style=${style_map_o(dotStyles)}></div>
       <div class="bar primary-bar" style=${style_map_o(progressStyles)}>
         <div class="bar-inner"></div>
@@ -9533,7 +9734,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const linear_progress_styles_css_styles = i `:host{--_active-indicator-color: var(--md-linear-progress-active-indicator-color, var(--md-sys-color-primary, #6750a4));--_active-indicator-height: var(--md-linear-progress-active-indicator-height, 4px);--_four-color-active-indicator-four-color: var(--md-linear-progress-four-color-active-indicator-four-color, var(--md-sys-color-tertiary-container, #ffd8e4));--_four-color-active-indicator-one-color: var(--md-linear-progress-four-color-active-indicator-one-color, var(--md-sys-color-primary, #6750a4));--_four-color-active-indicator-three-color: var(--md-linear-progress-four-color-active-indicator-three-color, var(--md-sys-color-tertiary, #7d5260));--_four-color-active-indicator-two-color: var(--md-linear-progress-four-color-active-indicator-two-color, var(--md-sys-color-primary-container, #eaddff));--_track-color: var(--md-linear-progress-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_track-height: var(--md-linear-progress-track-height, 4px);--_track-shape: var(--md-linear-progress-track-shape, 0px);border-radius:var(--_track-shape);display:flex;position:relative;min-width:80px;height:var(--_track-height);content-visibility:auto;contain:strict}.progress,.dots,.inactive-track,.bar,.bar-inner{position:absolute}.progress{direction:ltr;inset:0;border-radius:inherit;overflow:hidden;display:flex;align-items:center}.bar{animation:none;width:100%;height:var(--_active-indicator-height);transform-origin:left center;transition:transform 250ms cubic-bezier(0.4, 0, 0.6, 1)}.secondary-bar{display:none}.bar-inner{inset:0;animation:none;background:var(--_active-indicator-color)}.inactive-track{background:var(--_track-color);inset:0;transition:transform 250ms cubic-bezier(0.4, 0, 0.6, 1);transform-origin:left center}.dots{inset:0;animation:linear infinite 250ms;animation-name:buffering;background-color:var(--_track-color);background-repeat:repeat-x;-webkit-mask-image:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 2' preserveAspectRatio='xMinYMin slice'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 2' preserveAspectRatio='xMinYMin slice'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");z-index:-1}.indeterminate .bar{transition:none}.indeterminate .primary-bar{inset-inline-start:-145.167%}.indeterminate .secondary-bar{inset-inline-start:-54.8889%;display:block}.indeterminate .dots{display:none}.indeterminate .primary-bar{animation:linear infinite 2s;animation-name:primary-indeterminate-translate}.indeterminate .primary-bar>.bar-inner{animation:linear infinite 2s primary-indeterminate-scale}.indeterminate.four-color .primary-bar>.bar-inner{animation-name:primary-indeterminate-scale,four-color;animation-duration:2s,4s}.indeterminate .secondary-bar{animation:linear infinite 2s;animation-name:secondary-indeterminate-translate}.indeterminate .secondary-bar>.bar-inner{animation:linear infinite 2s secondary-indeterminate-scale}.indeterminate.four-color .secondary-bar>.bar-inner{animation-name:secondary-indeterminate-scale,four-color;animation-duration:2s,4s}:host-context([dir=rtl]),:host([dir=rtl]){transform:scale(-1)}:host(:dir(rtl)){transform:scale(-1)}@keyframes primary-indeterminate-scale{0%{transform:scaleX(0.08)}36.65%{animation-timing-function:cubic-bezier(0.334731, 0.12482, 0.785844, 1);transform:scaleX(0.08)}69.15%{animation-timing-function:cubic-bezier(0.06, 0.11, 0.6, 1);transform:scaleX(0.661479)}100%{transform:scaleX(0.08)}}@keyframes secondary-indeterminate-scale{0%{animation-timing-function:cubic-bezier(0.205028, 0.057051, 0.57661, 0.453971);transform:scaleX(0.08)}19.15%{animation-timing-function:cubic-bezier(0.152313, 0.196432, 0.648374, 1.00432);transform:scaleX(0.457104)}44.15%{animation-timing-function:cubic-bezier(0.257759, -0.003163, 0.211762, 1.38179);transform:scaleX(0.72796)}100%{transform:scaleX(0.08)}}@keyframes buffering{0%{transform:translateX(calc(var(--_track-height) / 2 * 5))}}@keyframes primary-indeterminate-translate{0%{transform:translateX(0px)}20%{animation-timing-function:cubic-bezier(0.5, 0, 0.701732, 0.495819);transform:translateX(0px)}59.15%{animation-timing-function:cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);transform:translateX(83.6714%)}100%{transform:translateX(200.611%)}}@keyframes secondary-indeterminate-translate{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:translateX(0px)}25%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:translateX(37.6519%)}48.35%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:translateX(84.3862%)}100%{transform:translateX(160.278%)}}@keyframes four-color{0%{background:var(--_four-color-active-indicator-one-color)}15%{background:var(--_four-color-active-indicator-one-color)}25%{background:var(--_four-color-active-indicator-two-color)}40%{background:var(--_four-color-active-indicator-two-color)}50%{background:var(--_four-color-active-indicator-three-color)}65%{background:var(--_four-color-active-indicator-three-color)}75%{background:var(--_four-color-active-indicator-four-color)}90%{background:var(--_four-color-active-indicator-four-color)}100%{background:var(--_four-color-active-indicator-one-color)}}@media(forced-colors: active){:host{outline:1px solid CanvasText}.bar-inner,.dots{background-color:CanvasText}}/*# sourceMappingURL=linear-progress-styles.css.map */
+const linear_progress_styles_css_styles = i `:host{--_active-indicator-color: var(--md-linear-progress-active-indicator-color, var(--md-sys-color-primary, #6750a4));--_active-indicator-height: var(--md-linear-progress-active-indicator-height, 4px);--_four-color-active-indicator-four-color: var(--md-linear-progress-four-color-active-indicator-four-color, var(--md-sys-color-tertiary-container, #ffd8e4));--_four-color-active-indicator-one-color: var(--md-linear-progress-four-color-active-indicator-one-color, var(--md-sys-color-primary, #6750a4));--_four-color-active-indicator-three-color: var(--md-linear-progress-four-color-active-indicator-three-color, var(--md-sys-color-tertiary, #7d5260));--_four-color-active-indicator-two-color: var(--md-linear-progress-four-color-active-indicator-two-color, var(--md-sys-color-primary-container, #eaddff));--_track-color: var(--md-linear-progress-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_track-height: var(--md-linear-progress-track-height, 4px);--_track-shape: var(--md-linear-progress-track-shape, 0px);border-radius:var(--_track-shape);display:flex;position:relative;min-width:80px;height:var(--_track-height);content-visibility:auto;contain:strict}.progress,.dots,.inactive-track,.bar,.bar-inner{position:absolute}.progress{direction:ltr;inset:0;border-radius:inherit;overflow:hidden;display:flex;align-items:center}.bar{animation:none;width:100%;height:var(--_active-indicator-height);transform-origin:left center;transition:transform 250ms cubic-bezier(0.4, 0, 0.6, 1)}.secondary-bar{display:none}.bar-inner{inset:0;animation:none;background:var(--_active-indicator-color)}.inactive-track{background:var(--_track-color);inset:0;transition:transform 250ms cubic-bezier(0.4, 0, 0.6, 1);transform-origin:left center}.dots{inset:0;animation:linear infinite 250ms;animation-name:buffering;background-color:var(--_track-color);background-repeat:repeat-x;-webkit-mask-image:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 2' preserveAspectRatio='xMinYMin slice'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 2' preserveAspectRatio='xMinYMin slice'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");z-index:-1}.dots[hidden]{display:none}.indeterminate .bar{transition:none}.indeterminate .primary-bar{inset-inline-start:-145.167%}.indeterminate .secondary-bar{inset-inline-start:-54.8889%;display:block}.indeterminate .primary-bar{animation:linear infinite 2s;animation-name:primary-indeterminate-translate}.indeterminate .primary-bar>.bar-inner{animation:linear infinite 2s primary-indeterminate-scale}.indeterminate.four-color .primary-bar>.bar-inner{animation-name:primary-indeterminate-scale,four-color;animation-duration:2s,4s}.indeterminate .secondary-bar{animation:linear infinite 2s;animation-name:secondary-indeterminate-translate}.indeterminate .secondary-bar>.bar-inner{animation:linear infinite 2s secondary-indeterminate-scale}.indeterminate.four-color .secondary-bar>.bar-inner{animation-name:secondary-indeterminate-scale,four-color;animation-duration:2s,4s}:host-context([dir=rtl]),:host([dir=rtl]){transform:scale(-1)}:host(:dir(rtl)){transform:scale(-1)}@keyframes primary-indeterminate-scale{0%{transform:scaleX(0.08)}36.65%{animation-timing-function:cubic-bezier(0.334731, 0.12482, 0.785844, 1);transform:scaleX(0.08)}69.15%{animation-timing-function:cubic-bezier(0.06, 0.11, 0.6, 1);transform:scaleX(0.661479)}100%{transform:scaleX(0.08)}}@keyframes secondary-indeterminate-scale{0%{animation-timing-function:cubic-bezier(0.205028, 0.057051, 0.57661, 0.453971);transform:scaleX(0.08)}19.15%{animation-timing-function:cubic-bezier(0.152313, 0.196432, 0.648374, 1.00432);transform:scaleX(0.457104)}44.15%{animation-timing-function:cubic-bezier(0.257759, -0.003163, 0.211762, 1.38179);transform:scaleX(0.72796)}100%{transform:scaleX(0.08)}}@keyframes buffering{0%{transform:translateX(calc(var(--_track-height) / 2 * 5))}}@keyframes primary-indeterminate-translate{0%{transform:translateX(0px)}20%{animation-timing-function:cubic-bezier(0.5, 0, 0.701732, 0.495819);transform:translateX(0px)}59.15%{animation-timing-function:cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);transform:translateX(83.6714%)}100%{transform:translateX(200.611%)}}@keyframes secondary-indeterminate-translate{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:translateX(0px)}25%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:translateX(37.6519%)}48.35%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:translateX(84.3862%)}100%{transform:translateX(160.278%)}}@keyframes four-color{0%{background:var(--_four-color-active-indicator-one-color)}15%{background:var(--_four-color-active-indicator-one-color)}25%{background:var(--_four-color-active-indicator-two-color)}40%{background:var(--_four-color-active-indicator-two-color)}50%{background:var(--_four-color-active-indicator-three-color)}65%{background:var(--_four-color-active-indicator-three-color)}75%{background:var(--_four-color-active-indicator-four-color)}90%{background:var(--_four-color-active-indicator-four-color)}100%{background:var(--_four-color-active-indicator-one-color)}}@media(forced-colors: active){:host{outline:1px solid CanvasText}.bar-inner,.dots{background-color:CanvasText}}/*# sourceMappingURL=linear-progress-styles.css.map */
 `;
 //# sourceMappingURL=linear-progress-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/progress/linear-progress.js
@@ -10409,6 +10610,7 @@ var select_a;
 
 
 
+
 const VALUE = Symbol('value');
 // Separate variable needed for closure.
 const selectBaseClass = mixinOnReportValidity(mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(lit_element_s))));
@@ -10517,6 +10719,10 @@ class Select extends selectBaseClass {
          */
         this.menuPositioning = 'popover';
         /**
+         * Clamps the menu-width to the width of the select.
+         */
+        this.clampMenuWidth = false;
+        /**
          * The max time between the keystrokes of the typeahead select / menu behavior
          * before it clears the typeahead buffer.
          */
@@ -10529,6 +10735,11 @@ class Select extends selectBaseClass {
          * Text to display in the field. Only set for SSR.
          */
         this.displayText = '';
+        /**
+         * Whether the menu should be aligned to the start or the end of the select's
+         * textbox.
+         */
+        this.menuAlign = 'start';
         this[select_a] = '';
         /**
          * Used for initializing select when the user sets the `value` directly.
@@ -10556,6 +10767,11 @@ class Select extends selectBaseClass {
         this.nativeErrorText = '';
         this.focused = false;
         this.open = false;
+        this.defaultFocus = FocusState.NONE;
+        // Have to keep track of previous open because it's state and private and thus
+        // cannot be tracked in PropertyValues<this> map.
+        this.prevOpen = this.open;
+        this.selectWidth = 0;
         if (is_server_o) {
             return;
         }
@@ -10616,6 +10832,16 @@ class Select extends selectBaseClass {
         if (!this.hasUpdated) {
             this.initUserSelection();
         }
+        // We have just opened the menu.
+        // We are only able to check for the select's rect in `update()` instead of
+        // having to wait for `updated()` because the menu can never be open on
+        // first render since it is not settable and Lit SSR does not support click
+        // events which would open the menu.
+        if (this.prevOpen !== this.open && this.open) {
+            const selectRect = this.getBoundingClientRect();
+            this.selectWidth = selectRect.width;
+        }
+        this.prevOpen = this.open;
         super.update(changed);
     }
     render() {
@@ -10722,29 +10948,39 @@ class Select extends selectBaseClass {
     }
     renderMenu() {
         const ariaLabel = this.label || this.ariaLabel;
-        return x ` <md-menu
-      id="listbox"
-      default-focus="none"
-      role="listbox"
-      tabindex="-1"
-      aria-label=${ariaLabel || T}
-      stay-open-on-focusout
-      part="menu"
-      exportparts="focus-ring: menu-focus-ring"
-      anchor="field"
-      .open=${this.open}
-      .quick=${this.quick}
-      .positioning=${this.menuPositioning}
-      .typeaheadDelay=${this.typeaheadDelay}
-      @opening=${this.handleOpening}
-      @opened=${this.redispatchEvent}
-      @closing=${this.redispatchEvent}
-      @closed=${this.handleClosed}
-      @close-menu=${this.handleCloseMenu}
-      @request-selection=${this.handleRequestSelection}
-      @request-deselection=${this.handleRequestDeselection}>
-      ${this.renderMenuContent()}
-    </md-menu>`;
+        return x `<div class="menu-wrapper">
+      <md-menu
+        id="listbox"
+        .defaultFocus=${this.defaultFocus}
+        role="listbox"
+        tabindex="-1"
+        aria-label=${ariaLabel || T}
+        stay-open-on-focusout
+        part="menu"
+        exportparts="focus-ring: menu-focus-ring"
+        anchor="field"
+        style=${style_map_o({
+            '--__menu-min-width': `${this.selectWidth}px`,
+            '--__menu-max-width': this.clampMenuWidth
+                ? `${this.selectWidth}px`
+                : undefined,
+        })}
+        .open=${this.open}
+        .quick=${this.quick}
+        .positioning=${this.menuPositioning}
+        .typeaheadDelay=${this.typeaheadDelay}
+        .anchorCorner=${this.menuAlign === 'start' ? 'end-start' : 'end-end'}
+        .menuCorner=${this.menuAlign === 'start' ? 'start-start' : 'start-end'}
+        @opening=${this.handleOpening}
+        @opened=${this.redispatchEvent}
+        @closing=${this.redispatchEvent}
+        @closed=${this.handleClosed}
+        @close-menu=${this.handleCloseMenu}
+        @request-selection=${this.handleRequestSelection}
+        @request-deselection=${this.handleRequestDeselection}>
+        ${this.renderMenuContent()}
+      </md-menu>
+    </div>`;
     }
     renderMenuContent() {
         return x `<slot></slot>`;
@@ -10760,12 +10996,33 @@ class Select extends selectBaseClass {
         const typeaheadController = this.menu.typeaheadController;
         const isOpenKey = event.code === 'Space' ||
             event.code === 'ArrowDown' ||
+            event.code === 'ArrowUp' ||
+            event.code === 'End' ||
+            event.code === 'Home' ||
             event.code === 'Enter';
         // Do not open if currently typing ahead because the user may be typing the
         // spacebar to match a word with a space
         if (!typeaheadController.isTypingAhead && isOpenKey) {
             event.preventDefault();
             this.open = true;
+            // https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/#kbd_label
+            switch (event.code) {
+                case 'Space':
+                case 'ArrowDown':
+                case 'Enter':
+                    // We will handle focusing last selected item in this.handleOpening()
+                    this.defaultFocus = FocusState.NONE;
+                    break;
+                case 'End':
+                    this.defaultFocus = FocusState.LAST_ITEM;
+                    break;
+                case 'ArrowUp':
+                case 'Home':
+                    this.defaultFocus = FocusState.FIRST_ITEM;
+                    break;
+                default:
+                    break;
+            }
             return;
         }
         const isPrintableKey = event.key.length === 1;
@@ -10786,7 +11043,7 @@ class Select extends selectBaseClass {
         }
     }
     handleClick() {
-        this.open = true;
+        this.open = !this.open;
     }
     handleFocus() {
         this.focused = true;
@@ -10858,6 +11115,11 @@ class Select extends selectBaseClass {
     async handleOpening(e) {
         this.labelEl?.removeAttribute?.('aria-live');
         this.redispatchEvent(e);
+        // FocusState.NONE means we want to handle focus ourselves and focus the
+        // last selected item.
+        if (this.defaultFocus !== FocusState.NONE) {
+            return;
+        }
         const items = this.menu.items;
         const activeItem = getActiveItem(items)?.item;
         let [selectedItem] = this.lastSelectedOptionRecords[0] ?? [null];
@@ -10912,7 +11174,8 @@ class Select extends selectBaseClass {
      * @return Whether the last selected option has changed.
      */
     selectItem(item) {
-        this.lastSelectedOptionRecords.forEach(([option]) => {
+        const selectedOptions = this.getSelectedOptions() ?? [];
+        selectedOptions.forEach(([option]) => {
             if (item !== option) {
                 option.selected = false;
             }
@@ -11023,6 +11286,9 @@ __decorate([
     property_n({ attribute: 'menu-positioning' })
 ], Select.prototype, "menuPositioning", void 0);
 __decorate([
+    property_n({ type: Boolean, attribute: 'clamp-menu-width' })
+], Select.prototype, "clampMenuWidth", void 0);
+__decorate([
     property_n({ type: Number, attribute: 'typeahead-delay' })
 ], Select.prototype, "typeaheadDelay", void 0);
 __decorate([
@@ -11031,6 +11297,9 @@ __decorate([
 __decorate([
     property_n({ attribute: 'display-text' })
 ], Select.prototype, "displayText", void 0);
+__decorate([
+    property_n({ attribute: 'menu-align' })
+], Select.prototype, "menuAlign", void 0);
 __decorate([
     property_n()
 ], Select.prototype, "value", null);
@@ -11049,6 +11318,9 @@ __decorate([
 __decorate([
     state_r()
 ], Select.prototype, "open", void 0);
+__decorate([
+    state_r()
+], Select.prototype, "defaultFocus", void 0);
 __decorate([
     query_e('.field')
 ], Select.prototype, "field", void 0);
@@ -11096,7 +11368,7 @@ const filled_select_styles_css_styles = i `:host{--_text-field-active-indicator-
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const select_internal_shared_styles_css_styles = i `:host{color:unset;min-width:210px;display:flex}.field{cursor:default;outline:none}.select{position:relative;flex-direction:column}.icon.trailing svg,.icon ::slotted(*){fill:currentColor}.icon ::slotted(*){width:inherit;height:inherit;font-size:inherit}.icon slot{display:flex;height:100%;width:100%;align-items:center;justify-content:center}.icon.trailing :is(.up,.down){opacity:0;transition:opacity 75ms linear 75ms}.select:not(.open) .down,.select.open .up{opacity:1}.field,.select,md-menu{min-width:inherit;width:inherit;max-width:inherit;display:flex}md-menu ::slotted(:not[disabled]){cursor:pointer}.field,.select{width:100%}:host{display:inline-flex}:host([disabled]){pointer-events:none}/*# sourceMappingURL=shared-styles.css.map */
+const select_internal_shared_styles_css_styles = i `:host{color:unset;min-width:210px;display:flex}.field{cursor:default;outline:none}.select{position:relative;flex-direction:column}.icon.trailing svg,.icon ::slotted(*){fill:currentColor}.icon ::slotted(*){width:inherit;height:inherit;font-size:inherit}.icon slot{display:flex;height:100%;width:100%;align-items:center;justify-content:center}.icon.trailing :is(.up,.down){opacity:0;transition:opacity 75ms linear 75ms}.select:not(.open) .down,.select.open .up{opacity:1}.field,.select,md-menu{min-width:inherit;width:inherit;max-width:inherit;display:flex}md-menu{min-width:var(--__menu-min-width);max-width:var(--__menu-max-width, inherit)}.menu-wrapper{width:0px;height:0px;max-width:inherit}md-menu ::slotted(:not[disabled]){cursor:pointer}.field,.select{width:100%}:host{display:inline-flex}:host([disabled]){pointer-events:none}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/select/filled-select.js
@@ -11256,7 +11528,9 @@ class SelectOptionController {
     }
     /**
      * The text that is selectable via typeahead. If not set, defaults to the
-     * innerText of the item slotted into the `"headline"` slot.
+     * innerText of the item slotted into the `"headline"` slot, and if there are
+     * no slotted elements into headline, then it checks the _default_ slot, and
+     * then the `"supporting-text"` slot if nothing is in _default_.
      */
     get typeaheadText() {
         return this.menuItemController.typeaheadText;
@@ -11266,20 +11540,16 @@ class SelectOptionController {
     }
     /**
      * The text that is displayed in the select field when selected. If not set,
-     * defaults to the textContent of the item slotted into the `"headline"` slot.
+     * defaults to the textContent of the item slotted into the `"headline"` slot,
+     * and if there are no slotted elements into headline, then it checks the
+     * _default_ slot, and then the `"supporting-text"` slot if nothing is in
+     * _default_.
      */
     get displayText() {
         if (this.internalDisplayText !== null) {
             return this.internalDisplayText;
         }
-        const headlineElements = this.getHeadlineElements();
-        const textParts = [];
-        headlineElements.forEach((headlineElement) => {
-            if (headlineElement.textContent && headlineElement.textContent.trim()) {
-                textParts.push(headlineElement.textContent.trim());
-            }
-        });
-        return textParts.join(' ');
+        return this.menuItemController.typeaheadText;
     }
     setDisplayText(text) {
         this.internalDisplayText = text;
@@ -11308,7 +11578,6 @@ class SelectOptionController {
             this.menuItemController.onKeydown(e);
         };
         this.menuItemController = new MenuItemController(host, config);
-        this.getHeadlineElements = config.getHeadlineElements;
         host.addController(this);
     }
     hostUpdate() {
@@ -11382,6 +11651,12 @@ class SelectOptionEl extends lit_element_s {
         this.selectOptionController = new SelectOptionController(this, {
             getHeadlineElements: () => {
                 return this.headlineElements;
+            },
+            getSupportingTextElements: () => {
+                return this.supportingTextElements;
+            },
+            getDefaultElements: () => {
+                return this.defaultElements;
             },
             getInteractiveElement: () => this.listItemRoot,
         });
@@ -11515,6 +11790,12 @@ __decorate([
     query_assigned_elements_o({ slot: 'headline' })
 ], SelectOptionEl.prototype, "headlineElements", void 0);
 __decorate([
+    query_assigned_elements_o({ slot: 'supporting-text' })
+], SelectOptionEl.prototype, "supportingTextElements", void 0);
+__decorate([
+    query_assigned_nodes_n({ slot: '' })
+], SelectOptionEl.prototype, "defaultElements", void 0);
+__decorate([
     property_n({ attribute: 'typeahead-text' })
 ], SelectOptionEl.prototype, "typeaheadText", null);
 __decorate([
@@ -11594,6 +11875,7 @@ function when_n(n,r,t){return n?r(n):t?.(n)}
  * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
+
 
 
 
@@ -11915,13 +12197,13 @@ class Slider extends sliderBaseClass {
             onTop,
             isOverlapping,
         })}">
-      <div class="handleNub"><md-elevation></md-elevation></div>
-      ${when_n(this.labeled, () => this.renderLabel(label))}
       <md-focus-ring part="focus-ring" for=${name}></md-focus-ring>
       <md-ripple
         for=${name}
         class=${name}
         ?disabled=${this.disabled}></md-ripple>
+      <div class="handleNub"><md-elevation></md-elevation></div>
+      ${when_n(this.labeled, () => this.renderLabel(label))}
     </div>`;
     }
     renderInput({ start, value, ariaLabel, ariaValueText, ariaMin, ariaMax, }) {
@@ -12310,7 +12592,7 @@ function isOverlapping(elA, elB) {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const slider_styles_css_styles = i `:host{--_active-track-color: var(--md-slider-active-track-color, var(--md-sys-color-primary, #6750a4));--_active-track-height: var(--md-slider-active-track-height, 4px);--_active-track-shape: var(--md-slider-active-track-shape, 9999px);--_disabled-active-track-color: var(--md-slider-disabled-active-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-active-track-opacity: var(--md-slider-disabled-active-track-opacity, 0.38);--_disabled-handle-color: var(--md-slider-disabled-handle-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-handle-elevation: var(--md-slider-disabled-handle-elevation, 0);--_disabled-inactive-track-color: var(--md-slider-disabled-inactive-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-inactive-track-opacity: var(--md-slider-disabled-inactive-track-opacity, 0.12);--_focus-handle-color: var(--md-slider-focus-handle-color, var(--md-sys-color-primary, #6750a4));--_handle-color: var(--md-slider-handle-color, var(--md-sys-color-primary, #6750a4));--_handle-elevation: var(--md-slider-handle-elevation, 1);--_handle-height: var(--md-slider-handle-height, 20px);--_handle-shadow-color: var(--md-slider-handle-shadow-color, var(--md-sys-color-shadow, #000));--_handle-shape: var(--md-slider-handle-shape, 9999px);--_handle-width: var(--md-slider-handle-width, 20px);--_hover-handle-color: var(--md-slider-hover-handle-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-color: var(--md-slider-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-opacity: var(--md-slider-hover-state-layer-opacity, 0.08);--_inactive-track-color: var(--md-slider-inactive-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_inactive-track-height: var(--md-slider-inactive-track-height, 4px);--_inactive-track-shape: var(--md-slider-inactive-track-shape, 9999px);--_label-container-color: var(--md-slider-label-container-color, var(--md-sys-color-primary, #6750a4));--_label-container-height: var(--md-slider-label-container-height, 28px);--_pressed-handle-color: var(--md-slider-pressed-handle-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-color: var(--md-slider-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-slider-pressed-state-layer-opacity, 0.12);--_state-layer-size: var(--md-slider-state-layer-size, 40px);--_with-overlap-handle-outline-color: var(--md-slider-with-overlap-handle-outline-color, var(--md-sys-color-on-primary, #fff));--_with-overlap-handle-outline-width: var(--md-slider-with-overlap-handle-outline-width, 1px);--_with-tick-marks-active-container-color: var(--md-slider-with-tick-marks-active-container-color, var(--md-sys-color-on-primary, #fff));--_with-tick-marks-container-size: var(--md-slider-with-tick-marks-container-size, 2px);--_with-tick-marks-disabled-container-color: var(--md-slider-with-tick-marks-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_with-tick-marks-inactive-container-color: var(--md-slider-with-tick-marks-inactive-container-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-color: var(--md-slider-label-text-color, var(--md-sys-color-on-primary, #fff));--_label-text-font: var(--md-slider-label-text-font, var(--md-sys-typescale-label-medium-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-slider-label-text-line-height, var(--md-sys-typescale-label-medium-line-height, 1rem));--_label-text-size: var(--md-slider-label-text-size, var(--md-sys-typescale-label-medium-size, 0.75rem));--_label-text-weight: var(--md-slider-label-text-weight, var(--md-sys-typescale-label-medium-weight, var(--md-ref-typeface-weight-medium, 500)));--_start-fraction: 0;--_end-fraction: 0;--_tick-count: 0;display:inline-flex;vertical-align:middle;min-inline-size:200px;--md-elevation-level: var(--_handle-elevation);--md-elevation-shadow-color: var(--_handle-shadow-color)}md-focus-ring{height:48px;inset:unset;width:48px}md-elevation{transition-duration:250ms}@media(prefers-reduced-motion){.label{transition-duration:0}}:host([disabled]){opacity:var(--_disabled-active-track-opacity);--md-elevation-level: var(--_disabled-handle-elevation)}.container{flex:1;display:flex;align-items:center;position:relative;block-size:var(--_state-layer-size);pointer-events:none;touch-action:none}.track,.tickmarks{position:absolute;inset:0;display:flex;align-items:center}.track::before,.tickmarks::before,.track::after,.tickmarks::after{position:absolute;content:"";inset-inline-start:calc(var(--_state-layer-size)/2 - var(--_with-tick-marks-container-size));inset-inline-end:calc(var(--_state-layer-size)/2 - var(--_with-tick-marks-container-size));background-size:calc((100% - var(--_with-tick-marks-container-size)*2)/var(--_tick-count)) 100%}.track::before,.tickmarks::before{block-size:var(--_inactive-track-height);border-radius:var(--_inactive-track-shape)}.track::before{background-color:var(--_inactive-track-color)}.tickmarks::before{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-inactive-container-color) 0, var(--_with-tick-marks-inactive-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}:host([disabled]) .track::before{opacity:calc(1/var(--_disabled-active-track-opacity)*var(--_disabled-inactive-track-opacity));background-color:var(--_disabled-inactive-track-color)}.track::after,.tickmarks::after{block-size:var(--_active-track-height);border-radius:var(--_active-track-shape);clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))) 0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)))}.track::after{background-color:var(--_active-track-color)}.tickmarks::after{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-active-container-color) 0, var(--_with-tick-marks-active-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}:host-context([dir=rtl]) .track::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([dir=rtl]) .track::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}.track:dir(rtl)::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host-context([dir=rtl]) .tickmarks::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([dir=rtl]) .tickmarks::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}.tickmarks:dir(rtl)::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([disabled]) .track::after{background-color:var(--_disabled-active-track-color)}:host([disabled]) .tickmarks::before{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-disabled-container-color) 0, var(--_with-tick-marks-disabled-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}.handleContainerPadded{position:relative;block-size:100%;inline-size:100%;padding-inline:calc(var(--_state-layer-size)/2)}.handleContainerBlock{position:relative;block-size:100%;inline-size:100%}.handleContainer{position:absolute;inset-block-start:0;inset-block-end:0;inset-inline-start:calc(100%*var(--_start-fraction));inline-size:calc(100%*(var(--_end-fraction) - var(--_start-fraction)))}.handle{position:absolute;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);border-radius:var(--_handle-shape);display:flex;place-content:center;place-items:center}.handleNub{position:absolute;height:var(--_handle-height);width:var(--_handle-width);border-radius:var(--_handle-shape);background:var(--_handle-color)}:host([disabled]) .handleNub{background:var(--_disabled-handle-color)}input.end:focus~.handleContainerPadded .handle.end>.handleNub,input.start:focus~.handleContainerPadded .handle.start>.handleNub{background:var(--_focus-handle-color)}.container>.handleContainerPadded .handle.hover>.handleNub{background:var(--_hover-handle-color)}:host(:not([disabled])) input.end:active~.handleContainerPadded .handle.end>.handleNub,:host(:not([disabled])) input.start:active~.handleContainerPadded .handle.start>.handleNub{background:var(--_pressed-handle-color)}.onTop.isOverlapping .label,.onTop.isOverlapping .label::before{outline:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}.onTop.isOverlapping .handleNub{border:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}.handle.start{inset-inline-start:calc(0px - var(--_state-layer-size)/2)}.handle.end{inset-inline-end:calc(0px - var(--_state-layer-size)/2)}.label{position:absolute;box-sizing:border-box;display:flex;padding:4px;place-content:center;place-items:center;border-radius:9999px;color:var(--_label-text-color);font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);inset-block-end:100%;min-inline-size:var(--_label-container-height);min-block-size:var(--_label-container-height);background:var(--_label-container-color);transition:transform 100ms cubic-bezier(0.2, 0, 0, 1);transform-origin:center bottom;transform:scale(0)}:host(:focus-within) .label,.handleContainer.hover .label,:where(:has(input:active)) .label{transform:scale(1)}.label::before,.label::after{position:absolute;display:block;content:"";background:inherit}.label::before{inline-size:calc(var(--_label-container-height)/2);block-size:calc(var(--_label-container-height)/2);bottom:calc(var(--_label-container-height)/-10);transform:rotate(45deg)}.label::after{inset:0px;border-radius:inherit}.labelContent{z-index:1}input[type=range]{opacity:0;-webkit-tap-highlight-color:rgba(0,0,0,0);position:absolute;box-sizing:border-box;height:100%;width:100%;margin:0;background:rgba(0,0,0,0);cursor:pointer;pointer-events:auto;appearance:none}input[type=range]:focus{outline:none}::-webkit-slider-runnable-track{-webkit-appearance:none}::-moz-range-track{appearance:none}::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;block-size:var(--_handle-height);inline-size:var(--_handle-width);opacity:0;z-index:2}input.end::-webkit-slider-thumb{--_track-and-knob-padding: calc( (var(--_state-layer-size) - var(--_handle-width)) / 2 );--_x-translate: calc( var(--_track-and-knob-padding) - 2 * var(--_end-fraction) * var(--_track-and-knob-padding) );transform:translateX(var(--_x-translate))}:host-context([dir=rtl]) input.end::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}:host([dir=rtl]) input.end::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}input.end:dir(rtl)::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}input.start::-webkit-slider-thumb{--_track-and-knob-padding: calc( (var(--_state-layer-size) - var(--_handle-width)) / 2 );--_x-translate: calc( var(--_track-and-knob-padding) - 2 * var(--_start-fraction) * var(--_track-and-knob-padding) );transform:translateX(var(--_x-translate))}:host-context([dir=rtl]) input.start::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}:host([dir=rtl]) input.start::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}input.start:dir(rtl)::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}::-moz-range-thumb{appearance:none;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);transform:scaleX(0);opacity:0;z-index:2}.ranged input.start{clip-path:inset(0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))) 0 0)}:host-context([dir=rtl]) .ranged input.start{clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}:host([dir=rtl]) .ranged input.start{clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}.ranged input.start:dir(rtl){clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}.ranged input.end{clip-path:inset(0 0 0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)))}:host-context([dir=rtl]) .ranged input.end{clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}:host([dir=rtl]) .ranged input.end{clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}.ranged input.end:dir(rtl){clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}.onTop{z-index:1}.handle{--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}md-ripple{border-radius:50%;height:var(--_state-layer-size);width:var(--_state-layer-size)}/*# sourceMappingURL=slider-styles.css.map */
+const slider_styles_css_styles = i `:host{--_active-track-color: var(--md-slider-active-track-color, var(--md-sys-color-primary, #6750a4));--_active-track-height: var(--md-slider-active-track-height, 4px);--_active-track-shape: var(--md-slider-active-track-shape, 9999px);--_disabled-active-track-color: var(--md-slider-disabled-active-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-active-track-opacity: var(--md-slider-disabled-active-track-opacity, 0.38);--_disabled-handle-color: var(--md-slider-disabled-handle-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-handle-elevation: var(--md-slider-disabled-handle-elevation, 0);--_disabled-inactive-track-color: var(--md-slider-disabled-inactive-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-inactive-track-opacity: var(--md-slider-disabled-inactive-track-opacity, 0.12);--_focus-handle-color: var(--md-slider-focus-handle-color, var(--md-sys-color-primary, #6750a4));--_handle-color: var(--md-slider-handle-color, var(--md-sys-color-primary, #6750a4));--_handle-elevation: var(--md-slider-handle-elevation, 1);--_handle-height: var(--md-slider-handle-height, 20px);--_handle-shadow-color: var(--md-slider-handle-shadow-color, var(--md-sys-color-shadow, #000));--_handle-shape: var(--md-slider-handle-shape, 9999px);--_handle-width: var(--md-slider-handle-width, 20px);--_hover-handle-color: var(--md-slider-hover-handle-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-color: var(--md-slider-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-opacity: var(--md-slider-hover-state-layer-opacity, 0.08);--_inactive-track-color: var(--md-slider-inactive-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_inactive-track-height: var(--md-slider-inactive-track-height, 4px);--_inactive-track-shape: var(--md-slider-inactive-track-shape, 9999px);--_label-container-color: var(--md-slider-label-container-color, var(--md-sys-color-primary, #6750a4));--_label-container-height: var(--md-slider-label-container-height, 28px);--_pressed-handle-color: var(--md-slider-pressed-handle-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-color: var(--md-slider-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-slider-pressed-state-layer-opacity, 0.12);--_state-layer-size: var(--md-slider-state-layer-size, 40px);--_with-overlap-handle-outline-color: var(--md-slider-with-overlap-handle-outline-color, var(--md-sys-color-on-primary, #fff));--_with-overlap-handle-outline-width: var(--md-slider-with-overlap-handle-outline-width, 1px);--_with-tick-marks-active-container-color: var(--md-slider-with-tick-marks-active-container-color, var(--md-sys-color-on-primary, #fff));--_with-tick-marks-container-size: var(--md-slider-with-tick-marks-container-size, 2px);--_with-tick-marks-disabled-container-color: var(--md-slider-with-tick-marks-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_with-tick-marks-inactive-container-color: var(--md-slider-with-tick-marks-inactive-container-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-color: var(--md-slider-label-text-color, var(--md-sys-color-on-primary, #fff));--_label-text-font: var(--md-slider-label-text-font, var(--md-sys-typescale-label-medium-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-slider-label-text-line-height, var(--md-sys-typescale-label-medium-line-height, 1rem));--_label-text-size: var(--md-slider-label-text-size, var(--md-sys-typescale-label-medium-size, 0.75rem));--_label-text-weight: var(--md-slider-label-text-weight, var(--md-sys-typescale-label-medium-weight, var(--md-ref-typeface-weight-medium, 500)));--_start-fraction: 0;--_end-fraction: 0;--_tick-count: 0;display:inline-flex;vertical-align:middle;min-inline-size:200px;--md-elevation-level: var(--_handle-elevation);--md-elevation-shadow-color: var(--_handle-shadow-color)}md-focus-ring{height:48px;inset:unset;width:48px}md-elevation{transition-duration:250ms}@media(prefers-reduced-motion){.label{transition-duration:0}}:host([disabled]){opacity:var(--_disabled-active-track-opacity);--md-elevation-level: var(--_disabled-handle-elevation)}.container{flex:1;display:flex;align-items:center;position:relative;block-size:var(--_state-layer-size);pointer-events:none;touch-action:none}.track,.tickmarks{position:absolute;inset:0;display:flex;align-items:center}.track::before,.tickmarks::before,.track::after,.tickmarks::after{position:absolute;content:"";inset-inline-start:calc(var(--_state-layer-size)/2 - var(--_with-tick-marks-container-size));inset-inline-end:calc(var(--_state-layer-size)/2 - var(--_with-tick-marks-container-size));background-size:calc((100% - var(--_with-tick-marks-container-size)*2)/var(--_tick-count)) 100%}.track::before,.tickmarks::before{block-size:var(--_inactive-track-height);border-radius:var(--_inactive-track-shape)}.track::before{background-color:var(--_inactive-track-color)}.tickmarks::before{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-inactive-container-color) 0, var(--_with-tick-marks-inactive-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}:host([disabled]) .track::before{opacity:calc(1/var(--_disabled-active-track-opacity)*var(--_disabled-inactive-track-opacity));background-color:var(--_disabled-inactive-track-color)}.track::after,.tickmarks::after{block-size:var(--_active-track-height);border-radius:var(--_active-track-shape);clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))) 0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)))}.track::after{background-color:var(--_active-track-color)}.tickmarks::after{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-active-container-color) 0, var(--_with-tick-marks-active-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}@supports not selector(:dir(rtl)){:host-context([dir=rtl]) .track::after,:host([dir=rtl]) .track::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}}.track:dir(rtl)::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}@supports not selector(:dir(rtl)){:host-context([dir=rtl]) .tickmarks::after,:host([dir=rtl]) .tickmarks::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}}.tickmarks:dir(rtl)::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([disabled]) .track::after{background-color:var(--_disabled-active-track-color)}:host([disabled]) .tickmarks::before{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-disabled-container-color) 0, var(--_with-tick-marks-disabled-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}.handleContainerPadded{position:relative;block-size:100%;inline-size:100%;padding-inline:calc(var(--_state-layer-size)/2)}.handleContainerBlock{position:relative;block-size:100%;inline-size:100%}.handleContainer{position:absolute;inset-block-start:0;inset-block-end:0;inset-inline-start:calc(100%*var(--_start-fraction));inline-size:calc(100%*(var(--_end-fraction) - var(--_start-fraction)))}.handle{position:absolute;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);border-radius:var(--_handle-shape);display:flex;place-content:center;place-items:center}.handleNub{position:absolute;height:var(--_handle-height);width:var(--_handle-width);border-radius:var(--_handle-shape);background:var(--_handle-color)}:host([disabled]) .handleNub{background:var(--_disabled-handle-color)}input.end:focus~.handleContainerPadded .handle.end>.handleNub,input.start:focus~.handleContainerPadded .handle.start>.handleNub{background:var(--_focus-handle-color)}.container>.handleContainerPadded .handle.hover>.handleNub{background:var(--_hover-handle-color)}:host(:not([disabled])) input.end:active~.handleContainerPadded .handle.end>.handleNub,:host(:not([disabled])) input.start:active~.handleContainerPadded .handle.start>.handleNub{background:var(--_pressed-handle-color)}.onTop.isOverlapping .label,.onTop.isOverlapping .label::before{outline:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}.onTop.isOverlapping .handleNub{border:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}.handle.start{inset-inline-start:calc(0px - var(--_state-layer-size)/2)}.handle.end{inset-inline-end:calc(0px - var(--_state-layer-size)/2)}.label{position:absolute;box-sizing:border-box;display:flex;padding:4px;place-content:center;place-items:center;border-radius:9999px;color:var(--_label-text-color);font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);inset-block-end:100%;min-inline-size:var(--_label-container-height);min-block-size:var(--_label-container-height);background:var(--_label-container-color);transition:transform 100ms cubic-bezier(0.2, 0, 0, 1);transform-origin:center bottom;transform:scale(0)}:host(:focus-within) .label,.handleContainer.hover .label,:where(:has(input:active)) .label{transform:scale(1)}.label::before,.label::after{position:absolute;display:block;content:"";background:inherit}.label::before{inline-size:calc(var(--_label-container-height)/2);block-size:calc(var(--_label-container-height)/2);bottom:calc(var(--_label-container-height)/-10);transform:rotate(45deg)}.label::after{inset:0px;border-radius:inherit}.labelContent{z-index:1}input[type=range]{opacity:0;-webkit-tap-highlight-color:rgba(0,0,0,0);position:absolute;box-sizing:border-box;height:100%;width:100%;margin:0;background:rgba(0,0,0,0);cursor:pointer;pointer-events:auto;appearance:none}input[type=range]:focus{outline:none}::-webkit-slider-runnable-track{-webkit-appearance:none}::-moz-range-track{appearance:none}::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;block-size:var(--_handle-height);inline-size:var(--_handle-width);opacity:0;z-index:2}input.end::-webkit-slider-thumb{--_track-and-knob-padding: calc( (var(--_state-layer-size) - var(--_handle-width)) / 2 );--_x-translate: calc( var(--_track-and-knob-padding) - 2 * var(--_end-fraction) * var(--_track-and-knob-padding) );transform:translateX(var(--_x-translate))}@supports not selector(:dir(rtl)){:host-context([dir=rtl]) input.end::-webkit-slider-thumb,:host([dir=rtl]) input.end::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}}input.end:dir(rtl)::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}input.start::-webkit-slider-thumb{--_track-and-knob-padding: calc( (var(--_state-layer-size) - var(--_handle-width)) / 2 );--_x-translate: calc( var(--_track-and-knob-padding) - 2 * var(--_start-fraction) * var(--_track-and-knob-padding) );transform:translateX(var(--_x-translate))}@supports not selector(:dir(rtl)){:host-context([dir=rtl]) input.start::-webkit-slider-thumb,:host([dir=rtl]) input.start::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}}input.start:dir(rtl)::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}::-moz-range-thumb{appearance:none;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);transform:scaleX(0);opacity:0;z-index:2}.ranged input.start{clip-path:inset(0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))) 0 0)}@supports not selector(:dir(rtl)){:host-context([dir=rtl]) .ranged input.start,:host([dir=rtl]) .ranged input.start{clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}}.ranged input.start:dir(rtl){clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}.ranged input.end{clip-path:inset(0 0 0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)))}@supports not selector(:dir(rtl)){:host-context([dir=rtl]) .ranged input.end,:host([dir=rtl]) .ranged input.end{clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}}.ranged input.end:dir(rtl){clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}.onTop{z-index:1}.handle{--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}md-ripple{border-radius:50%;height:var(--_state-layer-size);width:var(--_state-layer-size)}/*# sourceMappingURL=slider-styles.css.map */
 `;
 //# sourceMappingURL=slider-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/slider/slider.js
@@ -12351,6 +12633,7 @@ MdSlider = __decorate([
  * Copyright 2021 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
+
 
 
 
@@ -12840,7 +13123,7 @@ const primary_tab_styles_css_styles = i `:host{--_active-indicator-color: var(--
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const tab_styles_css_styles = i `:host{display:inline-flex;align-items:center;justify-content:center;outline:none;padding:0 16px;position:relative;-webkit-tap-highlight-color:rgba(0,0,0,0);vertical-align:middle;user-select:none;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);color:var(--_label-text-color);z-index:0;--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}md-focus-ring{--md-focus-ring-shape: 8px}:host([active]) md-focus-ring{margin-bottom:calc(var(--_active-indicator-height) + 1px)}.button::before{background:var(--_container-color);content:"";inset:0;position:absolute;z-index:-1}.button::before,md-ripple,md-elevation{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start)}.content{position:relative;box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;justify-content:center;height:var(--_container-height);gap:8px}.indicator{position:absolute;box-sizing:border-box;z-index:-1;transform-origin:bottom left;background:var(--_active-indicator-color);border-radius:var(--_active-indicator-shape);height:var(--_active-indicator-height);inset:auto 0 0 0;opacity:0}::slotted([slot=icon]){display:inline-flex;position:relative;writing-mode:horizontal-tb;fill:currentColor;color:var(--_icon-color);font-size:var(--_icon-size);width:var(--_icon-size);height:var(--_icon-size)}:host(:hover){color:var(--_hover-label-text-color);cursor:pointer}:host(:hover) ::slotted([slot=icon]){color:var(--_hover-icon-color)}:host(:focus){color:var(--_focus-label-text-color)}:host(:focus) ::slotted([slot=icon]){color:var(--_focus-icon-color)}:host(:active){color:var(--_pressed-label-text-color)}:host(:active) ::slotted([slot=icon]){color:var(--_pressed-icon-color)}:host([active]) .indicator{opacity:1}:host([active]){color:var(--_active-label-text-color);--md-elevation-level: var(--_container-elevation);--md-ripple-hover-color: var(--_active-hover-state-layer-color);--md-ripple-hover-opacity: var(--_active-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_active-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_active-pressed-state-layer-opacity)}:host([active]) ::slotted([slot=icon]){color:var(--_active-icon-color)}:host([active]:hover){color:var(--_active-hover-label-text-color)}:host([active]:hover) ::slotted([slot=icon]){color:var(--_active-hover-icon-color)}:host([active]:focus){color:var(--_active-focus-label-text-color)}:host([active]:focus) ::slotted([slot=icon]){color:var(--_active-focus-icon-color)}:host([active]:active){color:var(--_active-pressed-label-text-color)}:host([active]:active) ::slotted([slot=icon]){color:var(--_active-pressed-icon-color)}:host,::slotted(*){white-space:nowrap}@media(forced-colors: active){.indicator{background:CanvasText}}/*# sourceMappingURL=tab-styles.css.map */
+const tab_styles_css_styles = i `:host{display:inline-flex;align-items:center;justify-content:center;outline:none;padding:0 16px;position:relative;-webkit-tap-highlight-color:rgba(0,0,0,0);vertical-align:middle;user-select:none;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);color:var(--_label-text-color);z-index:0;--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity);--md-elevation-level: var(--_container-elevation)}md-focus-ring{--md-focus-ring-shape: 8px}:host([active]) md-focus-ring{margin-bottom:calc(var(--_active-indicator-height) + 1px)}.button::before{background:var(--_container-color);content:"";inset:0;position:absolute;z-index:-1}.button::before,md-ripple,md-elevation{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start)}.content{position:relative;box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;justify-content:center;height:var(--_container-height);gap:8px}.indicator{position:absolute;box-sizing:border-box;z-index:-1;transform-origin:bottom left;background:var(--_active-indicator-color);border-radius:var(--_active-indicator-shape);height:var(--_active-indicator-height);inset:auto 0 0 0;opacity:0}::slotted([slot=icon]){display:inline-flex;position:relative;writing-mode:horizontal-tb;fill:currentColor;color:var(--_icon-color);font-size:var(--_icon-size);width:var(--_icon-size);height:var(--_icon-size)}:host(:hover){color:var(--_hover-label-text-color);cursor:pointer}:host(:hover) ::slotted([slot=icon]){color:var(--_hover-icon-color)}:host(:focus){color:var(--_focus-label-text-color)}:host(:focus) ::slotted([slot=icon]){color:var(--_focus-icon-color)}:host(:active){color:var(--_pressed-label-text-color)}:host(:active) ::slotted([slot=icon]){color:var(--_pressed-icon-color)}:host([active]) .indicator{opacity:1}:host([active]){color:var(--_active-label-text-color);--md-ripple-hover-color: var(--_active-hover-state-layer-color);--md-ripple-hover-opacity: var(--_active-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_active-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_active-pressed-state-layer-opacity)}:host([active]) ::slotted([slot=icon]){color:var(--_active-icon-color)}:host([active]:hover){color:var(--_active-hover-label-text-color)}:host([active]:hover) ::slotted([slot=icon]){color:var(--_active-hover-icon-color)}:host([active]:focus){color:var(--_active-focus-label-text-color)}:host([active]:focus) ::slotted([slot=icon]){color:var(--_active-focus-icon-color)}:host([active]:active){color:var(--_active-pressed-label-text-color)}:host([active]:active) ::slotted([slot=icon]){color:var(--_active-pressed-icon-color)}:host,::slotted(*){white-space:nowrap}@media(forced-colors: active){.indicator{background:CanvasText}}/*# sourceMappingURL=tab-styles.css.map */
 `;
 //# sourceMappingURL=tab-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/tabs/primary-tab.js
@@ -13276,6 +13559,161 @@ const stringConverter = {
     },
 };
 //# sourceMappingURL=string-converter.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/validators/text-field-validator.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * A validator that provides constraint validation that emulates `<input>` and
+ * `<textarea>` validation.
+ */
+class TextFieldValidator extends Validator {
+    computeValidity({ state, renderedControl }) {
+        let inputOrTextArea = renderedControl;
+        if (isInputState(state) && !inputOrTextArea) {
+            // Get cached <input> or create it.
+            inputOrTextArea = this.inputControl || document.createElement('input');
+            // Cache the <input> to re-use it next time.
+            this.inputControl = inputOrTextArea;
+        }
+        else if (!inputOrTextArea) {
+            // Get cached <textarea> or create it.
+            inputOrTextArea =
+                this.textAreaControl || document.createElement('textarea');
+            // Cache the <textarea> to re-use it next time.
+            this.textAreaControl = inputOrTextArea;
+        }
+        // Set this variable so we can check it for input-specific properties.
+        const input = isInputState(state)
+            ? inputOrTextArea
+            : null;
+        // Set input's "type" first, since this can change the other properties
+        if (input) {
+            input.type = state.type;
+        }
+        if (inputOrTextArea.value !== state.value) {
+            // Only programmatically set the value if there's a difference. When using
+            // the rendered control, the value will always be up to date. Setting the
+            // property (even if it's the same string) will reset the internal <input>
+            // dirty flag, making minlength and maxlength validation reset.
+            inputOrTextArea.value = state.value;
+        }
+        inputOrTextArea.required = state.required;
+        // The following IDLAttribute properties will always hydrate an attribute,
+        // even if set to a the default value ('' or -1). The presence of the
+        // attribute triggers constraint validation, so we must remove the attribute
+        // when empty.
+        if (input) {
+            const inputState = state;
+            if (inputState.pattern) {
+                input.pattern = inputState.pattern;
+            }
+            else {
+                input.removeAttribute('pattern');
+            }
+            if (inputState.min) {
+                input.min = inputState.min;
+            }
+            else {
+                input.removeAttribute('min');
+            }
+            if (inputState.max) {
+                input.max = inputState.max;
+            }
+            else {
+                input.removeAttribute('max');
+            }
+            if (inputState.step) {
+                input.step = inputState.step;
+            }
+            else {
+                input.removeAttribute('step');
+            }
+        }
+        // Use -1 to represent no minlength and maxlength, which is what the
+        // platform input returns. However, it will throw an error if you try to
+        // manually set it to -1.
+        //
+        // While the type is `number`, it may actually be `null` at runtime.
+        // `null > -1` is true since `null` coerces to `0`, so we default null and
+        // undefined to -1.
+        //
+        // We set attributes instead of properties since setting a property may
+        // throw an out of bounds error in relation to the other property.
+        // Attributes will not throw errors while the state is updating.
+        if ((state.minLength ?? -1) > -1) {
+            inputOrTextArea.setAttribute('minlength', String(state.minLength));
+        }
+        else {
+            inputOrTextArea.removeAttribute('minlength');
+        }
+        if ((state.maxLength ?? -1) > -1) {
+            inputOrTextArea.setAttribute('maxlength', String(state.maxLength));
+        }
+        else {
+            inputOrTextArea.removeAttribute('maxlength');
+        }
+        return {
+            validity: inputOrTextArea.validity,
+            validationMessage: inputOrTextArea.validationMessage,
+        };
+    }
+    equals({ state: prev }, { state: next }) {
+        // Check shared input and textarea properties
+        const inputOrTextAreaEqual = prev.type === next.type &&
+            prev.value === next.value &&
+            prev.required === next.required &&
+            prev.minLength === next.minLength &&
+            prev.maxLength === next.maxLength;
+        if (!isInputState(prev) || !isInputState(next)) {
+            // Both are textareas, all relevant properties are equal.
+            return inputOrTextAreaEqual;
+        }
+        // Check additional input-specific properties.
+        return (inputOrTextAreaEqual &&
+            prev.pattern === next.pattern &&
+            prev.min === next.min &&
+            prev.max === next.max &&
+            prev.step === next.step);
+    }
+    copy({ state }) {
+        // Don't hold a reference to the rendered control when copying since we
+        // don't use it when checking if the state changed.
+        return {
+            state: isInputState(state)
+                ? this.copyInput(state)
+                : this.copyTextArea(state),
+            renderedControl: null,
+        };
+    }
+    copyInput(state) {
+        const { type, pattern, min, max, step } = state;
+        return {
+            ...this.copySharedState(state),
+            type,
+            pattern,
+            min,
+            max,
+            step,
+        };
+    }
+    copyTextArea(state) {
+        return {
+            ...this.copySharedState(state),
+            type: state.type,
+        };
+    }
+    copySharedState({ value, required, minLength, maxLength, }) {
+        return { value, required, minLength, maxLength };
+    }
+}
+function isInputState(state) {
+    return state.type !== 'textarea';
+}
+//# sourceMappingURL=text-field-validator.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/internal/text-field.js
 /**
  * @license
@@ -13294,8 +13732,11 @@ const stringConverter = {
 
 
 
+
+
+
 // Separate variable needed for closure.
-const textFieldBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
+const textFieldBaseClass = mixinOnReportValidity(mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(lit_element_s))));
 /**
  * A text field component.
  *
@@ -13328,7 +13769,25 @@ class TextField extends textFieldBaseClass {
          * `reportValidity()`.
          */
         this.errorText = '';
+        /**
+         * The floating Material label of the textfield component. It informs the user
+         * about what information is requested for a text field. It is aligned with
+         * the input text, is always visible, and it floats when focused or when text
+         * is entered into the textfield. This label also sets accessibilty labels,
+         * but the accessible label is overriden by `aria-label`.
+         *
+         * Learn more about floating labels from the Material Design guidelines:
+         * https://m3.material.io/components/text-fields/guidelines
+         */
         this.label = '';
+        /**
+         * Indicates that the user must specify a value for the input before the
+         * owning form can be submitted and will render an error state when
+         * `reportValidity()` is invoked when value is empty. Additionally the
+         * floating label will render an asterisk `"*"` when true.
+         *
+         * https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/required
+         */
         this.required = false;
         /**
          * The current value of the text field. It is always a string.
@@ -13399,12 +13858,24 @@ class TextField extends textFieldBaseClass {
          */
         this.minLength = -1;
         /**
+         * When true, hide the spinner for `type="number"` text fields.
+         */
+        this.noSpinner = false;
+        /**
          * A regular expression that the text field's value must match to pass
          * constraint validation.
          *
          * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#pattern
          */
         this.pattern = '';
+        /**
+         * Defines the text displayed in the textfield when it has no value. Provides
+         * a brief hint to the user as to the expected type of data that should be
+         * entered into the control. Unlike `label`, the placeholder is not visible
+         * and does not float when the textfield has a value.
+         *
+         * https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/placeholder
+         */
         this.placeholder = '';
         /**
          * Indicates whether or not a user should be able to edit the text field's
@@ -13468,17 +13939,6 @@ class TextField extends textFieldBaseClass {
          * `reportValidity()`.
          */
         this.nativeErrorText = '';
-        this.isCheckingValidity = false;
-        this.isReportingValidity = false;
-        // Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
-        // Replace with this[internals].validity.customError when resolved.
-        this.hasCustomValidityError = false;
-        this.onInvalid = (invalidEvent) => {
-            if (this.isCheckingValidity || this.isReportingValidity) {
-                return;
-            }
-            this.showErrorMessage(false, invalidEvent);
-        };
     }
     /**
      * Gets or sets the direction in which selection occurred.
@@ -13506,25 +13966,6 @@ class TextField extends textFieldBaseClass {
     }
     set selectionStart(value) {
         this.getInputOrTextarea().selectionStart = value;
-    }
-    /**
-     * Returns the text field's validation error message.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
-     */
-    get validationMessage() {
-        this.syncValidity();
-        return this[internals].validationMessage;
-    }
-    /**
-     * Returns a `ValidityState` object that represents the validity states of the
-     * text field.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
-     */
-    get validity() {
-        this.syncValidity();
-        return this[internals].validity;
     }
     /**
      * The text field's value as a number.
@@ -13562,76 +14003,8 @@ class TextField extends textFieldBaseClass {
         input.valueAsDate = value;
         this.value = input.value;
     }
-    /**
-     * Returns whether an element will successfully validate based on forms
-     * validation rules and constraints.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/willValidate
-     */
-    get willValidate() {
-        this.syncValidity();
-        return this[internals].willValidate;
-    }
     get hasError() {
         return this.error || this.nativeError;
-    }
-    /**
-     * Checks the text field's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/checkValidity
-     *
-     * @return true if the text field is valid, or false if not.
-     */
-    checkValidity() {
-        this.isCheckingValidity = true;
-        this.syncValidity();
-        const isValid = this[internals].checkValidity();
-        this.isCheckingValidity = false;
-        return isValid;
-    }
-    /**
-     * Checks the text field's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * This method will display or clear an error text message equal to the text
-     * field's `validationMessage`, unless the invalid event is canceled.
-     *
-     * Use `setCustomValidity()` to customize the `validationMessage`.
-     *
-     * This method can also be used to re-announce error messages to screen
-     * readers.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity
-     *
-     * @return true if the text field is valid, or false if not.
-     */
-    reportValidity() {
-        this.isReportingValidity = true;
-        let invalidEvent;
-        this.addEventListener('invalid', (event) => {
-            invalidEvent = event;
-        }, { once: true });
-        const valid = this.checkValidity();
-        this.showErrorMessage(valid, invalidEvent);
-        this.isReportingValidity = false;
-        return valid;
-    }
-    showErrorMessage(valid, invalidEvent) {
-        if (invalidEvent?.defaultPrevented) {
-            return valid;
-        }
-        const prevMessage = this.getErrorText();
-        this.nativeError = !valid;
-        this.nativeErrorText = this.validationMessage;
-        if (prevMessage === this.getErrorText()) {
-            this.field?.reannounceError();
-        }
-        return valid;
     }
     /**
      * Selects all the text in the text field.
@@ -13640,21 +14013,6 @@ class TextField extends textFieldBaseClass {
      */
     select() {
         this.getInputOrTextarea().select();
-    }
-    /**
-     * Sets a custom validation error message for the text field. Use this for
-     * custom error message.
-     *
-     * When the error is not an empty string, the text field is considered invalid
-     * and `validity.customError` will be true.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity
-     *
-     * @param error The error message to display.
-     */
-    setCustomValidity(error) {
-        this.hasCustomValidityError = !!error;
-        this[internals].setValidity({ customError: !!error }, error, this.getInputOrTextarea());
     }
     setRangeText(...args) {
         // Calling setRangeText with 1 vs 3-4 arguments has different behavior.
@@ -13728,6 +14086,7 @@ class TextField extends textFieldBaseClass {
             'disabled': this.disabled,
             'error': !this.disabled && this.hasError,
             'textarea': this.type === 'textarea',
+            'no-spinner': this.noSpinner,
         };
         return x `
       <span class="text-field ${class_map_e(classes)}">
@@ -13746,9 +14105,6 @@ class TextField extends textFieldBaseClass {
             // before checking its value.
             this.value = value;
         }
-        // Sync validity when properties change, since validation properties may
-        // have changed.
-        this.syncValidity();
     }
     renderField() {
         return static_n `<${this.fieldTag}
@@ -13788,11 +14144,15 @@ class TextField extends textFieldBaseClass {
     `;
     }
     renderInputOrTextarea() {
-        const style = { direction: this.textDirection };
+        const style = { 'direction': this.textDirection };
         const ariaLabel = this.ariaLabel || this.label || T;
         // lit-anaylzer `autocomplete` types are too strict
         // tslint:disable-next-line:no-any
         const autocomplete = this.autocomplete;
+        // These properties may be set to null if the attribute is removed, and
+        // `null > -1` is incorrectly `true`.
+        const hasMaxLength = (this.maxLength ?? -1) > -1;
+        const hasMinLength = (this.minLength ?? -1) > -1;
         if (this.type === 'textarea') {
             return x `
         <textarea
@@ -13803,17 +14163,17 @@ class TextField extends textFieldBaseClass {
           aria-label=${ariaLabel}
           autocomplete=${autocomplete || T}
           ?disabled=${this.disabled}
-          maxlength=${this.maxLength > -1 ? this.maxLength : T}
-          minlength=${this.minLength > -1 ? this.minLength : T}
+          maxlength=${hasMaxLength ? this.maxLength : T}
+          minlength=${hasMinLength ? this.minLength : T}
           placeholder=${this.placeholder || T}
           ?readonly=${this.readOnly}
           ?required=${this.required}
           rows=${this.rows}
           cols=${this.cols}
           .value=${live_l(this.value)}
-          @change=${this.handleChange}
-          @focusin=${this.handleFocusin}
-          @focusout=${this.handleFocusout}
+          @change=${this.redispatchEvent}
+          @focus=${this.handleFocusChange}
+          @blur=${this.handleFocusChange}
           @input=${this.handleInput}
           @select=${this.redispatchEvent}></textarea>
       `;
@@ -13837,9 +14197,9 @@ class TextField extends textFieldBaseClass {
           ?disabled=${this.disabled}
           inputmode=${inputMode || T}
           max=${(this.max || T)}
-          maxlength=${this.maxLength > -1 ? this.maxLength : T}
+          maxlength=${hasMaxLength ? this.maxLength : T}
           min=${(this.min || T)}
-          minlength=${this.minLength > -1 ? this.minLength : T}
+          minlength=${hasMinLength ? this.minLength : T}
           pattern=${this.pattern || T}
           placeholder=${this.placeholder || T}
           ?readonly=${this.readOnly}
@@ -13849,8 +14209,8 @@ class TextField extends textFieldBaseClass {
           type=${this.type}
           .value=${live_l(this.value)}
           @change=${this.redispatchEvent}
-          @focusin=${this.handleFocusin}
-          @focusout=${this.handleFocusout}
+          @focus=${this.handleFocusChange}
+          @blur=${this.handleFocusChange}
           @input=${this.handleInput}
           @select=${this.redispatchEvent} />
         ${suffix}
@@ -13876,22 +14236,16 @@ class TextField extends textFieldBaseClass {
     getErrorText() {
         return this.error ? this.errorText : this.nativeErrorText;
     }
-    handleFocusin() {
-        this.focused = true;
-    }
-    handleFocusout() {
-        this.focused = false;
+    handleFocusChange() {
+        // When calling focus() or reportValidity() during change, it's possible
+        // for blur to be called after the new focus event. Rather than set
+        // `this.focused` to true/false on focus/blur, we always set it to whether
+        // or not the input itself is focused.
+        this.focused = this.inputOrTextarea?.matches(':focus') ?? false;
     }
     handleInput(event) {
         this.dirty = true;
         this.value = event.target.value;
-        // Sync validity so that clients can check validity on input.
-        this.syncValidity();
-    }
-    handleChange(event) {
-        // Sync validity so that clients can check validity on change.
-        this.syncValidity();
-        this.redispatchEvent(event);
     }
     redispatchEvent(event) {
         redispatchEvent(this, event);
@@ -13920,31 +14274,9 @@ class TextField extends textFieldBaseClass {
         }
         return this.getInputOrTextarea();
     }
-    syncValidity() {
-        // Sync the internal <input>'s validity and the host's ElementInternals
-        // validity. We do this to re-use native `<input>` validation messages.
-        const input = this.getInputOrTextarea();
-        if (this.hasCustomValidityError) {
-            input.setCustomValidity(this[internals].validationMessage);
-        }
-        else {
-            input.setCustomValidity('');
-        }
-        this[internals].setValidity(input.validity, input.validationMessage, this.getInputOrTextarea());
-    }
     handleIconChange() {
         this.hasLeadingIcon = this.leadingIcons.length > 0;
         this.hasTrailingIcon = this.trailingIcons.length > 0;
-    }
-    connectedCallback() {
-        super.connectedCallback();
-        // Handles the case where the user submits the form and native validation
-        // error pops up. We want the error styles to show.
-        this.addEventListener('invalid', this.onInvalid);
-    }
-    disconnectedCallback() {
-        super.disconnectedCallback();
-        this.removeEventListener('invalid', this.onInvalid);
     }
     [getFormValue]() {
         return this.value;
@@ -13959,6 +14291,32 @@ class TextField extends textFieldBaseClass {
         // Required for the case that the user slots a focusable element into the
         // leading icon slot such as an iconbutton due to how delegatesFocus works.
         this.getInputOrTextarea().focus();
+    }
+    [createValidator]() {
+        return new TextFieldValidator(() => ({
+            state: this,
+            renderedControl: this.inputOrTextarea,
+        }));
+    }
+    [getValidityAnchor]() {
+        return this.inputOrTextarea;
+    }
+    [onReportValidity](invalidEvent) {
+        if (invalidEvent?.defaultPrevented) {
+            return;
+        }
+        if (invalidEvent) {
+            // Prevent default pop-up behavior. This also prevents focusing, so we
+            // manually focus.
+            invalidEvent.preventDefault();
+            this.focus();
+        }
+        const prevMessage = this.getErrorText();
+        this.nativeError = !!invalidEvent;
+        this.nativeErrorText = this.validationMessage;
+        if (prevMessage === this.getErrorText()) {
+            this.field?.reannounceError();
+        }
     }
 }
 (() => {
@@ -14023,6 +14381,9 @@ __decorate([
 __decorate([
     property_n({ type: Number })
 ], TextField.prototype, "minLength", void 0);
+__decorate([
+    property_n({ type: Boolean, attribute: 'no-spinner' })
+], TextField.prototype, "noSpinner", void 0);
 __decorate([
     property_n()
 ], TextField.prototype, "pattern", void 0);
@@ -14095,7 +14456,7 @@ class FilledTextField extends TextField {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const textfield_internal_shared_styles_css_styles = i `:host{display:inline-flex;outline:none;resize:both;-webkit-tap-highlight-color:rgba(0,0,0,0)}.text-field,.field{width:100%}.text-field{display:inline-flex}.field{cursor:text}.disabled .field{cursor:default}.text-field,.textarea .field{resize:inherit}.icon{color:currentColor;display:flex;fill:currentColor}.icon ::slotted(*){display:flex}[hasstart] .icon.leading{font-size:var(--_leading-icon-size);height:var(--_leading-icon-size);width:var(--_leading-icon-size)}[hasend] .icon.trailing{font-size:var(--_trailing-icon-size);height:var(--_trailing-icon-size);width:var(--_trailing-icon-size)}.input-wrapper{display:flex}.input-wrapper>*{all:inherit;padding:0}.input{caret-color:var(--_caret-color);overflow-x:hidden;text-align:inherit}.input::placeholder{color:currentColor;opacity:1}.input::-webkit-calendar-picker-indicator{display:none}.input::-webkit-search-decoration,.input::-webkit-search-cancel-button{display:none}@media(forced-colors: active){.input{background-color:Field}}:focus-within .input{caret-color:var(--_focus-caret-color)}.error:focus-within .input{caret-color:var(--_error-focus-caret-color)}.text-field:not(.disabled) .prefix{color:var(--_input-text-prefix-color)}.text-field:not(.disabled) .suffix{color:var(--_input-text-suffix-color)}.text-field:not(.disabled) .input::placeholder{color:var(--_input-text-placeholder-color)}.prefix,.suffix{text-wrap:nowrap;width:min-content}.prefix{padding-inline-end:var(--_input-text-prefix-trailing-space)}.suffix{padding-inline-start:var(--_input-text-suffix-leading-space)}/*# sourceMappingURL=shared-styles.css.map */
+const textfield_internal_shared_styles_css_styles = i `:host{display:inline-flex;outline:none;resize:both;-webkit-tap-highlight-color:rgba(0,0,0,0)}.text-field,.field{width:100%}.text-field{display:inline-flex}.field{cursor:text}.disabled .field{cursor:default}.text-field,.textarea .field{resize:inherit}.icon{color:currentColor;display:flex;fill:currentColor}.icon ::slotted(*){display:flex}[hasstart] .icon.leading{font-size:var(--_leading-icon-size);height:var(--_leading-icon-size);width:var(--_leading-icon-size)}[hasend] .icon.trailing{font-size:var(--_trailing-icon-size);height:var(--_trailing-icon-size);width:var(--_trailing-icon-size)}.input-wrapper{display:flex}.input-wrapper>*{all:inherit;padding:0}.input{caret-color:var(--_caret-color);overflow-x:hidden;text-align:inherit}.input::placeholder{color:currentColor;opacity:1}.input::-webkit-calendar-picker-indicator{display:none}.input::-webkit-search-decoration,.input::-webkit-search-cancel-button{display:none}@media(forced-colors: active){.input{background:none}}.no-spinner .input::-webkit-inner-spin-button,.no-spinner .input::-webkit-outer-spin-button{display:none}.no-spinner .input[type=number]{-moz-appearance:textfield}:focus-within .input{caret-color:var(--_focus-caret-color)}.error:focus-within .input{caret-color:var(--_error-focus-caret-color)}.text-field:not(.disabled) .prefix{color:var(--_input-text-prefix-color)}.text-field:not(.disabled) .suffix{color:var(--_input-text-suffix-color)}.text-field:not(.disabled) .input::placeholder{color:var(--_input-text-placeholder-color)}.prefix,.suffix{text-wrap:nowrap;width:min-content}.prefix{padding-inline-end:var(--_input-text-prefix-trailing-space)}.suffix{padding-inline-start:var(--_input-text-suffix-leading-space)}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/filled-text-field.js
@@ -14293,26 +14654,206 @@ MdOutlinedTextField = __decorate([
 // LINT.ThenChange(:imports)
 //# sourceMappingURL=all.js.map
 ;// CONCATENATED MODULE: ./Components/Dialog/MBDialog.ts
-function dialogShow(dialogID) {
+function dialogShow(dialogID, dotNetObject, gestureCancellation) {
+  //    const dialogElement: MdDialog | null = (document.getElementById(dialogID) as MdDialog);
+  var dialogElement = document.getElementById(dialogID);
+  if (dialogElement != null) {
+    dialogElement._dotNetObject = dotNetObject;
+    dialogElement._gestureCancellation = gestureCancellation;
+    console.log("Adding listener for dialog closed events");
+    var closedCallback = function closedCallback() {
+      console.log("Dialog close event");
+      dialogElement.removeEventListener('close', closedCallback);
+      dialogElement._dotNetObject.invokeMethodAsync('NotifyClosed', dialogElement.returnValue);
+    };
+    dialogElement.addEventListener('closed', closedCallback);
+    console.log("Adding listener for dialog cancel events");
+    dialogElement.addEventListener('cancel', function (event) {
+      event.preventDefault(); // Stop cancellation gestures from closing dialog
+      if (dialogElement._gestureCancellation) {
+        dialogElement.close('cancel'); // Update `returnValue` to handle cancellation logic
+      }
+    });
+    dialogElement.show();
+  }
+}
+function dialogClose(dialogID, dialogValue) {
   var _document$getElementB;
-  (_document$getElementB = document.getElementById(dialogID)) === null || _document$getElementB === void 0 || _document$getElementB.show();
+  (_document$getElementB = document.getElementById(dialogID)) === null || _document$getElementB === void 0 || _document$getElementB.close(dialogValue);
+}
+;// CONCATENATED MODULE: ./Components/Grid/MBGrid.ts
+function syncScrollByID(gridHeaderID, gridBodyID) {
+  var headerDiv = document.getElementById(gridHeaderID);
+  var bodyDiv = document.getElementById(gridBodyID);
+  if (headerDiv != null && bodyDiv != null) {
+    headerDiv.scrollLeft = bodyDiv.scrollLeft;
+  }
+}
+function syncScrollByRef(gridHeaderRef, gridBodyRef) {
+  gridHeaderRef.scrollLeft = gridBodyRef.scrollLeft;
+}
+function getScrollBarWidth(className) {
+  var firstDiv = document.createElement("div");
+
+  // Set styles
+  firstDiv.style.position = 'absolute';
+  firstDiv.style.visibility = 'hidden';
+  firstDiv.style.whiteSpace = 'nowrap';
+  firstDiv.style.left = '-9999px';
+
+  // Set the class
+  firstDiv.className = className;
+
+  // Append to the body
+  document.body.appendChild(firstDiv);
+
+  // Create a second div
+  var secondDiv = document.createElement("div");
+
+  // Append it as a child of the first div
+  firstDiv.appendChild(secondDiv);
+
+  // Calculate width
+  var width = firstDiv.offsetWidth - secondDiv.offsetWidth;
+
+  // Remove the divs
+  document.body.removeChild(firstDiv);
+  return width;
+}
+function getTextWidths(className, currentWidths, textToMeasure) {
+  // Create an element
+  var ele = document.createElement('div');
+
+  // Set styles
+  ele.style.position = 'absolute';
+  ele.style.visibility = 'hidden';
+  ele.style.whiteSpace = 'nowrap';
+  ele.style.left = '-9999px';
+
+  // Set the class
+  ele.className = className;
+
+  // Append to the body
+  document.body.appendChild(ele);
+
+  // Log time
+  //    console.log("Prior to for loop in getTextWidths " + new Date().toString());
+
+  for (var i = 0; i < textToMeasure.length; i++) {
+    // Set the text
+    ele.innerText = textToMeasure[i];
+
+    // Get the width
+    var width = window.getComputedStyle(ele).width;
+    var unadornedWidth = width.slice(0, width.indexOf("px"));
+    var numericWidth = parseFloat(unadornedWidth);
+    var indexMod = i % currentWidths.length;
+    if (numericWidth > currentWidths[indexMod]) {
+      currentWidths[indexMod] = numericWidth;
+    }
+  }
+
+  // Log time
+  //    console.log("Completed for loop in getTextWidths " + new Date().toString());
+
+  // Remove the element
+  document.body.removeChild(ele);
+  return currentWidths;
+}
+function scrollToIndicatedRow(rowIdentifier) {
+  console.log("scrollToIndicatedRow: " + rowIdentifier);
+  var row = document.getElementById(rowIdentifier);
+  console.log("scrollToIndicatedRow element: " + row);
+  if (row != null) {
+    console.log("scrollToIndicatedRow scrollIntoView");
+    row.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
 }
 ;// CONCATENATED MODULE: ./Components/Menu/MBMenu.ts
-function reportMenuCloseEvent() {
-  console.log("Menu close event");
+//import { MdButton } from '@material/web/button/button.js';
+
+function logAfterRenderEvent() {
+  console.log("Blazor OnAfterRenderAsync event...");
+}
+function displayClosedEvent() {
+  console.log("displayClosedEvent invoked");
+}
+function displayClosingEvent() {
+  console.log("displayClosingEvent invoked");
 }
 
-//function reportMenuCloseEvent(cme: CloseMenuEvent) {
-//    console.log("Menu close event");
-//}
+/**
+ * Searches for an element with `class="output"` set on it, and updates the
+ * text of that element with the menu-closed event's content.
+ */
+function displayMenuCloseEvent(event) {
+  console.log("displayMenuCloseEvent invoked");
+  // get the output element from the shadow root
+  var root = event.target.getRootNode();
+  var outputEl = root.querySelector('.output');
+  var stringifyItem = function stringifyItem(menuItem) {
+    var tagName = menuItem.tagName.toLowerCase();
+    var headline = menuItem.typeaheadText;
+    return "".concat(tagName).concat(menuItem.id ? "[id=\"".concat(menuItem.id, "\"]") : '', " > [slot=\"headline\"] > ").concat(headline);
+  };
 
-function setMenuCloseEvent(menuID) {
+  // display the event's details in the inner text of that output element
+  outputEl.textContent = "CustomEvent {\n  type: ".concat(event.type, ",\n  target: ").concat(stringifyItem(event.target), ",\n  detail: {\n    initiator: ").concat(stringifyItem(event.detail.initiator), ",\n    itemPath: [\n      ").concat(event.detail.itemPath.map(function (item) {
+    return stringifyItem(item);
+  }).join(",\n      "), "\n    ],\n  },\n  reason: ").concat(JSON.stringify(event.detail.reason), "\n}");
+}
+function displayOpenedEvent() {
+  console.log("displayOpenedEvent invoked");
+}
+function displayOpeningEvent() {
+  console.log("displayOpeningEvent invoked");
+}
+function setMenuEventListeners(menuButtonID, menuID, isFirstRender) {
+  var buttonElement = document.getElementById(menuButtonID);
   var menuElement = document.getElementById(menuID);
-  if (menuElement != null) {
-    console.log("Adding listener for menu-close events");
-    menuElement.addEventListener('menu-close', function () {
-      reportMenuCloseEvent();
+  if (buttonElement != null && menuElement != null) {
+    console.log("Adding listener for button click events");
+    if (!isFirstRender) {
+      buttonElement.removeEventListener('click', toggleMenu);
+    }
+    buttonElement.addEventListener('click', function () {
+      toggleMenu(menuElement);
     });
+
+    //console.log("Adding listener for menu closed events");
+    //menuElement.removeEventListener('closed', displayClosedEvent);
+    //menuElement.addEventListener('closed', () => displayClosedEvent);
+
+    //console.log("Adding listener for menu closing events");
+    //menuElement.removeEventListener('closing', displayClosingEvent);
+    //menuElement.addEventListener('closing', () => displayClosingEvent);
+
+    console.log("Adding listener for menu-close events");
+    if (!isFirstRender) {
+      // TS2769
+      // @ts-expect-error
+      menuElement.removeEventListener('menu-close', displayMenuCloseEvent);
+    }
+    menuElement.addEventListener('menu-close', function () {
+      displayMenuCloseEvent;
+    });
+    menuElement.addEventListener('click', function () {
+      displayMenuCloseEvent;
+    }, true);
+
+    //console.log("Adding listener for menu opened events");
+    //menuElement.removeEventListener('opened', displayOpenedEvent);
+    //menuElement.addEventListener('opened', () => displayOpenedEvent);
+
+    //console.log("Adding listener for menu opening events");
+    //menuElement.removeEventListener('opening', displayOpeningEvent);
+    //menuElement.addEventListener('opening', () => displayOpeningEvent);
+
+    console.log("...");
   }
 }
 function toggleMenu(menuElement) {
@@ -14321,19 +14862,43 @@ function toggleMenu(menuElement) {
     menuElement.open = !menuElement.open;
   }
 }
-function toggleMenuOpen(menuButtonID, menuID) {
-  var buttonElement = document.getElementById(menuButtonID);
-  var menuElement = document.getElementById(menuID);
-  if (buttonElement != null && menuElement != null) {
-    console.log("Adding listener for click events");
-    buttonElement.addEventListener('click', function () {
-      toggleMenu(menuElement);
+;// CONCATENATED MODULE: ./Components/Tabs/MBTabs.ts
+// Because of invocation of setTabsChangeEvent in AfterRenderAsync the first change is not detected. The workaround is to
+// lookup the first panel by name
+
+function setTabsChangeEvent(tabsID, firstPanelAriaControlledBy) {
+  var firstPanel = firstPanelAriaControlledBy;
+  var tabsElement = document.getElementById(tabsID);
+  if (tabsElement != null) {
+    console.log("Adding listener for change events");
+    var currentPanel = null;
+    tabsElement.addEventListener('change', function () {
+      var _tabsElement$activeTa;
+      var root = tabsElement.getRootNode();
+      if (currentPanel) {
+        //console.log("currentPanel is not null, direct hide");
+        currentPanel.hidden = true;
+      } else {
+        //console.log("currentPanel is null, looking up first panel by '" + firstPanel + "'");
+        currentPanel = root.querySelector("#".concat(firstPanel));
+        if (currentPanel) {
+          currentPanel.hidden = true;
+        }
+      }
+      ;
+      var panelId = (_tabsElement$activeTa = tabsElement.activeTab) === null || _tabsElement$activeTa === void 0 ? void 0 : _tabsElement$activeTa.getAttribute('aria-controls');
+      currentPanel = root.querySelector("#".concat(panelId));
+      if (currentPanel) {
+        currentPanel.hidden = false;
+      }
     });
   }
+  ;
 }
 ;// CONCATENATED MODULE: ./Components/TextField/MBTextField.ts
-function selectFieldContent(elem) {
-  if (!elem) {
+function selectFieldContent(textfieldID) {
+  var textfieldElement = document.getElementById(textfieldID);
+  if (!textfieldElement) {
     return;
   }
 
@@ -14345,8 +14910,8 @@ function selectFieldContent(elem) {
   // Seemed to happen in Blazor Server (presumably due to slower JS Invoke timing).
   // Also probably not needed.Time will tell.
 
-  if (elem.focused == true) {
-    elem.select();
+  if (textfieldElement.focused == true) {
+    textfieldElement.select();
   }
 }
 ;// CONCATENATED MODULE: ./node_modules/@material/base/foundation.js
@@ -17129,24 +17694,11 @@ var MDCDataTable = /** @class */ (function (_super) {
 //# sourceMappingURL=component.js.map
 ;// CONCATENATED MODULE: ./Components.MD2/DataTable/MBDataTable.ts
 
-function MBDataTable_init(elem, hasProgress, showProgress) {
+function MBDataTable_init(elem) {
   if (!elem) {
     return;
   }
   elem._dataTable = MDCDataTable.attachTo(elem);
-  if (hasProgress) {
-    setProgress(elem, showProgress);
-  }
-}
-function setProgress(elem, showProgress) {
-  if (!elem) {
-    return;
-  }
-  if (showProgress) {
-    elem._dataTable.showProgress();
-  } else {
-    elem._dataTable.hideProgress();
-  }
 }
 ;// CONCATENATED MODULE: ./node_modules/@material/dom/focus-trap.js
 /**
@@ -21768,6 +22320,8 @@ M.B.MD3 JS
 
 
 
+
+
 /*
 MWC2 JS
 */
@@ -21778,7 +22332,9 @@ MWC2 JS
 
 window.MaterialBlazor = {
   MBDialog: MBDialog_namespaceObject,
+  MBGrid: MBGrid_namespaceObject,
   MBMenu: MBMenu_namespaceObject,
+  MBTabs: MBTabs_namespaceObject,
   MBTextField: MBTextField_namespaceObject,
   MBCard: MBCard_namespaceObject,
   MBDataTable: MBDataTable_namespaceObject,
